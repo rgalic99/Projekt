@@ -30,7 +30,7 @@ const data = {
 			category: "Headphones",
 			image: "/images/p3.jpg",
 			price: 149,
-			countInStock: 2,
+			countInStock: 0,
 			brand: "Anker",
 			rating: 4.8,
 			numReviews: 17,

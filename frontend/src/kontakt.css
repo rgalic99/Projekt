@@ -1,97 +1,97 @@
 body {
-    font: 1.6rem Helvetica;
-    font-size: 16px;
-    color: black;
-    line-height: 1.5;
-    background-color: whitesmoke;
-    margin: 0;
+	font: 1.6rem Helvetica;
+	font-size: 16px;
+	color: black;
+	line-height: 1.5;
+	background-color: whitesmoke;
+	margin: 0;
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 header {
-    padding: 0px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    min-height: 70px;
-    background-color: rgb(34, 44, 44);
-    z-index: 2;
+	padding: 0px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	min-height: 70px;
+	background-color: rgb(34, 44, 44);
+	z-index: 2;
 }
 
 header h2 {
-    font: 1.6rem Helvetica;
-    margin: 0;
-    padding: 12px 0;
-    color: white;
-    font-size: 40px;
-    white-space: nowrap;
+	font: 1.6rem Helvetica;
+	margin: 0;
+	padding: 12px 0;
+	color: white;
+	font-size: 40px;
+	white-space: nowrap;
 }
 
-header>.container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 100%;
+header > .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100%;
 }
 
 form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 0 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	max-width: 600px;
+	margin: 40px auto;
+	padding: 0 16px;
 }
 
 .form-control {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 20px;
-    text-align: start;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 20px;
+	text-align: start;
 }
 
 label::before {
-    content: "*";
-    color: #c00a27;
-    padding-right: 4px;
+	content: "*";
+	color: #c00a27;
+	padding-right: 4px;
 }
 
 input,
 textarea {
-    margin-top: 4px;
-    padding: 8px 16px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    font: 1.6rem Helvetica;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
+	margin-top: 4px;
+	padding: 8px 16px;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	font: 1.6rem Helvetica;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	outline: none;
 }
 
 textarea {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100px;
-    max-height: 250px;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	max-height: 250px;
 }
 
 input::placeholder,
@@ -102,44 +102,44 @@ input::-moz-placeholder,
 textarea::-moz-placeholder,
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 .btn {
-    background-color: rgb(34, 44, 44);
-    display: block;
-    min-width: 400px;
-    padding: 16px 16px;
-    margin: 12px auto;
-    color: white;
-    font-size: 25px;
-    line-height: 1.5;
-    font: 1.6rem Helvetica;
-    border-radius: 25px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    box-shadow: 10px;
+	background-color: rgb(34, 44, 44);
+	display: block;
+	min-width: 400px;
+	padding: 16px 16px;
+	margin: 12px auto;
+	color: white;
+	font-size: 25px;
+	line-height: 1.5;
+	font: 1.6rem Helvetica;
+	border-radius: 25px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	box-shadow: 10px;
 }
 
 .btn:hover {
-    background-color: black
+	background-color: black;
 }
 
 .btn:active {
-    background-color: #dacc0d;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+	background-color: #dacc0d;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
 
-#kontakt>h2 {
-    text-align: center;
-    font-size: 50px;
+#kontakt > h2 {
+	text-align: center;
+	font-size: 50px;
 }
 
 footer {
-    background-color: rgb(34, 44, 44);
-    padding: 40px 16px;
-    color: white;
-    text-align: center;
+	background-color: rgb(34, 44, 44);
+	padding: 40px 16px;
+	color: white;
+	text-align: center;
 }
