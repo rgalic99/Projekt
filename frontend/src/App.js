@@ -1,4 +1,5 @@
 import React from 'react'
+import data from './data';
 
 function App() {
   return (
@@ -15,13 +16,15 @@ function App() {
     </header>
     <main className="main">
       <div className= "row center">
-          <div className="card">
-              <a href="product.html">
-                  <img className="medium" src="./images/p1.jpg" alt="product"></img>
+            {
+                data.products.map((product)=>
+                <div key={product._id} className="card">
+              <a href={`/product/${product._id}`}>
+                  <img className="medium" src={product.image} alt={product.name}></img>
               </a>
               <div className="card-body">
-                  <a href="product.html">
-                      <h2>Wireless charging stand</h2>
+                  <a href={`/product/${product._id}`}>
+                      <h2>{product.name}</h2>
                   </a>
                   <div className="rating">
                   <span> <i className="fa fa-star"></i> </span>
@@ -31,8 +34,8 @@ function App() {
                   <span> <i className="fa fa-star"></i> </span>
                   </div>
               </div>
-              <div className="price">€30</div>
-          </div>
+              <div className="price">€{product.price}</div>
+              </div>)}     
       </div>
     </main>
     <footer className="row center">
