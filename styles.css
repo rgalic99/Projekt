@@ -9,52 +9,102 @@ body{
     margin: 0;
 }
 
-.grid-container{
+/*Layout*/
+.grid-container {
     display: grid;
     grid-template-areas:
-    "header"
-    "main"
-    "footer" ;
+      'header'
+      'main'
+      'footer';
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 1fr 5rem;
     height: 100%;
-}
-
-.header{
+  }
+  header {
     grid-area: header;
-    background-color:rgb(34, 44, 44);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo a{
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 0.5rem;
-}
-.header-links a{
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    padding: 0.5rem;
-
-}
-.header-links a:hover{
-    color:yellow;
-}
-
-.main{
+    background-color: rgb(34, 44, 44);
+  }
+  main {
     grid-area: main;
-}
-
-.footer{
+    padding: 1rem;
+  }
+  footer {
     grid-area: footer;
     background-color: darkslategray;
     color: white;
+  }
+
+  /* Common */
+  h1 {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+  h2 {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: #ff8000;
+  }
+
+  /* Header */
+
+  header a {
+    color: white;
+    padding: 1rem;
+  }
+  a.logo {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+.row {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+  }
+
+.row.center {
+    justify-content: center;
 }
+
+  /* Image */
+  img{
+    border-radius: 0.5rem;
+}
+
+img.medium{
+    max-width: 29rem;
+    width: 100%;
+}
+
+  /* Card */
+.card{
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.card-body{
+    padding: 1rem;
+}
+
+.card-body > *{
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+  }
+  /* Rating */
+  .rating span {
+    color: #f0c040;
+    margin: 0.1rem;
+  }

@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech-@-Tack</title>
@@ -9,27 +13,40 @@
 
 <body>
     <div class="grid-container">
-        <header class="header">
+        <header class="row">
             <div class="logo">
                 <a href="index.html">Tech-@-Tack</a>
             </div>
             <div class="header-links">
                 <a href="cart.html">Košarica 👜 </a>
-                <a href="singin">Sign up/in 🖊 </a>
+                <a href="singin.html">Sign up/in 🖊 </a>
             </div>
               
         </header>
         <main class="main">
-            <ul>
-                <li>Product 1</li>
-                <li>Product 2</li>
-                <li>Product 3</li>
-                <li>Product 4</li>
-                <li>Product 5</li>
-                <li>Product 6</li>
-            </ul>
+          <div class= "row center">
+              <div class="card">
+                  <a href="product.html">
+                      <!-- image size:680x830-->
+                      <img class="medium" src="./images/p1.jpg" alt="product">
+                  </a>
+                  <div class="card-body">
+                      <a href="product.html">
+                          <h2>Wireless charging stand</h2>
+                      </a>
+                      <div class="rating">
+                      <span> <i class="fa fa-star"></i> </span>
+                      <span> <i class="fa fa-star"></i> </span>
+                      <span> <i class="fa fa-star"></i> </span>
+                      <span> <i class="fa fa-star"></i> </span>
+                      <span> <i class="fa fa-star"></i> </span>
+                      </div>
+                  </div>
+                  <div class="price">€30</div>
+              </div>
+          </div>
         </main>
-        <footer class="footer">
+        <footer class="row center">
             All rights reserved © Tech-@-Tack 2020
         </footer>
     </div>
