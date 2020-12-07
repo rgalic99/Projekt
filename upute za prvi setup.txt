@@ -1,0 +1,22 @@
+udjete u foleder di ce vam bit projekt
+otvorite ga u terminalu
+
+git init
+git remote add origin https://github.com/rgalic99/Projekt.git
+git clone https://github.com/rgalic99/Projekt.git
+
+cd Projekt
+
+cd frontend
+
+npm install react
+
+npm install react-router-dom
+
+
+
+za svaku promjenu sto zelite napravit navigirajte se u folder /projekt i otvorite terminal tu te napisite
+
+sad git add .
+git commit -m "neki komentar"
+git push
