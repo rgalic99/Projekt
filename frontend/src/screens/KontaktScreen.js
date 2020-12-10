@@ -4,12 +4,6 @@ import "../kontakt.css";
 export default function KontaktScreen() {
 	return (
 		<body>
-			<header>
-				<div className="container">
-					<h2>Tech-@-tack</h2>
-				</div>
-			</header>
-
 			<section id="kontakt">
 				<h2>Kontakt</h2>
 				<form>
@@ -45,13 +39,6 @@ export default function KontaktScreen() {
 					</button>
 				</form>
 			</section>
-
-			<footer>
-				<h4>Tech-@-tack</h4>
-				<p>
-					&copy;<em>2020, All rights reserved</em>
-				</p>
-			</footer>
 		</body>
 	);
 }

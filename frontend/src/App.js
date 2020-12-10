@@ -10,7 +10,7 @@ function App() {
 			<div className="grid-container">
 				<header className="row">
 					<div className="logo">
-						<a href="index.html"> Tech - @ - Tack </a>
+						<a href="/"> Tech - @ - Tack </a>
 					</div>
 					<div className="header-links">
 						<a href="cart.html"> Košarica👜 </a>
@@ -23,7 +23,7 @@ function App() {
 					<Route path="/kontakt" component={KontaktScreen} exact></Route>
 				</main>
 				<footer className="row center">
-					<a href="kontakt.html">All rights reserved© Tech - @ - Tack 2020</a>
+					<a href="/kontakt">All rights reserved© Tech - @ - Tack 2020</a>
 				</footer>
 			</div>
 		</BrowserRouter>

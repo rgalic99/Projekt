@@ -1,7 +1,6 @@
 import React from "react";
 import data from "../data";
 import Product from "../components/Product";
-import "../index.css";
 
 export default function HomeScreen(props) {
 	return (

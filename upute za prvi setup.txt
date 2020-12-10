@@ -12,11 +12,3 @@ cd frontend
 npm install react
 
 npm install react-router-dom
-
-
-
-za svaku promjenu sto zelite napravit navigirajte se u folder /projekt i otvorite terminal tu te napisite
-
-sad git add .
-git commit -m "neki komentar"
-git push
