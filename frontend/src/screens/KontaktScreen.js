@@ -1,5 +1,5 @@
 import React from "react";
-import "../kontakt.css";
+import "../styles/kontakt.css";
 
 export default function KontaktScreen() {
 	return (

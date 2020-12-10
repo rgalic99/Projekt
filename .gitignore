@@ -2,5 +2,10 @@
 settings.json
 debug.log
 frontend/package.json
-frontend/package-lock.json
 frontend/.eslintcache
+
+.vscode
+frontend/public/kontakt.html
+frontend/package-lock.json
+frontend/README.md
+frontend/.gitignore
