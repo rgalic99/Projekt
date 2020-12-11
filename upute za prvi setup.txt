@@ -12,3 +12,8 @@ cd frontend
 npm install react
 
 npm install react-router-dom
+
+cd .. 
+cd backend 
+npm install -g nodemon --save-dev
+
