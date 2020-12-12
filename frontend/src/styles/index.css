@@ -79,6 +79,7 @@ button:hover {
 	border: 0.1rem darkgray solid;
 }
 button.primary {
+	margin: auto;
 	background-color: #f0c040;
 }
 button.block {
@@ -101,7 +102,7 @@ a.logo {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
+	padding: 1rem;
 }
 
 .row.center {
@@ -125,6 +126,7 @@ img {
 img.medium {
 	max-width: 29rem;
 	width: 100%;
+	align-items: flex-start;
 }
 img.large {
 	width: 100%;
@@ -132,14 +134,22 @@ img.large {
 
 /* Card */
 .card {
+	flex-grow: 2;
+	flex-basis: 20%;
 	border: 0.1rem #c0c0c0 solid;
 	background-color: #f8f8f8;
 	border-radius: 0.5rem;
 	margin: 1rem;
+	align-content: flex-end;
 }
 
 .card-body {
-	padding: 1rem;
+	padding: 1rem 1rem;
+}
+.card-body > a > h2 {
+	word-wrap: break-word;
+	text-align: auto;
+	margin: auto;
 }
 
 .card-body > * {
@@ -148,11 +158,18 @@ img.large {
 
 .price {
 	font-size: 2rem;
+	margin: 0;
+	text-align: auto;
+	margin: auto;
 }
 /* Rating */
 .rating span {
 	color: #f0c040;
 	margin: 0.1rem;
+	align-self: start;
+	text-indent: 0rem;
+	text-align: auto;
+	margin: auto;
 }
 .rating span:last-child {
 	color: gray;

@@ -17,7 +17,7 @@ header {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-	min-height: 70px;
+	min-height: 50px;
 	background-color: rgb(34, 44, 44);
 	z-index: 2;
 }
@@ -140,6 +140,7 @@ textarea:-ms-input-placeholder {
 footer {
 	background-color: rgb(34, 44, 44);
 	padding: 40px 16px;
+	margin: 0;
 	color: white;
 	text-align: center;
 }
