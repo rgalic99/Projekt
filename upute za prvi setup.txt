@@ -13,6 +13,8 @@ npm install react
 
 npm install react-router-dom
 
+npm install axios
+
 cd .. 
 cd backend 
 npm install -g nodemon --save-dev
