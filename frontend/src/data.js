@@ -735,7 +735,7 @@ const data = {
 		},
 
 		{
-			_id: "53",
+			_id: "101",
 			name: "Optix MAG272CQR Curved Gaming Monitor",
 			category: "Monitori",
 			image: "/images/p53.jpg",
