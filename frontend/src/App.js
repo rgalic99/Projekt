@@ -17,13 +17,15 @@ function App() {
 						<Link to="/"> Tech - @ - Tack </Link>
 					</div>
 					<div className="header-links">
-						<Link to="cart.html">
+						<Link to="singin.html" className="signUpIn">
+							Sign up / in 🖊
+						</Link>
+						<Link to="cart.html" className="cart">
 							Košarica👜
 							{cartItems.length > 0 && (
 								<span className="badge">{cartItems.length}</span>
 							)}
 						</Link>
-						<Link to="singin.html"> Sign up / in 🖊 </Link>
 					</div>
 				</header>
 				<main className="main">

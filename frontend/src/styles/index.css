@@ -248,3 +248,27 @@ footer a {
 	color: red;
 	background-color: white;
 }
+
+/*Media rules*/
+
+@media screen and (max-width: 664px) {
+	.logo {
+		display: none;
+	}
+	.header {
+		display: flex;
+	}
+	.header-links {
+		display: flex;
+		justify-content: space-between;
+		flex-basis: content;
+		flex-grow: 2;
+		font-size: 2rem;
+	}
+	.signUpIn {
+		order: 1;
+	}
+	.cart {
+		order: 2;
+	}
+}
