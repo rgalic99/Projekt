@@ -679,20 +679,6 @@ const data = {
 		},
 
 		{
-			_id: "53",
-			name: "Optix MAG272CQR Curved Gaming Monitor",
-			category: "Monitori",
-			image: "/images/p53.jpg",
-			price: 2499.99,
-			countInStock: 14,
-			brand: "MSI",
-			rating: 4.7,
-			numReviews: 35,
-			description:
-				"Optix MAG272CQR Curved Gaming Monitor nudi sve što možete poželjeti: savršene gaming performanse, izuzetnu kvalitetu slike i RGB svjetla na poleđini. Ovaj monitor ima i USB-C port kao i oštru VA display panelu koja omogućava svim gamer-ima da puno bolje vide prilikom tamnijih scena u igricama.",
-		},
-
-		{
 			_id: "54",
 			name: "Rugged Protecive Case for Apple AirPods Pro",
 			category: "Slušalice",
