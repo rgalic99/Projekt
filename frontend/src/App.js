@@ -5,6 +5,7 @@ import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import KontaktScreen from "./screens/KontaktScreen";
 import ProductScreen from "./screens/ProductScreen";
+import SigninScreen from "./screens/SigninScreen";
 
 function App() {
 	const cart = useSelector((state) => state.cart);
@@ -17,7 +18,7 @@ function App() {
 						<Link to="/"> Tech - @ - Tack </Link>
 					</div>
 					<div className="header-links">
-						<Link to="singin.html" className="signUpIn">
+						<Link to="/signin" className="signUpIn">
 							Sign up / in 🖊
 						</Link>
 						<Link to="/cart" className="cart">
@@ -32,6 +33,7 @@ function App() {
 					<Route path="/product/:id" component={ProductScreen}></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
 					<Route path="/" component={HomeScreen} exact></Route>
+					<Route path="/signin" component={SigninScreen} exact></Route>
 					<Route path="/kontakt" component={KontaktScreen} exact></Route>
 				</main>
 				<footer className="row center">
