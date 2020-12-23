@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Rating from "../components/Rating";
+/*import Rating from "../components/Rating";*/
 import { useDispatch, useSelector } from "react-redux";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
@@ -42,21 +42,26 @@ export default function ProductScreen(props) {
 								<h1>{product.name}</h1>
 							</li>
 							<li>Cijena: {product.price}kn</li>
-							<li>
+							{/* <li className="product-rating">
 								<Rating
 									rating={product.rating}
 									numReviews={product.numReviews}
 								></Rating>
-							</li>
+							</li> */}
 							<li>
-								Opis: <p>{product.description}</p>
+								Opis:
+								<span className="product-description">
+									{product.description}
+								</span>
 							</li>
 						</ul>
 						<div className="col-1">
 							<div className="card card-body">
 								<ul>
 									<li>
-										<div className="price">Cijena: {product.price}kn</div>
+										<div className="price-2">
+											Cijena: <h2>{product.price} kn</h2>
+										</div>
 									</li>
 									<li>
 										<div className="row">

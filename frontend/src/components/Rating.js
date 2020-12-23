@@ -4,11 +4,9 @@ import Stars from "./Stars";
 export default function Rating(props) {
 	const { rating, numReviews } = props;
 	return (
-		<div className="rating">
+		<span className="rating">
 			{Stars(rating)}
-			<span>
-				<div>{numReviews + " recenzija"}</div>
-			</span>
-		</div>
+			<div>{numReviews + " recenzija"}</div>
+		</span>
 	);
 }

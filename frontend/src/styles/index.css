@@ -204,12 +204,33 @@ img.large {
 
 .card-body > * {
 	margin-bottom: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .price {
 	font-size: 2rem;
 	position: absolute;
 	bottom: 0;
+}
+
+.price-2 {
+	font-size: 1.5rem;
+	color: rgba(0, 147, 193, 1);
+}
+
+.price-2 > h2 {
+	font-size: 4rem;
+	padding: 0;
+	margin: 0 0;
+}
+
+.product-description {
+	background-color: rgb(221, 221, 221);
+	border: 1px black;
+	border-radius: 0.2rem;
+	word-wrap: break-word;
+	margin-right: 5rem;
+	display: block;
 }
 /* Rating */
 .rating {
