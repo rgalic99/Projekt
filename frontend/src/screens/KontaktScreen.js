@@ -17,7 +17,7 @@ export default function KontaktScreen() {
 						></input>
 					</div>
 					<div className="form-control">
-						<label for="naslov">Title</label>
+						<label for="naslov">Naslov</label>
 						<input
 							type="text"
 							name="subject"
@@ -35,7 +35,7 @@ export default function KontaktScreen() {
 						></textarea>
 					</div>
 					<button className="btn" type="submit">
-						Send
+						Pošalji
 					</button>
 				</form>
 			</section>

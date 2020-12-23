@@ -31,7 +31,7 @@ userRouter.post(
 				return;
 			}
 		}
-		res.status(401).send({ message: "Invalid username or password" });
+		res.status(401).send({ message: "Neispravan email ili lozinka" });
 	})
 );
 

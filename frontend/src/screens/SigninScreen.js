@@ -26,12 +26,12 @@ export default function SigninScreen(props) {
 		<div>
 			<form className="form" onSubmit={submitHandler}>
 				<div>
-					<h1>Sign In</h1>
+					<h1>Prijava</h1>
 				</div>
 				{loading && <LoadingBox></LoadingBox>}
 				{error && <MessageBox variant="failed-login">{error}</MessageBox>}
 				<div>
-					<label htmlFor="email">Email address</label>
+					<label htmlFor="email">Email adresa</label>
 					<input
 						type="email"
 						id="email"
@@ -41,7 +41,7 @@ export default function SigninScreen(props) {
 					></input>
 				</div>
 				<div>
-					<label htmlFor="password">Password</label>
+					<label htmlFor="password">Lozinka</label>
 					<input
 						type="password"
 						id="password"
@@ -53,13 +53,13 @@ export default function SigninScreen(props) {
 				<div>
 					<label />
 					<button className="primary" type="submit">
-						Sign In
+						Prijava
 					</button>
 				</div>
 				<div>
 					<label />
 					<div>
-						New customer? <Link to="/register">Create your account</Link>
+						Novi korisnik? <Link to="/register">Napravite svoj račun</Link>
 					</div>
 				</div>
 			</form>

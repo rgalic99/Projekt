@@ -240,7 +240,6 @@ footer a {
 }
 .error {
 	color: red;
-	background-color: crimson;
 }
 .alert {
 	padding: 1rem;
@@ -263,8 +262,11 @@ footer a {
 	background-color: lightcoral;
 }
 
+.alert-failed-login::after {
+	content: "❌";
+}
 .alert-failed-login::before {
-	content: "❌Error❌";
+	content: "❌";
 }
 
 /*Media rules*/

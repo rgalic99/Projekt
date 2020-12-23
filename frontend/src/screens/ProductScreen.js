@@ -27,7 +27,7 @@ export default function ProductScreen(props) {
 				<MessageBox variant="faliure">{Error}</MessageBox>
 			) : (
 				<div>
-					<Link to="/">⬅Back to results</Link>
+					<Link to="/">⬅Povratak na rezultate</Link>
 					<div className="row top">
 						<div className="col-2">
 							<img
@@ -41,7 +41,7 @@ export default function ProductScreen(props) {
 							<li>
 								<h1>{product.name}</h1>
 							</li>
-							<li>Price: €{product.price}</li>
+							<li>Cijena: {product.price}kn</li>
 							<li>
 								<Rating
 									rating={product.rating}
@@ -49,23 +49,23 @@ export default function ProductScreen(props) {
 								></Rating>
 							</li>
 							<li>
-								Description: <p>{product.description}</p>
+								Opis: <p>{product.description}</p>
 							</li>
 						</ul>
 						<div className="col-1">
 							<div className="card card-body">
 								<ul>
 									<li>
-										<div className="price">Price: €{product.price}</div>
+										<div className="price">Cijena: {product.price}kn</div>
 									</li>
 									<li>
 										<div className="row">
 											<div>Status: </div>
 											<div>
 												{product.countInStock > 0 ? (
-													<span className="success"> In Stock</span>
+													<span className="success"> Dostupno</span>
 												) : (
-													<span className="error"> Unavailable</span>
+													<span className="error"> Nedostupno</span>
 												)}
 											</div>
 										</div>
@@ -74,7 +74,7 @@ export default function ProductScreen(props) {
 										<>
 											<li>
 												<div className="row">
-													<div>Kol</div>
+													<div>Količina</div>
 													<div>
 														<select
 															value={qty}
@@ -96,7 +96,7 @@ export default function ProductScreen(props) {
 													onClick={addToCartHandler}
 													className="primary block"
 												>
-													Add to cart
+													Dodaj u košaricu
 												</button>
 											</li>
 										</>

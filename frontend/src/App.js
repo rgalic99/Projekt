@@ -38,7 +38,7 @@ function App() {
 							</div>
 						) : (
 							<Link to="/signin" className="signUpIn">
-								Sign up / in 🖊
+								Prijava 🖊
 							</Link>
 						)}
 
@@ -58,7 +58,7 @@ function App() {
 					<Route path="/kontakt" component={KontaktScreen} exact></Route>
 				</main>
 				<footer className="row center">
-					<a href="/kontakt">All rights reserved© Tech - @ - Tack 2020</a>
+					<a href="/kontakt">Sva prava pridržana© Tech - @ - Tack 2020</a>
 				</footer>
 			</div>
 		</BrowserRouter>
