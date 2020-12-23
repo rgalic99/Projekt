@@ -20,7 +20,7 @@ function App() {
 						<Link to="singin.html" className="signUpIn">
 							Sign up / in 🖊
 						</Link>
-						<Link to="cart.html" className="cart">
+						<Link to="/cart" className="cart">
 							Košarica👜
 							{cartItems.length > 0 && (
 								<span className="badge">{cartItems.length}</span>
