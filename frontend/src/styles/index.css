@@ -240,6 +240,7 @@ footer a {
 }
 .error {
 	color: red;
+	background-color: crimson;
 }
 .alert {
 	padding: 1rem;
@@ -255,6 +256,15 @@ footer a {
 .alert-faliure {
 	color: red;
 	background-color: white;
+}
+
+.alert-failed-login {
+	color: rgb(85, 5, 5);
+	background-color: lightcoral;
+}
+
+.alert-failed-login::before {
+	content: "❌Error❌";
 }
 
 /*Media rules*/
@@ -299,4 +309,28 @@ footer a {
 
 label::before {
 	visibility: hidden;
+}
+
+/* Dropdown */
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+.dropdown-content {
+	position: absolute;
+	display: none;
+	right: 0;
+	min-width: 12rem;
+	padding: 1rem;
+	z-index: 1;
+	background-color: #203040;
+	margin: 0;
+	margin-top: 0.2rem;
+	border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown-content:hover {
+	display: block;
 }
