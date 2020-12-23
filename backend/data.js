@@ -16,7 +16,6 @@ const data = {
 	],
 	products: [
 		{
-			_id: "1",
 			name: "Ekster Smart Wallet",
 			category: "Oprema",
 			image: "/images/p1.jpg",
@@ -29,7 +28,6 @@ const data = {
 				"RFID zaštita, ukupno pohranjuje 10+ kartica, ručno izrađen od vrhunske kože prema zlatno ocijenjenim LWG protokolima",
 		},
 		{
-			_id: "2",
 			name: "PD Tech Pouch",
 			category: "Oprema",
 			image: "/images/p2.jpg",
@@ -42,7 +40,6 @@ const data = {
 				"Bez obzira spremate li kablove, svakodnevnu opremu ili potrepštine za putovanje, Tech Pouch nudi organizaciju bez premca i lak pristup. Džepovi u origami stilu stvaraju ogromnu prostornu učinkovitost",
 		},
 		{
-			_id: "3",
 			name: "Zyllion Back and Neck Massager",
 			category: "Kućanski aparati",
 			image: "/images/p3.jpg",
@@ -55,7 +52,6 @@ const data = {
 				"Ergonomski i kompaktni masažer za jastuke savršeno pristaje iza kontura vrata te donjeg i gornjeg dijela leđa, trbuha, lista i bedara",
 		},
 		{
-			_id: "4",
 			name: "Philips Sleep and Wake-Up Light",
 			category: "Oprema",
 			image: "/images/p4.jpg",
@@ -68,7 +64,6 @@ const data = {
 				"Prilagođeni zalazak i izlazak sunca, dokazano vam daje lako i energično buđenje i popravlja raspoloženje ujutro",
 		},
 		{
-			_id: "5",
 			name: "Apple iPad",
 			category: "Tablet",
 			image: "/images/p5.jpg",
@@ -81,7 +76,6 @@ const data = {
 				"32 GB, veličina ekrana 10.2 inča, OS: IPadOS, baterija do 10 sati rada, boje: Gold, Silver, Space Gray",
 		},
 		{
-			_id: "9",
 			name: "WD Portable SSD (500GB)",
 			category: "Solid State diskovi",
 			image: "/images/p9.jpg",
@@ -94,7 +88,6 @@ const data = {
 				"256-bitna AES hardverska enkripcija s omogućenom lozinkom, brzine do 1050 MB/s i brzine upisa do 1000 MB/s",
 		},
 		{
-			_id: "7",
 			name: "Netgear MK62 Mesh Wi-Fi 6 System",
 			category: "Digitalni prijemnici i antene",
 			image: "/images/p7.jpg",
@@ -107,7 +100,6 @@ const data = {
 				"visokokvalitetni proizvod,pokrivenost do 3 000 četvornih metara,isporučuju do 1 8Gbps brzine za 25+ uređaja",
 		},
 		{
-			_id: "8",
 			name: "Mophie Dual Wireless Charging Pad",
 			category: "Oprema",
 			image: "/images/p8.jpg",
@@ -120,7 +112,6 @@ const data = {
 				"Istovremeno punite 3 uređaja: s 2 mjesta za bežično punjenje i jedno sa USB-A priključkom",
 		},
 		{
-			_id: "10",
 			name: "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
 			category: "Slušalice",
 			image: "/images/p10.jpg",
@@ -133,7 +124,6 @@ const data = {
 				"Up to 30-hour battery life with quick charging, uklanjanje buke Dual Noise Sensor tehnologijom",
 		},
 		{
-			_id: "11",
 			name: "Amazon Echo Dot (4th Gen) Smart Speaker",
 			category: "Smart Home oprema",
 			image: "/images/p11.jpg",
@@ -146,7 +136,6 @@ const data = {
 				"Spremna za komunikaciju-postaviti Alexi pitanje, kontrolirajte vašu pametnu kuću, povežite se sa ostalima",
 		},
 		{
-			_id: "6",
 			name: "TaoTronics SoundLiberty 79 Wireless Earbuds",
 			category: "Slušalice",
 			image: "/images/p6.jpg",
@@ -159,7 +148,6 @@ const data = {
 				"Nudi nevjerojatno čistu kvalitetu zvuka, čipset kombinira najnoviju tehnologiju Bluetooth 5.0 i naprednu LDS antenu za brz i stabilan prijenos signala",
 		},
 		{
-			_id: "12",
 			name: "Samsung Galaxy S20 FE 5G Android Smartphone",
 			category: "Smartphone",
 			image: "/images/p12.jpg",
@@ -172,7 +160,6 @@ const data = {
 				"Unutarnja memorija: 128 GB, OS: Android 10, Veličina ekrana: 6.5 inča, RAM: 6 GB, Otporan na vodu: Da, Prednja kamera: 32 megapixela, Stražnja kamera: 12 megapixela",
 		},
 		{
-			_id: "13",
 			name: "Razer Seiren Mini USB Streaming Microphone",
 			category: "Oprema",
 			image: "/images/p13.jpg",
@@ -185,7 +172,6 @@ const data = {
 				"Podešen sa strožim kutom primanja, tako da se može usredotočiti na vaš glas, istovremeno osiguravajući da se pozadinski zvukovi poput tipkanja i klikova mišem ne pokupe, stvoren za minimalističke ili manje postavke, jedva zauzima prostor na radnom stolu, sjedeći na čvrstom nosaču, mikrofon se može nagnuti kako bi pronašao savršenu poziciju za vaš glas",
 		},
 		{
-			_id: "14",
 			name: "Klipsch Cinema 400 Sound Bar HQ Audio",
 			category: "Slušalice",
 			image: "/images/p14.jpg",
@@ -198,7 +184,6 @@ const data = {
 				"40-inčna 2.1-zvučna traka s 8-inčnim bežičnim subwooferom, vršna snaga od 400 W",
 		},
 		{
-			_id: "15",
 			name: "Monocarbon Carbon Fiber Case for Apple Watch (40-millimeter)",
 			category: "Oprema",
 			image: "/images/p15.jpg",
@@ -211,7 +196,6 @@ const data = {
 				"Elegantna futrola izrađena od pravog materijala od karbonskih vlakana, tanak s 0.6 mm, lagan sa samo 1 g, vrlo dobro pristaje",
 		},
 		{
-			_id: "16",
 			name: "Incase Slip MacBook Sleeve (13-inch version)",
 			category: "Oprema",
 			image: "/images/p16.jpg",
@@ -224,7 +208,6 @@ const data = {
 				"Kompatibilan s 13-inčnim MacBook Pro (USB-C) i M1, 2020/13-inčni MacBook Air s Retina & M1, 2020, tanak, moderniziran dizajn eliminira unutarnju pjenu i obloge",
 		},
 		{
-			_id: "17",
 			name: "Coral 3-in-1 UV Sterilizer and Dryer Unit",
 			category: "Oprema",
 			image: "/images/p17.jpg",
@@ -237,7 +220,6 @@ const data = {
 				"Bez napora eliminirajte 99.9% štetnih klica u 10 minuta, suši vaše predmete na toploj temperaturi u samo 𝟰𝟬 - 𝟳𝟬 minuta, sigurno za plastiku, staklo ili silikon",
 		},
 		{
-			_id: "18",
 			name: "Apple iPhone 12 mini 64GB ROM 5.4'' display ",
 			category: "Smartphone",
 			image: "/images/p18.jpg",
@@ -250,7 +232,6 @@ const data = {
 				"SIM: Single SIM, veličina ekrana: 5.4 inča, OS: iOS 14.1, unutrašnja memorija: 128 GB, USB: Lightning,USB 2.0, boje: Black, White, Red, Green, Blue",
 		},
 		{
-			_id: "19",
 			name: "Roku Streambar HQ Smart home HIFI System",
 			category: "Smart Home oprema",
 			image: "/images/p19.jpg",
@@ -263,7 +244,6 @@ const data = {
 				"Uživajte u laganom, brzom sučelju s najnovijim i najpopularnijim kanalima, plus pristup beskrajnoj besplatnoj zabavi, stream u briljantnoj HD, 4K i HDR slici oštre rezolucije i živih boja optimiziranih za bilo koji televizor, uključite televizor, prilagodite glasnoću i kontrolirajte svoj streaming, sve s Rokuovim daljinskim upravljačem, koristite svoj glas za brzo pretraživanje",
 		},
 		{
-			_id: "20",
 			name: "Razer Basilisk Ultimate HyperSpeed Wireless Gaming Mouse",
 			category: "Miševi",
 			image: "/images/p20.jpg",
@@ -276,7 +256,6 @@ const data = {
 				"Detekcija pokreta: Optička, materijal: plastika, 11 programabilnih tipki, 3x brže od tradicionalnih mehaničkih prekidača: Razer optički prekidači za miša koriste aktiviranje na bazi svjetlosnih zraka, registrirajući pritiske tipki brzinom svjetlosti",
 		},
 		{
-			_id: "21",
 			name: "Apple AirPods Pro",
 			category: "Slušalice",
 			image: "/images/p21.jpg",
@@ -289,7 +268,6 @@ const data = {
 				"AirPods Pro imaju vrhunsku tehnologiju za uklanjanje buke i jednako impresivnu kvalitetu zvuka, ujedno su i prvi AirPodovi koji imaju IPX4 ocjenu vodootpornosti, što znači da ih možete koristiti tijekom vježbanja.",
 		},
 		{
-			_id: "22",
 			name: "Belkin SoundForm Elite Hi-Fi Smart Speaker + Wireless Charger",
 			category: "Oprema",
 			image: "/images/p22.jpg",
@@ -302,7 +280,6 @@ const data = {
 				"Akustika tvrtke Devialet: Patentirane tehnologije audio pionira Devialet pružaju nevjerojatnu kvalitetu zvuka od kompaktnog uređaja, Speaker Active Matching (SAM) tehnologija tvrtke Devialet pruža apsolutnu vjernost i izuzetne performanse",
 		},
 		{
-			_id: "23",
 			name: "Marshall Uxbridge Smart Speaker",
 			category: "Smart Home oprema",
 			image: "/images/p23.jpg",
@@ -315,7 +292,6 @@ const data = {
 				"Uživajte u reprodukciji različitih glazbenih usluga i glasovnom upravljanju putem Amazon Alexa s crnim Marshall Uxbridge Voice bežičnim zvučničkim sustavom. Sadrži ugrađenu Wi-Fi vezu za pružanje pristupa nekim od vaših omiljenih glazbenih usluga. Ugrađena je i AirPlay 2 povezivost koja vam omogućuje streaming s kompatibilnog iOS uređaja.",
 		},
 		{
-			_id: "24",
 			name: "Anker PowerConf Bluetooth Speakerphone",
 			category: "Smart Home oprema",
 			image: "/images/p24.jpg",
@@ -328,7 +304,6 @@ const data = {
 				"Anker PowerConf Bluetooth zvučnik dizajniran je za upućivanje konferencijskih poziva gotovo bilo gdje. Kompaktni, ali nevjerojatno produktivni uređaj sadrži šest mikrofona i visokokvalitetni zvučnik s tehnologijom za pojačavanje glasa, a kompatibilan je sa svim glavnim konferencijskim uslugama.",
 		},
 		{
-			_id: "25",
 			name: "Samsung Galaxy Tab S6 Lite Android Tablet",
 			category: "Tablet",
 			image: "/images/p25.jpg",
@@ -341,7 +316,6 @@ const data = {
 				"Tablet ima oštar 10,4-inčni zaslon i ugrađene stereo zvučnike. Najbolje od svega je što ima razumnu cijenu. Možete naručiti Samsung Galaxy Tab S6 Lite s do 128 GB proširive pohrane u tri boje: plava, siva ili boja ruže.",
 		},
 		{
-			_id: "26",
 			name: "Amazon Echo Studio Smart Speaker",
 			category: "Smart Home oprema",
 			image: "/images/p26.jpg",
@@ -354,7 +328,6 @@ const data = {
 				"Amazon Echo Studio zvučnik je Alexa izrađen za audiofile. S pet audio upravljačkih programa na zvučniku, zvučnik može isporučiti 3D-poboljšani zvuk iznimne kvalitete. Naravno, elegantna naprava je i moćno pametno kućno središte koje će vam omogućiti da bez napora upravljate povezanim uređajima glasovnim naredbama.",
 		},
 		{
-			_id: "27",
 			name: "Samsung Galaxy Watch3",
 			category: "Satovi",
 			image: "/images/p27.jpg",
@@ -367,7 +340,6 @@ const data = {
 				"Moderan pametni sat Samsung Galaxy Watch3 ima moćan i nevjerojatno intuitivan skup značajki za praćenje zdravlja, kondicije i spavanja, uključujući mogućnost automatskog praćenja treninga korisnika. Sat je vodootporan i do 50 metara, tako da je savršen i za kupanje. Kompatibilan je ne samo s Android telefonima, već i iPhoneima.",
 		},
 		{
-			_id: "28",
 			name: "Jabra Elite Active 75t Wireless Earbuds",
 			category: "Slušalice",
 			image: "/images/p28.jpg",
@@ -380,7 +352,6 @@ const data = {
 				"Jabra Elite Active 75t pruža sve što biste očekivali od sjajnog para potpuno bežičnih slušalica. Oni su elegantni, izdržljivi, udobni, zabavni, pouzdani tijekom telefonskih poziva, a zahvaljujući vodootpornoj građi izvrsni su za vježbanje. Nedavno ažuriranje također je donijelo mogućnosti za uklanjanje buke. Slušalice Elite 75t Active imaju pouzdane performanse baterije s gotovo 8 sati između punjenja. Njihova torba s USB-C konektorom sadrži gotovo tri dodatna puna punjenja. Postoje četiri boje za odabir: bakreno crna, menta, mornarska plava i sienna.",
 		},
 		{
-			_id: "29",
 			name: "Apple MacBook Air with M1 Chip",
 			category: "Prijenosna računala",
 			image: "/images/p29.jpg",
@@ -393,7 +364,6 @@ const data = {
 				"Zahvaljujući Appleovom revolucionarnom M1 čipu, ažurirani MacBook Air ima više snage i znatno dulje trajanje baterije od svog prethodnika, zadržavajući isti ikonski dizajn. Budući da novom čipu nisu potrebni ventilatori za hlađenje, prijenosnik je tih i elegantan. Postoje tri boje za odabir: srebrna, svemirsko siva i zlatna.",
 		},
 		{
-			_id: "30",
 			name: "August Wi-Fi Smart Lock",
 			category: "Smart Home oprema",
 			image: "/images/p30.jpg",
@@ -406,7 +376,6 @@ const data = {
 				"Najnovija Wi-Fi Smart Lock od kolovoza kompatibilna je s većinom zasuna, tako da može lako integrirati gotovo sva ulazna vrata u postavke pametne kuće. Omogućuje vam čak i zadržavanje postojećih ključeva kuće. Možete upravljati pristupom bravi, provjeriti njezinu povijest korištenja i primati obavijesti kada netko otvori vrata putem mobilne aplikacije. Dostupna u srebrnoj ili crnoj boji, brava je također kompatibilna s Amazonom Alexa, Apple HomeKitom i Google Asistentom.",
 		},
 		{
-			_id: "31",
 			name: "Tile Pro Tracker With Replaceable Battery",
 			category: "Oprema",
 			image: "/images/p31.jpg",
@@ -419,7 +388,6 @@ const data = {
 				"Ovi mali i otmjeni uređaji tvrtke Tile pomoći će vam pronaći sve na što ih prikačite, sve dok je vaš telefon u njihovom dometu Bluetooth-a od 400 stopa. U slučaju da izgubite stavku, primit ćete obavijesti kad se uređaji nađu u dosegu drugog korisnika pločice. Dostupni u crno-bijeloj tehnici, Tile Pro trakere je jednostavno postaviti koliko i postaje - sve što trebate je mobilna aplikacija i Tile račun. Izmjenjiva baterija CR1632 za praćenje trajat će godinu dana nakon što aktivirate tragač.",
 		},
 		{
-			_id: "32",
 			name: "Klipsch Heritage Groove Portable Bluetooth Speaker",
 			category: "Smart Home oprema",
 			image: "/images/p32.jpg",
@@ -432,7 +400,6 @@ const data = {
 				"Bluetooth zvučnik Klipsch Heritage Groove ima prekrasan dizajn iz sredine stoljeća i vrhunsku izradu. Kvaliteta zvuka također je impresivna, što ga čini jednim od najboljih zvučnika ispod 100 USD. Možete očekivati ​​do 8 sati bežične reprodukcije između punjenja, a dostupno je s kućištem u crnoj boji ili orahu.",
 		},
 		{
-			_id: "33",
 			name: "Fujifilm Instax Mini Link Smartphone Printer",
 			category: "Oprema",
 			image: "/images/p33.jpg",
@@ -445,7 +412,6 @@ const data = {
 				"Ovaj kompaktni foto-pisač tvrtke Fujifilm stvorit će tvrde kopije fotografija vašeg pametnog telefona veličine 1,8 x 2,4 inča impresivnom brzinom. Dostupan u bijeloj, traper ili ružičastoj boji, Instax Mini Link može izbaciti slike za samo 12 sekundi pomoću vlastitog filma iste marke.",
 		},
 		{
-			_id: "34",
 			name: "Logitech MX Anywhere 3 Wireless Mouse",
 			category: "Miševi",
 			image: "/images/p34.jpg",
@@ -458,7 +424,6 @@ const data = {
 				"Logitech MX Anywhere 3 je najbolji najbolji kompaktni bežični miš. Elegantna dodatna oprema ima kotačić od nehrđajućeg čelika koji koristi najmoderniji elektromagnetski rub za blistavo brzo, ultra precizno pomicanje. Kompatibilan s PC-om i Macom, Anywhere 3 se može upariti s dva računala na kojima rade Windows i macOS i neprimjetno se prebaciti s njih. Njegova baterija može trajati mjesecima između punjenja, a ima USB-C konektor za punjenje. Možete ga naručiti u grafitnoj, blijedo sivoj i ružičastoj boji.",
 		},
 		{
-			_id: "35",
 			name: "Bose Portable Home Speaker",
 			category: "Smart Home oprema",
 			image: "/images/p35.jpg",
@@ -471,7 +436,6 @@ const data = {
 				"Bose prijenosni kućni zvučnik ima izvrstan zvuk i impresivnu svestranost. Opremljen Wi-Fi-jem, uređaj je kompatibilan s glasovnim naredbama Amazon Alexa i Google Assistant, kao i bežičnom reprodukcijom Apple AirPlay 2. Uz Bluetooth povezivost, prijenosni kućni zvučnik također je idealan za upotrebu u pokretu. Zvučnik može trajati do 12 sati između punjenja, a za punjenje baterije koristi USB-C konektor.",
 		},
 		{
-			_id: "36",
 			name: "Google Nest Hub Max Smart Display",
 			category: "Smart Home oprema",
 			image: "/images/p36.jpg",
@@ -484,7 +448,6 @@ const data = {
 				"Naprava ima živahni 10-inčni zaslon osjetljiv na dodir, dvojac visokokvalitetnih stereo zvučnika i ugrađenu pametnu kameru Nest. Potonji je zgodan za obavljanje video poziva Google Duo i za nadzor vašeg doma dok vas nema. Uz sve to, Nest Hub Max ujedno je i moćno središte povezanog doma - kompatibilno je s mnoštvom najpopularnijih proizvoda pametne kuće danas.",
 		},
 		{
-			_id: "37",
 			name: "Leatherman FREE P2 Multitool",
 			category: "Oprema",
 			image: "/images/p37.jpg",
@@ -497,7 +460,6 @@ const data = {
 				"FREE P2 multitool tvrtke Leatherman ima revolucionarnu novu tehnologiju koja korisnicima omogućuje lak pristup njegovih 19 ugrađenih alata, čak i jednom rukom. Ugrađeni alati uključuju kliješta, odstranjivač žice i rezače te kvartet odvijača, između ostalog. Kao i svi Leathermanovi proizvodi, i FREE P2 ima robusno 25-godišnje jamstvo. Multitool dolazi u paketu s čvrstom ovojnicom za nošenje.",
 		},
 		{
-			_id: "38",
 			name: "Peak Design Everyday Zip Backpack",
 			category: "Oprema",
 			image: "/images/p38.jpg",
@@ -510,7 +472,6 @@ const data = {
 				"Najnovija inačica ruksaka Peak Design Everyday najbolja je do sada. Nužan pri radu za prijenosnike u pokretu, dodatak ima elegantan dizajn, potpuno prilagodljiv interijer i omotani patent zatvarač. S maksimalnim kapacitetom od 15 litara, ruksak ima dovoljno mjesta za 13-inčno prijenosno računalo (tu je i namjenski rukav) uz vaše ostale svakodnevne predmete. Dostupna je i veća verzija od 20 litara s više prostora. Ruksak je izuzetno izrađen i otporan na vremenske utjecaje, izrađen od 100% reciklirane tkanine. Ruksak možete naručiti u četiri boje: jasen, crna, plava i kost.",
 		},
 		{
-			_id: "39",
 			name: "FiiO M6 MP3 Player",
 			category: "Elektronika",
 			image: "/images/p39.jpg",
@@ -523,7 +484,6 @@ const data = {
 				"FiiO M6 je elegantan i sadržajan MP3 uređaj s vrhunskim zvučnim performansama. Potonje dolazi zahvaljujući Samsung čipsetu i visokokvalitetnim audio komponentama. Stalak M6 ima 3,2-inčni zaslon osjetljiv na dodir i do 13 sati trajanja baterije između punjenja. Pokreće prilagođenu verziju Androida, tako da između ostalih možete instalirati aplikacije popularnih streaming usluga poput Spotify, Tidal i Qobuz.",
 		},
 		{
-			_id: "40",
 			name: "Nintendo Switch Lite Handheld Gaming Console",
 			category: "Elektronika",
 			image: "/images/p40.jpg",
@@ -536,7 +496,6 @@ const data = {
 				"Switch Lite, kao što mu i samo ime govori, cjenovno je povoljnija varijanta Nintendove popularne igraće konzole. Naprava je dizajnirana isključivo za ručno igranje. Ima lagani dizajn i kompaktniji 5,5-inčni zaslon od uobičajenog Switcha. Lite možete naručiti u nekoliko privlačnih boja - žutoj, tirkiznoj i sivoj. Važno je napomenuti da je Switch Lite kompatibilan samo s igrama koje podržavaju ručni način rada.",
 		},
 		{
-			_id: "41",
 			name: "Ridge Slim Aluminum Wallet",
 			category: "Oprema",
 			image: "/images/p41.jpg",
@@ -549,7 +508,6 @@ const data = {
 				"Ovaj minimalistički Ridgeov novčanik ima otisak kreditne ili osobne iskaznice, pa je kompaktan koliko i dobiva. Ova posebna varijanta izrađena je pomoću šarenih aluminijskih ploča i elastičnih materijala. Omogućuju mu da se proširi tako da stane do 12 kartica, kao i nešto novca. Novčanik također ima RFID-blokirajuće materijale koji štite vaše kartice. Ridge podržava svoje stvaranje doživotnim jamstvom.",
 		},
 		{
-			_id: "42",
 			name: "ZenPod Case for Apple AirPods With a Built-In Fidget Spinner",
 			category: "Oprema",
 			image: "/images/p42.jpg",
@@ -562,7 +520,6 @@ const data = {
 				"ZenPod kućište tvrtke Air Vinyl Design jedan je od naših omiljenih dodataka za Apple AirPods. Uz ugrađeni fidget spinner, kućište dodaje zabavnu, novu razinu interakcije s jednim od vaših omiljenih uređaja. Futrola je izrađena od visokokvalitetne prave kože. Možete ga naručiti u crnoj boji sa srebrnim ili crnim fidget spinner-om ili u smeđoj boji sa srebrnom vrtiljkom.",
 		},
 		{
-			_id: "43",
 			name: "Satechi Dual Smart Outlet",
 			category: "Smart Home oprema",
 			image: "/images/p43.jpg",
@@ -575,7 +532,6 @@ const data = {
 				"Ova dvostruka pametna utičnica tvrtke Satechi ima kompatibilnost Apple HomeKit, što vam omogućuje upravljanje povezanim uređajima pomoću Siri glasovnih naredbi, kao i putem vašeg iPhonea, iPada, Maca ili Apple Watcha. Omogućit će vam i praćenje potrošnje energije u stvarnom vremenu dok su izvan kuće.",
 		},
 		{
-			_id: "44",
 			name: "Apple Watch Series 6",
 			category: "Satovi",
 			image: "/images/p44.jpg",
@@ -588,7 +544,6 @@ const data = {
 				"Apple Watch Series 6 donosi brojne nadogradnje hardvera, zadržavajući isti izgled kao i njegov prethodnik. Najuzbudljiviji dijelovi uključuju senzor za kisik u krvi, kao i osjetno brži čip. Naravno, najnoviji Appleov pametni sat ima vrlo precizan senzor brzine otkucaja srca koji podržava EKG, uvijek uključeni Retina zaslon i opcionalno povezivanje sa staničnom mrežom.",
 		},
 		{
-			_id: "45",
 			name: "Roborock S6 Pure Robot Vacuum",
 			category: "Smart Home oprema",
 			image: "/images/p45.jpg",
@@ -601,7 +556,6 @@ const data = {
 				"Roborock S6 Pure je robotski usisavač s izvrsnim mogućnostima čišćenja, impresivno tihim radom i vrhunskom tehnologijom mapiranja soba. Za razliku od suparnika, robot može čak i brisati podove. Možete odabrati prostorije za čišćenje usisavača putem mobilne aplikacije. Roborock S6 također je kompatibilan s glasovnim naredbama Amazon Alexa i Google Assistant.",
 		},
 		{
-			_id: "46",
 			name: "Drop CTRL Mechanical Keyboard",
 			category: "Tipkovnice",
 			image: "/images/p46.jpg",
@@ -614,7 +568,6 @@ const data = {
 				"Mehanička tipkovnica Drop CTRL kompaktnog je dizajna s rasporedom od 87 tipki koji jamči iskustvo tipkanja bez ometanja. Ima čvrst okvir od strojno izrađenog aluminija, a možete ga naručiti uz širok izbor mehaničkih prekidača. Ima zamjenjive mehaničke prekidače i poklopce, programabilne značajke i potpuno prilagodljivo RGB pozadinsko osvjetljenje za svoje tipke i okvir.",
 		},
 		{
-			_id: "47",
 			name: "GoPro HERO9 Black Action Camera",
 			category: "Oprema",
 			image: "/images/p47.jpg",
@@ -627,7 +580,6 @@ const data = {
 				"Kompaktna, još jednostavnija za rad zahvaljujući prednjem LCD zaslonu i potpuno praktičnim značajkama povezivanja. Može snimiti 5K video, oštre fotografije od 20 MP, kao i uživo prenositi vaše avanture u Full HD rezoluciji.",
 		},
 		{
-			_id: "48",
 			name: "Furbo Dog Camera With Treat-Tossing Technology",
 			category: "Oprema",
 			image: "/images/p48.jpg",
@@ -640,7 +592,6 @@ const data = {
 				"Elegantna kamera za pse Furbo ima Wi-Fi povezivost koja omogućava korisnicima da prate svoje ljubimce putem aplikacije za pametni telefon. Sposoban je za snimanje ili strujanje Full HD videozapisa putem širokokutne leće. Naprava također može dijeliti poslastice - možete ih rasporediti izravno sa pametnog telefona dok ste odsutni. Ostale ključne značajke Furboa uključuju dvosmjernu audio povezivost, senzor lajanja i čvrst drveni poklopac.",
 		},
 		{
-			_id: "49",
 			name: "Fossil Collider HR Hybrid Smartwatch",
 			category: "Satovi",
 			image: "/images/p49.jpg",
@@ -653,7 +604,6 @@ const data = {
 				"Na brzinu, Fossil Collider HR izgleda poput klasičnog sata s kronografom s mehaničkim kazaljkama i rasporedom s tri tipke. Ali s ugrađenim uvijek uključenim zaslonom i senzorom otkucaja srca, hibridni pametni sat podjednako je obilježen i elegantan. Collider HR bez napora će isporučivati ​​obavijesti s vašeg telefona, kao i pratiti vaše aktivnosti, uz brojne druge funkcije. Njegovi su gumbi prilagodljivi putem Fosilove intuitivne mobilne aplikacije. Sat od nehrđajućeg čelika vodootporan je do 50 metara.",
 		},
 		{
-			_id: "50",
 			name: "Apple TV 4K Streaming Console",
 			category: "Smart Home oprema",
 			image: "/images/p50.jpg",
@@ -666,7 +616,6 @@ const data = {
 				"Apple TV 4K i dalje je najbolji streaming uređaj. Podržava ne samo UHD rezoluciju, već i HDR10, Dolby Vision i Dolby Atmos standarde za još obimnije iskustvo gledanja. Možete reproducirati 4K filmove s iTunes, Netflix i Amazon Prime, između ostalog.",
 		},
 		{
-			_id: "51",
 			name: "Samsung T7 Touch Prijenosni SSD",
 			category: "Solid State diskovi",
 			image: "/images/p51.jpg",
@@ -680,7 +629,6 @@ const data = {
 		},
 
 		{
-			_id: "52",
 			name: "BookArc Stalak za MacBook",
 			category: "Oprema",
 			image: "/images/p52.jpg",
@@ -694,7 +642,6 @@ const data = {
 		},
 
 		{
-			_id: "54",
 			name: "Rugged Protecive Case for Apple AirPods Pro",
 			category: "Slušalice",
 			image: "/images/p54.jpg",
@@ -708,7 +655,6 @@ const data = {
 		},
 
 		{
-			_id: "55",
 			name: "HYPERBOOM Waterproof Bluetooth Speaker",
 			category: "Zvučnici",
 			image: "/images/p55.jpg",
@@ -722,7 +668,6 @@ const data = {
 		},
 
 		{
-			_id: "56",
 			name: "FitBit Charge 4 Fitness Charger",
 			category: "Oprema",
 			image: "/images/p56.jpg",
@@ -736,7 +681,6 @@ const data = {
 		},
 
 		{
-			_id: "53",
 			name: "Optix MAG272CQR Curved Gaming Monitor",
 			category: "Monitori",
 			image: "/images/p53.jpg",
@@ -750,7 +694,6 @@ const data = {
 		},
 
 		{
-			_id: "57",
 			name: "SRS-XB33 Extra Bass Bluetooth Speaker",
 			category: "Zvučnici",
 			image: "/images/p57.jpg",
@@ -764,7 +707,6 @@ const data = {
 		},
 
 		{
-			_id: "58",
 			name: "Wireless Earphones",
 			category: "Slušalice",
 			image: "/images/p58.jpg",
@@ -778,7 +720,6 @@ const data = {
 		},
 
 		{
-			_id: "59",
 			name: "Pixel 4a Android Smartphone",
 			category: "Smartphone",
 			image: "/images/p59.jpg",
@@ -792,7 +733,6 @@ const data = {
 		},
 
 		{
-			_id: "60",
 			name: "Clean Contact Carabiner",
 			category: "Oprema",
 			image: "/images/p60.jpg",
@@ -806,7 +746,6 @@ const data = {
 		},
 
 		{
-			_id: "61",
 			name: "JBL Club 950 Wireless Headphones",
 			category: "Slušalice",
 			image: "/images/p61.jpg",
@@ -820,7 +759,6 @@ const data = {
 		},
 
 		{
-			_id: "62",
 			name: "USB-C Fast Charge Wall Charger",
 			category: "Baterije i punjači",
 			image: "/images/p62.jpg",
@@ -834,7 +772,6 @@ const data = {
 		},
 
 		{
-			_id: "63",
 			name: "Fitness Watch",
 			category: "Satovi",
 			image: "/images/p63.jpg",
@@ -848,7 +785,6 @@ const data = {
 		},
 
 		{
-			_id: "64",
 			name: "Wind Resistant Umbrella",
 			category: "Oprema",
 			image: "/images/p64.jpg",
@@ -862,7 +798,6 @@ const data = {
 		},
 
 		{
-			_id: "65",
 			name: "USB-C Earbuds",
 			category: "Slušalice",
 			image: "/images/p65.jpg",
@@ -876,7 +811,6 @@ const data = {
 		},
 
 		{
-			_id: "66",
 			name: "30,000 mAh Portable Battery Pack",
 			category: "Baterije i punjači",
 			image: "/images/p66.jpg",
@@ -890,7 +824,6 @@ const data = {
 		},
 
 		{
-			_id: "67",
 			name: "G915 TKL Lightspeed Wireless Mechanical Gaming Keyboard",
 			category: "Tipkovnice",
 			image: "/images/p67.jpg",
@@ -904,7 +837,6 @@ const data = {
 		},
 
 		{
-			_id: "68",
 			name: "Video Doorbell",
 			category: "Smart House oprema",
 			image: "/images/p68.jpg",
@@ -918,7 +850,6 @@ const data = {
 		},
 
 		{
-			_id: "69",
 			name: "Aluminium Multi-Port USB-C Adapter",
 			category: "Oprema",
 			image: "/images/p69.jpg",
@@ -932,7 +863,6 @@ const data = {
 		},
 
 		{
-			_id: "70",
 			name: "ScreenDr Professional Screen Cleaning Kit",
 			category: "Oprema",
 			image: "/images/p70.jpg",
@@ -946,7 +876,6 @@ const data = {
 		},
 
 		{
-			_id: "71",
 			name: "Pixelbook Go Lightweight Chromebook",
 			category: "Laptopi",
 			image: "/images/p71.jpg",
@@ -960,7 +889,6 @@ const data = {
 		},
 
 		{
-			_id: "72",
 			name: "StormBox Micro Waterproof Bluetooth Speaker",
 			category: "Zvučnici",
 			image: "/images/p72.jpg",
@@ -974,7 +902,6 @@ const data = {
 		},
 
 		{
-			_id: "73",
 			name: "Arctis 1 Wireless Gaming Headset",
 			category: "Slušalice",
 			image: "/images/p73.jpg",
@@ -988,7 +915,6 @@ const data = {
 		},
 
 		{
-			_id: "74",
 			name: "Pulse 4 Waterproof Bluetooth Speaker",
 			category: "Zvučnici",
 			image: "/images/p74.jpg",
@@ -1002,7 +928,6 @@ const data = {
 		},
 
 		{
-			_id: "75",
 			name: "Soundcore Wakey Wireless Speaker With Alarm Clock",
 			category: "Zvučnici",
 			image: "/images/p75.jpg",
@@ -1016,7 +941,6 @@ const data = {
 		},
 
 		{
-			_id: "76",
 			name: "WF-XB700 Extra Bass Wireless Earbuds",
 			category: "Slušalice",
 			image: "/images/p76.jpg",
@@ -1030,7 +954,6 @@ const data = {
 		},
 
 		{
-			_id: "77",
 			name: "USB-C Magnetic Charging Dock for Apple Watch",
 			category: "Oprema",
 			image: "/images/p77.jpg",
@@ -1044,7 +967,6 @@ const data = {
 		},
 
 		{
-			_id: "78",
 			name: "Surface Laptop Go",
 			category: "Laptopi",
 			image: "/images/p78.jpg",
@@ -1058,7 +980,6 @@ const data = {
 		},
 
 		{
-			_id: "79",
 			name: "Kevlar USB-C to Lightning Cable",
 			category: "Baterije i punjači",
 			image: "/images/p79.jpg",
@@ -1072,7 +993,6 @@ const data = {
 		},
 
 		{
-			_id: "80",
 			name: "Walkman NW-A105 MP3 Player",
 			category: "Elektronika",
 			image: "/images/p80.jpg",
@@ -1086,7 +1006,6 @@ const data = {
 		},
 
 		{
-			_id: "81",
 			name: "WeMo Smart Plug",
 			category: "Smart Home oprema",
 			image: "/images/p81.jpg",
@@ -1100,7 +1019,6 @@ const data = {
 		},
 
 		{
-			_id: "82",
 			name: "S1 Stealth Phone Pocket",
 			category: "Oprema",
 			image: "/images/p82.jpg",
@@ -1114,7 +1032,6 @@ const data = {
 		},
 
 		{
-			_id: "83",
 			name: "VII Series Power Outlet",
 			category: "Baterije i punjači",
 			image: "/images/p83.jpg",
@@ -1128,7 +1045,6 @@ const data = {
 		},
 
 		{
-			_id: "84",
 			name: "WAKE case for iPhone 12 Pro",
 			category: "Oprema",
 			image: "/images/p84.jpg",
@@ -1142,7 +1058,6 @@ const data = {
 		},
 
 		{
-			_id: "85",
 			name: "AT-LP60XBT Turntable",
 			category: "Zvučnici",
 			image: "/images/p85.jpg",
@@ -1156,7 +1071,6 @@ const data = {
 		},
 
 		{
-			_id: "86",
 			name: "Kasa Smart Wi-Fi Power Strip",
 			category: "Smart Home oprema",
 			image: "/images/p86.jpg",
@@ -1170,7 +1084,6 @@ const data = {
 		},
 
 		{
-			_id: "87",
 			name: "iPad Pro",
 			category: "Tableti",
 			image: "/images/p87.jpg",
@@ -1184,7 +1097,6 @@ const data = {
 		},
 
 		{
-			_id: "88",
 			name: "MW07 Plus True Wireless Earphones",
 			category: "Slušalice",
 			image: "/images/p88.jpg",
@@ -1198,7 +1110,6 @@ const data = {
 		},
 
 		{
-			_id: "89",
 			name: "Shield TV Streaming Player",
 			category: "Smart Home oprema",
 			image: "/images/p89.jpg",
@@ -1212,7 +1123,6 @@ const data = {
 		},
 
 		{
-			_id: "90",
 			name: "Elite 45h Wireless Headphones",
 			category: "Slušalice",
 			image: "/images/p90.jpg",
@@ -1226,7 +1136,6 @@ const data = {
 		},
 
 		{
-			_id: "91",
 			name: "Powerstation Plus XL Wireless Battery Pack",
 			category: "Baterije i punjači",
 			image: "/images/p91.jpg",
@@ -1240,7 +1149,6 @@ const data = {
 		},
 
 		{
-			_id: "92",
 			name: "MX Keys Wireless Keyboard",
 			category: "Oprema",
 			image: "/images/p92.jpg",
@@ -1254,7 +1162,6 @@ const data = {
 		},
 
 		{
-			_id: "93",
 			name: "Express HD Streaming Media Player",
 			category: "Smart Home oprema",
 			image: "/images/p93.jpg",
@@ -1268,7 +1175,6 @@ const data = {
 		},
 
 		{
-			_id: "94",
 			name: "V11 Outsize cordless vacuum",
 			category: "Smart Home oprema",
 			image: "/images/p94.jpg",
@@ -1282,7 +1188,6 @@ const data = {
 		},
 
 		{
-			_id: "95",
 			name: "Quantum 100 Wired Gaming Headphones",
 			category: "Slušalice",
 			image: "/images/p95.jpg",
@@ -1296,7 +1201,6 @@ const data = {
 		},
 
 		{
-			_id: "96",
 			name: "M1 Maverick Bifold Wallet",
 			category: "Oprema",
 			image: "/images/p96.jpg",
@@ -1310,7 +1214,6 @@ const data = {
 		},
 
 		{
-			_id: "97",
 			name: "Hue White and Color LED Ambiance Lightning Kit",
 			category: "Smart Home oprema",
 			image: "/images/p97.jpg",
@@ -1324,7 +1227,6 @@ const data = {
 		},
 
 		{
-			_id: "98",
 			name: "Brass Pen",
 			category: "Oprema",
 			image: "/images/p98.jpg",
@@ -1338,7 +1240,6 @@ const data = {
 		},
 
 		{
-			_id: "99",
 			name: "Piston Fit Wired Airbuds",
 			category: "Slušalice",
 			image: "/images/p99.jpg",
@@ -1352,7 +1253,6 @@ const data = {
 		},
 
 		{
-			_id: "100",
 			name: "Q80T Series QLED 4K Smart TV",
 			category: "Smart Home oprema",
 			image: "/images/p100.jpg",
