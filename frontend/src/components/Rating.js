@@ -6,7 +6,11 @@ export default function Rating(props) {
 	return (
 		<span className="rating">
 			{Stars(rating)}
-			<div>{numReviews + " recenzija"}</div>
+			<div>
+				{numReviews === 2 || numReviews === 3 || numReviews === 4
+					? numReviews + " recenzije"
+					: numReviews + " recenzija"}
+			</div>
 		</span>
 	);
 }

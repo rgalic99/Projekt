@@ -3,6 +3,8 @@ import React from "react";
 const Stars = (props) => {
 	let stars = [];
 	let counter = 0;
+	props = Number(props.toFixed(2));
+
 	for (let i = 1; i <= props; i++) {
 		stars.push(<i className="fa fa-star" key={counter}></i>);
 		counter++;

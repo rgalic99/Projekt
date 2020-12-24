@@ -118,16 +118,15 @@ a.logo {
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
-	padding: 1rem;
+	overflow-wrap: break-word;
 }
 
 .row.center {
 	justify-content: center;
 }
 .row.top {
-	flex-wrap: nowrap;
 	align-items: flex-start;
 }
 .col-1 {
@@ -138,7 +137,10 @@ a.logo {
 }
 
 .min-30 {
-	min-width: 30 rem;
+	width: 40rem;
+}
+.pricetag {
+	width: 8rem;
 }
 
 /* Image */
@@ -235,7 +237,7 @@ img.large {
 /* Rating */
 .rating {
 	position: absolute;
-	bottom: 5rem;
+	bottom: 3.7rem;
 }
 .rating span {
 	color: #f0c040;
@@ -372,4 +374,19 @@ label::before {
 .checkout-steps > div.active {
 	border-top-color: orange;
 	color: orange;
+}
+/*Place Order*/
+.placeOrder {
+	border: 0.1rem #c0c0c0 solid;
+	background-color: #f8f8f8;
+	border-radius: 0.5rem;
+	margin: 1rem;
+}
+.placeOrder-body {
+	padding: 1rem;
+	word-wrap: break-word;
+	text-align: auto;
+}
+.placeOrder-body > * {
+	margin-bottom: 0.5rem;
 }

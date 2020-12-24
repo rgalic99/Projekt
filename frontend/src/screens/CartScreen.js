@@ -37,7 +37,7 @@ export default function CartScreen(props) {
 					<ul>
 						{cartItems.map((item) => (
 							<li key={item.product}>
-								<div className="row">
+								<div className="placeOrder placeOrder-body row min-30-parent">
 									<div>
 										<img
 											src={item.image}
@@ -64,7 +64,10 @@ export default function CartScreen(props) {
 											))}
 										</select>
 									</div>
-									<div>{item.price}kn</div>
+									<div className="pricetag">
+										{item.price.toFixed(0) * item.qty}
+										kn
+									</div>
 									<div>
 										<button
 											type="button"
@@ -94,7 +97,9 @@ export default function CartScreen(props) {
 								) : (
 									<span> proizvoda</span>
 								)}
-								) : {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}kn
+								) :{" "}
+								{cartItems.reduce((a, c) => a + c.price * c.qty, 0).toFixed(0)}
+								kn
 							</h2>
 						</li>
 						<li>
