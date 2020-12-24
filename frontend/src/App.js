@@ -8,6 +8,7 @@ import KontaktScreen from "./screens/KontaktScreen";
 import ProductScreen from "./screens/ProductScreen";
 import SigninScreen from "./screens/SigninScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import ShippingAdressScreen from "./screens/ShippingAdressScreen";
 function App() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
@@ -51,12 +52,13 @@ function App() {
 					</div>
 				</header>
 				<main className="main">
+					<Route path="/" component={HomeScreen} exact></Route>
 					<Route path="/product/:id" component={ProductScreen}></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
-					<Route path="/" component={HomeScreen} exact></Route>
-					<Route path="/signin" component={SigninScreen} exact></Route>
-					<Route path="/register" component={RegisterScreen} exact></Route>
-					<Route path="/kontakt" component={KontaktScreen} exact></Route>
+					<Route path="/shipping" component={ShippingAdressScreen}></Route>
+					<Route path="/signin" component={SigninScreen}></Route>
+					<Route path="/register" component={RegisterScreen}></Route>
+					<Route path="/kontakt" component={KontaktScreen}></Route>
 				</main>
 				<footer className="row center">
 					<a href="/kontakt">Sva prava pridržana© Tech - @ - Tack 2020</a>
