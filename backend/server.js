@@ -19,6 +19,9 @@ mongoose.connect("mongodb://localhost/tech-attack" || process.env.MONGODB_URL, {
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
+app.get("/api/config/paypal", (req, res) => {
+	res.send(process.env.PAYPAL_CLIENT_ID || "sb");
+});
 app.get("/api/users", (req, res) => {
 	res.send(data.users);
 });
