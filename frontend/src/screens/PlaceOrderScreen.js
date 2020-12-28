@@ -24,7 +24,7 @@ export default function PlaceOrderScreen(props) {
 		cart.cartItems.reduce((a, c) => a + c.qty * c.price.toFixed(0), 0)
 	);
 	const PDV = Number(process.env.PDV) || 0.25;
-	cart.shippingPrice = cart.itemsPrice > 500 ? toPrice(0) : toPrice(10);
+	cart.shippingPrice = cart.itemsPrice >= 500 ? toPrice(0) : toPrice(10);
 	cart.taxPrice = toPrice(PDV * cart.itemsPrice);
 	cart.totalPrice = cart.itemsPrice + cart.shippingPrice;
 	cart.itemsPrice *= 1 - PDV;
