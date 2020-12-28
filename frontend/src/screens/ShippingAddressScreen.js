@@ -3,15 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { saveShippingAddress } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
 
-export default function ShippingAdressScreen(props) {
+export default function ShippingAddressScreen(props) {
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
+	const cart = useSelector((state) => state.cart);
+	const { shippingAddress } = cart;
 	if (!userInfo) {
 		props.history.push("/signin");
 	}
 	const [fullName, setFullName] = useState("");
 	const [address, setAddress] = useState("");
-	const [city, setCity] = useState("");
+	const [city, setCity] = useState(shippingAddress.city);
 	const [postalCode, setPostalCode] = useState("");
 	const [country, setCountry] = useState("");
 	const dispatch = useDispatch();
@@ -41,7 +43,7 @@ export default function ShippingAdressScreen(props) {
 					></input>
 				</div>
 				<div>
-					<label htmlFor="address">Address</label>
+					<label htmlFor="address">Adresa</label>
 					<input
 						type="text"
 						id="address"
@@ -52,7 +54,7 @@ export default function ShippingAdressScreen(props) {
 					></input>
 				</div>
 				<div>
-					<label htmlFor="city">City</label>
+					<label htmlFor="city">Grad</label>
 					<input
 						type="text"
 						id="city"

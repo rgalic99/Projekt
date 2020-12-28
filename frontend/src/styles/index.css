@@ -6,7 +6,8 @@ html {
 }
 
 body {
-	font: 1.6rem Helvetica;
+	font: 1.6rem Segoe UI;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	height: 100vh;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -278,9 +279,14 @@ footer a {
 	background-color: white;
 }
 
-.alert-faliure {
-	color: red;
-	background-color: white;
+.alert-failed-action {
+	color: rgb(255, 56, 56);
+	background-color: rgb(246, 190, 190);
+}
+
+.alert-success-action {
+	color: rgb(46, 158, 27);
+	background-color: rgb(160, 246, 190);
 }
 
 .alert-failed-login {

@@ -19,7 +19,7 @@ export default function HomeScreen(props) {
 			{loading ? (
 				<LoadingBox></LoadingBox>
 			) : error ? (
-				<MessageBox variant="faliure">{Error}</MessageBox>
+				<MessageBox variant="failed-action">{error}</MessageBox>
 			) : (
 				<div className="row center">
 					{products.map((product) => (

@@ -8,7 +8,7 @@ import KontaktScreen from "./screens/KontaktScreen";
 import ProductScreen from "./screens/ProductScreen";
 import SigninScreen from "./screens/SigninScreen";
 import RegisterScreen from "./screens/RegisterScreen";
-import ShippingAdressScreen from "./screens/ShippingAdressScreen";
+import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
@@ -58,7 +58,7 @@ function App() {
 					<Route path="/" component={HomeScreen} exact></Route>
 					<Route path="/product/:id" component={ProductScreen}></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
-					<Route path="/shipping" component={ShippingAdressScreen}></Route>
+					<Route path="/shipping" component={ShippingAddressScreen}></Route>
 					<Route path="/payment" component={PaymentMethodScreen}></Route>
 					<Route path="/placeorder" component={PlaceOrderScreen}></Route>
 					<Route path="/order/:id" component={OrderScreen}></Route>

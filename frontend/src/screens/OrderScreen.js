@@ -16,7 +16,7 @@ export default function OrderScreen(props) {
 	return loading ? (
 		<LoadingBox></LoadingBox>
 	) : error ? (
-		<MessageBox variant="error">{error}</MessageBox>
+		<MessageBox variant="failed-action">{error}</MessageBox>
 	) : (
 		<div>
 			<h1>Narudžba br. {order._id}</h1>
@@ -34,11 +34,13 @@ export default function OrderScreen(props) {
 									{order.shippingAddress.country}
 								</p>
 								{order.isDelivered ? (
-									<MessageBox variant="success">
+									<MessageBox variant="success-action">
 										Dostavljeno: {order.deliveredAt}
 									</MessageBox>
 								) : (
-									<MessageBox variant="error">Nije dostavljeno</MessageBox>
+									<MessageBox variant="failed-action">
+										Nije dostavljeno
+									</MessageBox>
 								)}
 							</div>
 						</li>
@@ -49,11 +51,11 @@ export default function OrderScreen(props) {
 									<strong>Način plaćanja:</strong> {order.paymentMethod}
 								</p>
 								{order.isPaid ? (
-									<MessageBox variant="success">
+									<MessageBox variant="success-action">
 										Plaćeno: {order.paidAt}
 									</MessageBox>
 								) : (
-									<MessageBox variant="danger">Nije plaćeno</MessageBox>
+									<MessageBox variant="failed-action">Nije plaćeno</MessageBox>
 								)}
 							</div>
 						</li>

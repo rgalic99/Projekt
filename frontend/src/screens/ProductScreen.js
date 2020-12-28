@@ -24,7 +24,7 @@ export default function ProductScreen(props) {
 			{loading ? (
 				<LoadingBox></LoadingBox>
 			) : error ? (
-				<MessageBox variant="faliure">{Error}</MessageBox>
+				<MessageBox variant="failed-action">{Error}</MessageBox>
 			) : (
 				<div>
 					<Link to="/">⬅Povratak na rezultate</Link>
