@@ -6,14 +6,12 @@ import CheckoutSteps from "../components/CheckoutSteps";
 export default function ShippingAddressScreen(props) {
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
-	const cart = useSelector((state) => state.cart);
-	const { shippingAddress } = cart;
 	if (!userInfo) {
 		props.history.push("/signin");
 	}
 	const [fullName, setFullName] = useState("");
 	const [address, setAddress] = useState("");
-	const [city, setCity] = useState(shippingAddress.city);
+	const [city, setCity] = useState("");
 	const [postalCode, setPostalCode] = useState("");
 	const [country, setCountry] = useState("");
 	const dispatch = useDispatch();
