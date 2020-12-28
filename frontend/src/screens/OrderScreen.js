@@ -29,7 +29,7 @@ export default function OrderScreen(props) {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		const addPayPalScript = async () => {
-			const { data } = await Axios.get("api/config/paypal");
+			const { data } = await Axios.get("/api/config/paypal");
 			const script = document.createElement("script");
 			script.type = "text/javascript";
 			script.src = `https://www.paypal.com/sdk/ks?client-id=${data}`;
@@ -77,15 +77,17 @@ export default function OrderScreen(props) {
 									{order.shippingAddress.postalCode},
 									{order.shippingAddress.country}
 								</p>
-								{order.isDelivered ? (
-									<MessageBox variant="success-action">
-										Dostavljeno: {order.deliveredAt}
-									</MessageBox>
-								) : (
-									<MessageBox variant="failed-action">
-										Nije dostavljeno
-									</MessageBox>
-								)}
+								<>
+									{order.isDelivered ? (
+										<MessageBox variant="success-action">
+											Dostavljeno: {order.deliveredAt}
+										</MessageBox>
+									) : (
+										<MessageBox variant="failed-action">
+											Nije dostavljeno
+										</MessageBox>
+									)}
+								</>
 							</div>
 						</li>
 						<li>
