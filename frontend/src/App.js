@@ -32,10 +32,17 @@ function App() {
 						<Link to="/"> Tech - @ - Tack </Link>
 					</div>
 					<div className="header-links">
+						<Link to="/cart" className="cart">
+							Košarica👜
+							{cartItems.length > 0 && (
+								<span className="badge">{cartItems.length}</span>
+							)}
+						</Link>
 						{userInfo ? (
 							<div className="dropdown">
-								<Link to="#" className="fa fa-caret-down">
+								<Link to="#">
 									{userInfo.name}
+									<i className="fa fa-caret-down"></i>
 								</Link>
 								<ul className="dropdown-content">
 									<li>
@@ -56,13 +63,27 @@ function App() {
 								Prijava 🖊
 							</Link>
 						)}
-
-						<Link to="/cart" className="cart">
-							Košarica👜
-							{cartItems.length > 0 && (
-								<span className="badge">{cartItems.length}</span>
-							)}
-						</Link>
+						{userInfo && userInfo.isAdmin && (
+							<div className="dropdown">
+								<Link to="#admin">
+									Admin <i className="fa fa-caret-down"></i>
+								</Link>
+								<ul className="dropdown-content">
+									<li>
+										<Link to="/dashboard"></Link>
+									</li>
+									<li>
+										<Link to="/productlist">Proizvodi</Link>
+									</li>
+									<li>
+										<Link to="/orderlist">Narudžbe</Link>
+									</li>
+									<li>
+										<Link to="/userlist">Korisnici</Link>
+									</li>
+								</ul>
+							</div>
+						)}
 					</div>
 				</header>
 				<main className="main">
