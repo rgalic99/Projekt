@@ -13,6 +13,7 @@ import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 function App() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
@@ -36,6 +37,9 @@ function App() {
 									{userInfo.name}
 								</Link>
 								<ul className="dropdown-content">
+									<li>
+										<Link to="/profile">Profil</Link>
+									</li>
 									<li>
 										<Link to="/orderhistory">Narudžbe</Link>
 									</li>
@@ -72,6 +76,7 @@ function App() {
 					<Route path="/register" component={RegisterScreen}></Route>
 					<Route path="/orderhistory" component={OrderHistoryScreen}></Route>
 					<Route path="/kontakt" component={KontaktScreen}></Route>
+					<Route path="/profile" component={ProfileScreen}></Route>
 				</main>
 				<footer className="row center">
 					<a href="/kontakt">Sva prava pridržana© Tech - @ - Tack 2020</a>
