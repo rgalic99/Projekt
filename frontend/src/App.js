@@ -90,7 +90,7 @@ function App() {
 				</header>
 				<main className="main">
 					<Route path="/" component={HomeScreen} exact></Route>
-					<Route path="/product/:id" component={ProductScreen}></Route>
+					<Route path="/product/:id" component={ProductScreen} exact></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
 					<Route path="/shipping" component={ShippingAddressScreen}></Route>
 					<Route path="/payment" component={PaymentMethodScreen}></Route>
