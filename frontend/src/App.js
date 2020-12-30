@@ -14,6 +14,7 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import PrivateRoute from "./components/PrivateRoute";
 function App() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
@@ -74,9 +75,15 @@ function App() {
 					<Route path="/order/:id" component={OrderScreen}></Route>
 					<Route path="/signin" component={SigninScreen}></Route>
 					<Route path="/register" component={RegisterScreen}></Route>
-					<Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+					<PrivateRoute
+						path="/orderhistory"
+						component={OrderHistoryScreen}
+					></PrivateRoute>
 					<Route path="/kontakt" component={KontaktScreen}></Route>
-					<Route path="/profile" component={ProfileScreen}></Route>
+					<PrivateRoute
+						path="/profile"
+						component={ProfileScreen}
+					></PrivateRoute>
 				</main>
 				<footer className="row center">
 					<a href="/kontakt">Sva prava pridržana© Tech - @ - Tack 2020</a>

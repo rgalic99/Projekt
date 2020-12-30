@@ -1,21 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { detailsUser } from "../actions/userActions";
+import { detailsUser, updateUserProfile } from "../actions/userActions";
 import MessageBox from "../components/MessageBox";
 import LoadingBox from "../components/LoadingBox";
+import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
 
 export default function ProfileScreen() {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [confirmPassword, setConfirmPassword] = useState("");
+
 	const dispatch = useDispatch();
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
 	const userDetails = useSelector((state) => state.userDetails);
 	const { loading, error, user } = userDetails;
+	const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
+	const {
+		success: successUpdate,
+		error: errorUpdate,
+		loading: loadingUpdate,
+	} = userUpdateProfile;
 
 	useEffect(() => {
-		dispatch(detailsUser(userInfo._id));
-	}, [dispatch, userInfo._id]);
+		if (!user) {
+			dispatch({ type: USER_UPDATE_PROFILE_RESET });
+			dispatch(detailsUser(userInfo._id));
+		} else {
+			setName(user.name);
+			setEmail(user.email);
+		}
+	}, [dispatch, userInfo._id, user]);
 	const submitHandler = (e) => {
 		e.preventDefault();
+		if (password !== confirmPassword) {
+			alert("Lozinke se ne poklapaju!");
+		} else {
+			dispatch(updateUserProfile({ userId: user._id, name, email, password }));
+		}
 	};
 	return (
 		<div>
@@ -29,13 +52,23 @@ export default function ProfileScreen() {
 					<MessageBox variant="failed-action">{error}</MessageBox>
 				) : (
 					<>
+						{loadingUpdate && <LoadingBox></LoadingBox>}
+						{errorUpdate && (
+							<MessageBox variant="failed-action">{errorUpdate}</MessageBox>
+						)}
+						{successUpdate && (
+							<MessageBox variant="success-action">
+								Profil uspješno ažuriran
+							</MessageBox>
+						)}
 						<div>
 							<label htmlFor="name">Ime</label>
 							<input
 								id="name"
 								type="text"
 								placeholder="Unesite ime"
-								value={user.name}
+								value={name}
+								onChange={(e) => setName(e.target.value)}
 							></input>
 						</div>
 						<div>
@@ -44,7 +77,8 @@ export default function ProfileScreen() {
 								id="email"
 								type="text"
 								placeholder="Unesite email"
-								value={user.email}
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 							></input>
 						</div>
 						<div>
@@ -53,6 +87,7 @@ export default function ProfileScreen() {
 								id="password"
 								type="text"
 								placeholder="Unesite lozinku"
+								onChange={(e) => setPassword(e.target.value)}
 							></input>
 						</div>
 						<div>
@@ -61,6 +96,7 @@ export default function ProfileScreen() {
 								id="pconfirmPassword"
 								type="text"
 								placeholder="Ponovno unesite lozinku"
+								onChange={(e) => setConfirmPassword(e.target.value)}
 							></input>
 						</div>
 						<div>
