@@ -6,6 +6,9 @@ import {
 	PRODUCT_LIST_FALIURE,
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_SUCCESS,
+	PRODUCT_UPDATE_FAILURE,
+	PRODUCT_UPDATE_REQUEST,
+	PRODUCT_UPDATE_SUCCESS,
 } from "../constants/productConstants";
 import {
 	PRODUCT_DETAILS_FALIURE,
@@ -64,5 +67,24 @@ export const createProduct = () => async (dispatch, getState) => {
 				? error.response.data.message
 				: error.message;
 		dispatch({ type: PRODUCT_CREATE_FAILURE, payload: message });
+	}
+};
+
+export const updateProduct = (product) => async (dispatch, getState) => {
+	dispatch({ type: PRODUCT_UPDATE_REQUEST, payload: product });
+	const {
+		userSignin: { userInfo },
+	} = getState();
+	try {
+		const { data } = await Axios.put(`/api/products/${product._id}`, product, {
+			headers: { Authorization: `Bearer ${userInfo.token}` },
+		});
+		dispatch({ type: PRODUCT_UPDATE_SUCCESS, payload: data });
+	} catch (error) {
+		const message =
+			error.response && error.response.data.message
+				? error.response.data.message
+				: error.message;
+		dispatch({ type: PRODUCT_UPDATE_FAILURE, error: message });
 	}
 };
