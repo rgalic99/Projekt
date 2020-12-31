@@ -9,3 +9,5 @@ frontend/public/kontakt.html
 frontend/package-lock.json
 frontend/README.md
 frontend/.gitignore
+
+/uploads/*.jpg
