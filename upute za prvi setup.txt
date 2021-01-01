@@ -1,14 +1,36 @@
 udjete u foleder di ce vam bit projekt
 otvorite ga u terminalu
 
+ako već nemate instalirajte git
+
 git init
 git remote add origin https://github.com/rgalic99/Projekt.git
 git clone https://github.com/rgalic99/Projekt.git
+
+ako vec nemate instalirajte node
 
 cd Projekt
 
 npm install
 
-svaki put kad nemate neki package da ne postoji navigirajte u projekt i udrite npm install
+cd /frontend
 
+npm install
+
+svaki put kad nemate neki package da ne postoji navigirajte u Projekt ili frontend i udrite npm install
+
+intalirajte mongodb
+
+obratite se Roku za admin account,env file i upload file
+
+kada idete raditi na necemu provjerite jeste li up to date tako da napravite git pull u Projekt
+
+kada idete neke promjene spremiti na git odete u Projekt folder i udrete
+
+git add .
+git commit -m "komentar sto ste napravili"
+
+mozete imati vise commitova ali kada zapravo zelite promjene staviti na github udrete
+
+git pull
 

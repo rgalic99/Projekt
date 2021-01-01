@@ -98,9 +98,7 @@ export const deleteProduct = (productId) => async (dispatch, getState) => {
 		userSignin: { userInfo },
 	} = getState();
 	try {
-		const { data } = Axios.delete(`/api/products/${productId}`, {
-			headers: { Authorization: `Bearer ${userInfo.token}` },
-		});
+		const { data } = await Axios.delete(`/api/products/${productId}`);
 		dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data });
 	} catch (error) {
 		const message =
