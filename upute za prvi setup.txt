@@ -1,4 +1,4 @@
-udjete u foleder di ce vam bit projekt
+uđete u folder di ce vam bit projekt
 otvorite ga u terminalu
 
 ako već nemate instalirajte git
@@ -6,6 +6,8 @@ ako već nemate instalirajte git
 git init
 git remote add origin https://github.com/rgalic99/Projekt.git
 git clone https://github.com/rgalic99/Projekt.git
+
+(mozda vam dode prompt da se prijavite u git to onda napravite)
 
 ako vec nemate instalirajte node
 
@@ -17,11 +19,19 @@ cd /frontend
 
 npm install
 
-svaki put kad nemate neki package da ne postoji navigirajte u Projekt ili frontend i udrite npm install
+svaki put kad nemate neki package da ne postoji navigirajte u Projekt ili frontend i udrite npm install (cd .. za nazad)
 
-intalirajte mongodb
+instalirajte mongodb (i mongodb compass koji je ukljucen s instalacijom)
 
-obratite se Roku za admin account,env file i upload file
+za pokretanje trebaju dva terminala, 
+	u prvom napisete npm start dok ste u Projekt folderu 
+	u drugom npm start dok ste u frontend folderu
+
+ako piše error 500 prvo morate otici na linkove (tj ako ne vidite nijedan proizvod)
+	-http://localhost:5000/api/products/seed
+	-http://localhost:5000/api/users/seed
+
+obratite se Roku za admin account,paypal sandbox account,env file i upload file
 
 kada idete raditi na necemu provjerite jeste li up to date tako da napravite git pull u Projekt
 
@@ -32,5 +42,5 @@ git commit -m "komentar sto ste napravili"
 
 mozete imati vise commitova ali kada zapravo zelite promjene staviti na github udrete
 
-git pull
+git push
 

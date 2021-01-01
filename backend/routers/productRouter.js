@@ -78,4 +78,19 @@ productRouter.put(
 		}
 	})
 );
+
+productRouter.delete(
+	"/:id",
+	isAuth,
+	isAdmin,
+	expressAsyncHandler(async (req, res) => {
+		const product = await Product.findById(req.params.id);
+		if (product) {
+			const deleteProduct = await product.remove();
+			res.send({ message: "Proizvod obrisan", product: deleteProduct });
+		} else {
+			res.status(404).send({ message: "Proizvod nije pronađen" });
+		}
+	})
+);
 export default productRouter;
