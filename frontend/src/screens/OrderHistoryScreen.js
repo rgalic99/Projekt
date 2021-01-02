@@ -36,11 +36,23 @@ export default function OrderHistoryScreen(props) {
 								<td>{order._id}</td>
 								<td>{order.createdAt.substring(0, 10)}</td>
 								<td>{order.totalPrice.toFixed(0)} kn</td>
-								<td>{order.isPaid ? order.paidAt.substring(0, 10) : "Ne"}</td>
 								<td>
-									{order.isDelivered
-										? order.deliveredAt.substring(0, 10)
-										: "Ne"}
+									{order.isPaid ? (
+										<MessageBox variant="success-action">
+											{order.paidAt.substring(0, 10)}
+										</MessageBox>
+									) : (
+										<MessageBox variant="failed-action">Ne</MessageBox>
+									)}
+								</td>
+								<td>
+									{order.isDelivered ? (
+										<MessageBox variant="success-action">
+											{order.deliveredAt.substring(0, 10)}
+										</MessageBox>
+									) : (
+										<MessageBox variant="failed-action">Ne</MessageBox>
+									)}
 								</td>
 								<td>
 									<button
