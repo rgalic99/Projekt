@@ -51,7 +51,7 @@ orderRouter.post(
 			const createdOrder = await order.save();
 			res
 				.status(201)
-				.send({ message: "New order created", order: createdOrder });
+				.send({ message: "Nova narudžba kreirana", order: createdOrder });
 		}
 	})
 );
@@ -64,7 +64,7 @@ orderRouter.get(
 		if (order) {
 			res.send(order);
 		} else {
-			res.status(404).send({ message: "Order Not Found" });
+			res.status(404).send({ message: "Narudžba nije pronađena" });
 		}
 	})
 );

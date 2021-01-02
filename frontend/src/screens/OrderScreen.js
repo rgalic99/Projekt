@@ -100,7 +100,7 @@ export default function OrderScreen(props) {
 								<>
 									{order.isDelivered ? (
 										<MessageBox variant="success-action">
-											Dostavljeno: {order.deliveredAt}
+											Dostavljeno: {order.deliveredAt.substring(0, 10)}
 										</MessageBox>
 									) : (
 										<MessageBox variant="failed-action">
@@ -184,7 +184,7 @@ export default function OrderScreen(props) {
 							<li>
 								<div className="row">
 									<div>
-										<strong> Ukupno </strong>
+										<strong>Ukupno</strong>
 									</div>
 									<div>
 										<strong>{order.totalPrice.toFixed(0)}kn</strong>

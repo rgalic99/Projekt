@@ -52,7 +52,7 @@ export default function PaymentMethodScreen(props) {
 							required
 							onChange={(e) => setPaymentMethod(e.target.value)}
 						></input>
-						<label htmlFor="stripe">Kartica</label>
+						<label htmlFor="card">Kartica</label>
 					</div>
 				</span>
 				<span>
@@ -64,7 +64,7 @@ export default function PaymentMethodScreen(props) {
 						required
 						onChange={(e) => setPaymentMethod(e.target.value)}
 					></input>
-					<label htmlFor="paypal">Gotovinom pri preuzimanju</label>
+					<label htmlFor="cash">Gotovinom pri preuzimanju</label>
 				</span>
 				<div>
 					<label />

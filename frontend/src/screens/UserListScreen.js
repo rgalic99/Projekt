@@ -22,7 +22,7 @@ export default function UserListScreen(props) {
 		});
 	}, [dispatch, successDelete]);
 	const deleteHandler = (user) => {
-		if (window.confirm("Are you sure?")) {
+		if (window.confirm("Jeste li sigurni da želite obrisati korisnika?")) {
 			dispatch(deleteUser(user._id));
 		}
 	};

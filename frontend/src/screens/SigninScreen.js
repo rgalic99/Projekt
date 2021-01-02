@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { signin } from "../actions/userActions";
+import { signIn } from "../actions/userActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 
@@ -16,7 +16,7 @@ export default function SigninScreen(props) {
 	const dispatch = useDispatch();
 	const submitHandler = (e) => {
 		e.preventDefault();
-		dispatch(signin(email, password));
+		dispatch(signIn(email, password));
 	};
 
 	useEffect(() => {
@@ -59,7 +59,7 @@ export default function SigninScreen(props) {
 				<div>
 					<label />
 					<div>
-						Novi korisnik?{" "}
+						Novi korisnik?
 						<Link to={`/register?redirect=${redirect}`}>
 							Napravite svoj račun
 						</Link>

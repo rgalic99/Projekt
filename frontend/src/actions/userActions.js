@@ -24,7 +24,7 @@ import {
 	USER_UPDATE_REQUEST,
 } from "../constants/userConstants";
 
-export const signin = (email, password) => async (dispatch) => {
+export const signIn = (email, password) => async (dispatch) => {
 	dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
 	try {
 		const { data } = await Axios.post("/api/users/signin", { email, password });
@@ -62,7 +62,7 @@ export const register = (name, email, password) => async (dispatch) => {
 		});
 	}
 };
-export const signout = () => (dispatch) => {
+export const signOut = () => (dispatch) => {
 	localStorage.removeItem("userInfo");
 	localStorage.removeItem("cartItems");
 	localStorage.removeItem("shippingAddress");

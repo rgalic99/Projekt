@@ -27,7 +27,7 @@ export default function ProductScreen(props) {
 				<MessageBox variant="failed-action">{Error}</MessageBox>
 			) : (
 				<div>
-					<Link to="/">⬅Povratak na rezultate</Link>
+					<Link to="/">⬅ Povratak na rezultate</Link>
 					<div className="row top">
 						<div className="col-2">
 							<img

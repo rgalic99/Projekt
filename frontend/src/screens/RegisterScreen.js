@@ -65,7 +65,7 @@ export default function SigninScreen(props) {
 					></input>
 				</div>
 				<div>
-					<label htmlFor="confirmPassword">Lozinka</label>
+					<label htmlFor="confirmPassword">Ponovite lozinku</label>
 					<input
 						type="password"
 						id="confirmPassword"
@@ -83,7 +83,7 @@ export default function SigninScreen(props) {
 				<div>
 					<label />
 					<div>
-						Već imate račun?{" "}
+						Već imate račun?
 						<Link to={`/signin?redirect=${redirect}`}>Prijavite se</Link>
 					</div>
 				</div>

@@ -87,7 +87,7 @@ export default function ShippingAddressScreen(props) {
 				<div>
 					<label />
 					<button className="primary" type="submit">
-						Nastavak➡
+						Nastavak ➡
 					</button>
 				</div>
 			</form>

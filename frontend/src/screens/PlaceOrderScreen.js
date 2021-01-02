@@ -86,7 +86,7 @@ export default function PlaceOrderScreen(props) {
 												</div>
 
 												<div>
-													{item.qty} x {item.price.toFixed(0)}kn ={" "}
+													{item.qty} x {item.price.toFixed(0)}kn =
 													{item.qty * item.price.toFixed(0)}
 													kn
 												</div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Stars = (props) => {
-	let stars = [];
+	const stars = [];
 	let counter = 0;
 	props = Number(props.toFixed(2));
 

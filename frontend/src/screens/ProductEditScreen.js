@@ -121,7 +121,7 @@ export default function ProductEditScreen(props) {
 							></input>
 						</div>
 						<div>
-							<label htmlFor="image">Slika</label>
+							<label htmlFor="image">Put slike</label>
 							<input
 								id="image"
 								type="text"
@@ -131,11 +131,11 @@ export default function ProductEditScreen(props) {
 							></input>
 						</div>
 						<div>
-							<label htmlFor="imageFile">Image File</label>
+							<label htmlFor="imageFile">Slika</label>
 							<input
 								type="file"
 								id="imageFile"
-								label="Choose Image"
+								label="Odaberite sliku"
 								onChange={uploadFileHandler}
 							></input>
 							{loadingUpload && <LoadingBox></LoadingBox>}

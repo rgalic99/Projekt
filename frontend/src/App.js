@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
-import { signout } from "./actions/userActions";
+import { signOut } from "./actions/userActions";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import KontaktScreen from "./screens/KontaktScreen";
@@ -30,7 +30,7 @@ function App() {
 	const { userInfo } = userSignin;
 	const dispatch = useDispatch();
 	const signoutHandler = () => {
-		dispatch(signout());
+		dispatch(signOut());
 	};
 	return (
 		<BrowserRouter>

@@ -31,7 +31,8 @@ export default function CartScreen(props) {
 				<h1>Košarica</h1>
 				{cartItems.length === 0 ? (
 					<MessageBox>
-						Košarica je prazna. <Link to="/">Natrag na kupovinu.</Link>
+						Košarica je prazna
+						<Link to="/">....⬅ Natrag na kupovinu</Link>
 					</MessageBox>
 				) : (
 					<ul>
@@ -97,7 +98,6 @@ export default function CartScreen(props) {
 								) : (
 									<span> proizvoda</span>
 								)}
-								) :{" "}
 								{cartItems.reduce((a, c) => a + c.price * c.qty, 0).toFixed(0)}
 								kn
 							</h2>
