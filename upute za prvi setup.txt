@@ -21,7 +21,7 @@ npm install
 
 svaki put kad nemate neki package da ne postoji navigirajte u Projekt ili frontend i udrite npm install (cd .. za nazad)
 
-instalirajte mongodb (i mongodb compass koji je ukljucen s instalacijom)
+instalirajte mongodb (i mongodb compass koji je ukljucen s instalacijom) i heroku CLI
 
 za pokretanje trebaju dva terminala, 
 	u prvom napisete npm start dok ste u Projekt folderu 
@@ -31,7 +31,7 @@ ako piše error 500 prvo morate otici na linkove (tj ako ne vidite nijedan proiz
 	-http://localhost:5000/api/products/seed
 	-http://localhost:5000/api/users/seed
 
-obratite se Roku za admin account,paypal sandbox account,env file i upload file
+obratite se Roku za admin account,paypal sandbox account,env file
 
 kada idete raditi na necemu provjerite jeste li up to date tako da napravite git pull u Projekt
 
