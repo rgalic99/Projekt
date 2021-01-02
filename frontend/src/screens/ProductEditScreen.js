@@ -140,7 +140,7 @@ export default function ProductEditScreen(props) {
 							></input>
 							{loadingUpload && <LoadingBox></LoadingBox>}
 							{errorUpload && (
-								<MessageBox variant="danger">{errorUpload}</MessageBox>
+								<MessageBox variant="failed-action">{errorUpload}</MessageBox>
 							)}
 						</div>
 						<div>

@@ -11,7 +11,6 @@ orderRouter.get(
 	isAdmin,
 	expressAsyncHandler(async (req, res) => {
 		const orders = await Order.find({}).populate("user", "name");
-		console.log(orders);
 		res.send(orders);
 	})
 );
@@ -94,6 +93,24 @@ orderRouter.delete(
 		if (order) {
 			const deleteOrder = await order.remove();
 			res.send({ message: "Narudžba obrisana", order: deleteOrder });
+		} else {
+			res.status(404).send({ message: "Narudžba nije pronađena" });
+		}
+	})
+);
+
+orderRouter.put(
+	"/:id/deliver",
+	isAuth,
+	isAdmin,
+	expressAsyncHandler(async (req, res) => {
+		const order = await Order.findById(req.params.id);
+		if (order) {
+			order.isDelivered = true;
+			order.deliveredAt = Date.now();
+
+			const updatedOrder = await order.save();
+			res.send({ message: "Narudžba dostavljena", order: updatedOrder });
 		} else {
 			res.status(404).send({ message: "Narudžba nije pronađena" });
 		}
