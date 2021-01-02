@@ -10,7 +10,7 @@ export default function UserEditScreen(props) {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [isAdmin, setIsAdmin] = useState(false);
-
+	const [isSeller, setIsSeller] = useState(false);
 	const userDetails = useSelector((state) => state.userDetails);
 	const { loading, error, user } = userDetails;
 
@@ -33,12 +33,13 @@ export default function UserEditScreen(props) {
 			setName(user.name);
 			setEmail(user.email);
 			setIsAdmin(user.isAdmin);
+			setIsSeller(user.isSeller);
 		}
 	}, [dispatch, props.history, successUpdate, user, userId]);
 
 	const submitHandler = (e) => {
 		e.preventDefault();
-		dispatch(updateUser({ _id: userId, name, email, isAdmin }));
+		dispatch(updateUser({ _id: userId, name, email, isSeller, isAdmin }));
 	};
 	return (
 		<div>
@@ -75,6 +76,17 @@ export default function UserEditScreen(props) {
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 							></input>
+						</div>
+						<div>
+							<span>
+								<label htmlFor="isSeller">Prodavač</label>
+								<input
+									id="isSeller"
+									type="checkbox"
+									checked={isSeller}
+									onChange={(e) => setIsSeller(e.target.checked)}
+								></input>
+							</span>
 						</div>
 						<div>
 							<span>

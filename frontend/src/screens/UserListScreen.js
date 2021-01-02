@@ -47,6 +47,7 @@ export default function UserListScreen(props) {
 							<th>ID</th>
 							<th>IME</th>
 							<th>EMAIL</th>
+							<th>PRODAVAČ</th>
 							<th>ADMIN</th>
 							<th>AKCIJE</th>
 						</tr>
@@ -57,6 +58,13 @@ export default function UserListScreen(props) {
 								<td>{user._id}</td>
 								<td>{user.name}</td>
 								<td>{user.email}</td>
+								<td>
+									{user.isSeller ? (
+										<MessageBox variant="success-action">Da</MessageBox>
+									) : (
+										<MessageBox variant="failed-action">Ne</MessageBox>
+									)}
+								</td>
 								<td>
 									{user.isAdmin ? (
 										<MessageBox variant="success-action">Da</MessageBox>
