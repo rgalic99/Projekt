@@ -98,7 +98,7 @@ export default function OrderScreen(props) {
 								</p>
 								{order.isPaid ? (
 									<MessageBox variant="success-action">
-										Plaćeno: {order.paidAt}
+										Plaćeno: {order.paidAt.substring(0, 10)}
 									</MessageBox>
 								) : (
 									<MessageBox variant="failed-action">Nije plaćeno</MessageBox>

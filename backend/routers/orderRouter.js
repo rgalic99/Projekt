@@ -1,9 +1,20 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
-import { isAuth } from "../utils.js";
+import { isAdmin, isAuth } from "../utils.js";
 
 const orderRouter = express.Router();
+
+orderRouter.get(
+	"/",
+	isAuth,
+	isAdmin,
+	expressAsyncHandler(async (req, res) => {
+		const orders = await Order.find({}).populate("user", "name");
+		console.log(orders);
+		res.send(orders);
+	})
+);
 
 orderRouter.get(
 	"/mine",
@@ -68,6 +79,21 @@ orderRouter.put(
 			};
 			const updatedOrder = await order.save();
 			res.send({ message: "Narudžba plaćena", order: updatedOrder });
+		} else {
+			res.status(404).send({ message: "Narudžba nije pronađena" });
+		}
+	})
+);
+
+orderRouter.delete(
+	"/:id",
+	isAuth,
+	isAdmin,
+	expressAsyncHandler(async (req, res) => {
+		const order = await Order.findById(req.params.id);
+		if (order) {
+			const deleteOrder = await order.remove();
+			res.send({ message: "Narudžba obrisana", order: deleteOrder });
 		} else {
 			res.status(404).send({ message: "Narudžba nije pronađena" });
 		}
