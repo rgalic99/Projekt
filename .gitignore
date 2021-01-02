@@ -11,3 +11,4 @@ frontend/README.md
 frontend/.gitignore
 
 /uploads/*.jpg
+node_modules
