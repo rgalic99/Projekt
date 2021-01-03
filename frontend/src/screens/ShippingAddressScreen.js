@@ -14,13 +14,55 @@ export default function ShippingAddressScreen(props) {
 	const [city, setCity] = useState("");
 	const [postalCode, setPostalCode] = useState("");
 	const [country, setCountry] = useState("");
+
+	const cart = useSelector((state) => state.cart);
+	const { shippingAddress } = cart;
+	const [lat, setLat] = useState(shippingAddress.lat);
+	const [lng, setLng] = useState(shippingAddress.lng);
+	const userAddressMap = useSelector((state) => state.userAddressMap);
+	const { address: addressMap } = userAddressMap;
 	const dispatch = useDispatch();
 	const submitHandler = (e) => {
 		e.preventDefault();
+		const newLat = addressMap ? addressMap.lat : lat;
+		const newLng = addressMap ? addressMap.lng : lng;
+		if (addressMap) {
+			setLat(addressMap.lat);
+			setLng(addressMap.lng);
+		}
+		let moveOn = true;
+		if (!newLat || !newLng) {
+			moveOn = window.confirm("Niste postavili adresu na karti. Nastaviti?");
+		}
+		if (moveOn) {
+			dispatch(
+				saveShippingAddress({
+					fullName,
+					address,
+					city,
+					postalCode,
+					country,
+					lat: newLat,
+					lng: newLng,
+				})
+			);
+			props.history.push("/payment");
+		}
+	};
+
+	const chooseOnMap = () => {
 		dispatch(
-			saveShippingAddress({ fullName, address, city, postalCode, country })
+			saveShippingAddress({
+				fullName,
+				address,
+				city,
+				postalCode,
+				country,
+				lat,
+				lng,
+			})
 		);
-		props.history.push("/payment");
+		props.history.push("/map");
 	};
 	return (
 		<div>
@@ -83,6 +125,12 @@ export default function ShippingAddressScreen(props) {
 						onChange={(e) => setCountry(e.target.value)}
 						required
 					></input>
+				</div>
+				<div>
+					<label htmlFor="chooseOnMap">Lokacija</label>
+					<button type="button" onClick={chooseOnMap}>
+						Odaberi na mapi
+					</button>
 				</div>
 				<div>
 					<label />
