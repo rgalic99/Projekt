@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { detailsProduct } from "../actions/productActions";
+import Rating from "../components/Rating";
 
 export default function ProductScreen(props) {
 	const dispatch = useDispatch();
@@ -39,15 +40,27 @@ export default function ProductScreen(props) {
 						<div className="col-1"></div>
 						<ul>
 							<li>
+								Prodavač
+								<h2>
+									<Link to={`/seller/${product.seller._id}`}>
+										{product.seller.seller.name}
+									</Link>
+								</h2>
+								<Rating
+									rating={product.seller.seller.rating}
+									numReviews={product.seller.seller.numReviews}
+								></Rating>
+							</li>
+							<li>
 								<h1>{product.name}</h1>
 							</li>
 							<li>Cijena: {product.price}kn</li>
-							{/* <li className="product-rating">
+							<li className="product-rating">
 								<Rating
 									rating={product.rating}
 									numReviews={product.numReviews}
 								></Rating>
-							</li> */}
+							</li>
 							<li>
 								Opis:
 								<span className="product-description">
