@@ -64,7 +64,7 @@ export default function SellerScreen(props) {
 				{loadingProducts ? (
 					<LoadingBox></LoadingBox>
 				) : errorProducts ? (
-					<MessageBox variant="danger">{errorProducts}</MessageBox>
+					<MessageBox variant="failed-action">{errorProducts}</MessageBox>
 				) : (
 					<>
 						{products.length === 0 && <MessageBox>Nema proizvoda</MessageBox>}

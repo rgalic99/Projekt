@@ -44,3 +44,7 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
 	console.log(`Backend server pokrenut http://localhost:${port}`);
 });
+
+app.get("/api/config/google", (req, res) => {
+	res.send(process.env.GOOGLE_API_KEY || "");
+});
