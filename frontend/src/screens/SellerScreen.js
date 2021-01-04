@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 import { listProducts } from "../actions/productActions";
 import { detailsUser } from "../actions/userActions";
 import LoadingBox from "../components/LoadingBox";
@@ -8,6 +9,7 @@ import Product from "../components/Product";
 import Rating from "../components/Rating";
 
 export default function SellerScreen(props) {
+	const { pageNumber = 1 } = useParams();
 	const sellerId = props.match.params.id;
 	const userDetails = useSelector((state) => state.userDetails);
 	const { loading, error, user } = userDetails;
@@ -17,13 +19,15 @@ export default function SellerScreen(props) {
 		loading: loadingProducts,
 		error: errorProducts,
 		products,
+		page,
+		pages,
 	} = productList;
 
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(detailsUser(sellerId));
-		dispatch(listProducts({ seller: sellerId }));
-	}, [dispatch, sellerId]);
+		dispatch(listProducts({ seller: sellerId, pageNumber }));
+	}, [dispatch, pageNumber, sellerId]);
 	return (
 		<div className="row top">
 			<div className="col-1">
@@ -71,6 +75,18 @@ export default function SellerScreen(props) {
 						<div className="row center">
 							{products.map((product) => (
 								<Product key={product._id} product={product}></Product>
+							))}
+						</div>
+
+						<div className="row center pagination">
+							{[...Array(pages).keys()].map((x) => (
+								<Link
+									className={x + 1 === page ? "active" : ""}
+									key={x + 1}
+									to={`/seller/${sellerId}/pageNumber/${x + 1}`}
+								>
+									{x + 1}
+								</Link>
 							))}
 						</div>
 					</>

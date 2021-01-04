@@ -18,11 +18,11 @@ export default function Product(props) {
 					numReviews={product.numReviews}
 				></Rating>
 				<span className="price">{product.price.toFixed(0)}kn</span>
-				{/* 		<div>
+				<div>
 					<Link to={`/seller/${product.seller._id}`}>
 						{product.seller.seller.name}
 					</Link>
-				</div> */}
+				</div>
 			</div>
 		</div>
 	);

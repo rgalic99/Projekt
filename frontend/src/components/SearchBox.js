@@ -8,17 +8,17 @@ export default function SearchBox(props) {
 	};
 	return (
 		<form className="search" onSubmit={submitHandler}>
-			<div className="row">
+			<span className="row">
 				<input
 					type="text"
 					name="q"
 					id="q"
 					onChange={(e) => setName(e.target.value)}
 				></input>
-				<button className="primary" type="submit">
+				<button className="search" type="submit">
 					<i className="fa fa-search"></i>
 				</button>
-			</div>
+			</span>
 		</form>
 	);
 }

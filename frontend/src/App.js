@@ -63,13 +63,13 @@ function App() {
 						</button>
 						<Link to="/"> Tech - @ - Tack </Link>
 					</div>
-					<div>
+					<span>
 						<Route
 							render={({ history }) => (
 								<SearchBox history={history}></SearchBox>
 							)}
 						></Route>
-					</div>
+					</span>
 					<div className="header-links">
 						<Link to="/cart" className="cart">
 							Košarica👜
@@ -124,7 +124,7 @@ function App() {
 								</Link>
 								<ul className="dropdown-content">
 									<li>
-										<Link to="/dashboard"></Link>
+										<Link to="/dashboard">Pregled</Link>
 									</li>
 									<li>
 										<Link to="/productlist">Proizvodi</Link>
@@ -178,7 +178,7 @@ function App() {
 						component={ProductEditScreen}
 						exact
 					></Route>
-					<Route path="/seller/:id" component={SellerScreen}></Route>
+					<Route path="/seller/:id" component={SellerScreen} exact></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
 					<Route path="/shipping" component={ShippingAddressScreen}></Route>
 					<Route path="/payment" component={PaymentMethodScreen}></Route>
@@ -202,7 +202,7 @@ function App() {
 						exact
 					></Route>
 					<Route
-						path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order"
+						path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order/pageNumber/:pageNumber"
 						component={SearchScreen}
 						exact
 					></Route>
@@ -234,11 +234,28 @@ function App() {
 					<SellerRoute
 						path="/productlist/seller"
 						component={ProductListScreen}
+						exact
 					></SellerRoute>
+					<Route
+						path="/seller/:id/pageNumber/:pageNumber"
+						component={SellerScreen}
+						exact
+					></Route>
+					<SellerRoute
+						path="/productlist/seller/pageNumber/:pageNumber"
+						component={ProductListScreen}
+						exact
+					></SellerRoute>
+
 					<SellerRoute
 						path="/orderlist/seller"
 						component={OrderListScreen}
 					></SellerRoute>
+					<AdminRoute
+						path="/productlist/pageNumber/:pageNumber"
+						component={ProductListScreen}
+						exact
+					></AdminRoute>
 				</main>
 				<footer className="row center">
 					<a href="/kontakt">Sva prava pridržana© Tech - @ - Tack 2020</a>
