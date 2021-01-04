@@ -160,6 +160,13 @@ img.small {
 	max-width: 5rem;
 	width: 100%;
 }
+img.small:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
 
 img.medium {
 	max-width: 29rem;
@@ -180,6 +187,13 @@ img.large {
 	height: 55rem;
 }
 
+img.large:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
 /* Card */
 .card {
 	flex-grow: 2;
