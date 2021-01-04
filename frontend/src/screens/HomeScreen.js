@@ -37,7 +37,7 @@ export default function HomeScreen(props) {
 					{sellers.length === 0 && (
 						<MessageBox>Nije pronađen prodavač</MessageBox>
 					)}
-					<Carousel showArrows autoPlay showThumbs={false}>
+					<Carousel showArrows responsiveHeight autoPlay showThumbs={false}>
 						{sellers.map((seller) => (
 							<div key={seller._id}>
 								<Link to={`/seller/${seller._id}`}>

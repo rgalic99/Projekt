@@ -62,7 +62,9 @@ export default function SearchScreen(props) {
 				) : error ? (
 					<MessageBox variant="failed-action">{error}</MessageBox>
 				) : (
-					<div>{products.length} Rezultata</div>
+					<div>
+						{products.length} rezultat{products.length !== 1 && <span>a</span>}
+					</div>
 				)}
 				<div>
 					Sortiraj po
@@ -136,7 +138,7 @@ export default function SearchScreen(props) {
 										to={getFilterUrl({ rating: r.rating })}
 										className={`${r.rating}` === `${rating}` ? "active" : ""}
 									>
-										<Rating caption={" & up"} rating={r.rating}></Rating>
+										<Rating caption={" & više"} rating={r.rating}></Rating>
 									</Link>
 								</li>
 							))}

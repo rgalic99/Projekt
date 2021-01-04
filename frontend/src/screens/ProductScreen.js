@@ -59,46 +59,14 @@ export default function ProductScreen(props) {
 				<div>
 					<Link to="/">⬅ Povratak na rezultate</Link>
 					<div className="row top">
-						<div className="col-2">
+						<span className="col-2">
 							<img
 								className="large"
 								src={product.image}
 								alt={product.name}
 							></img>
-						</div>
-						<div className="col-1"></div>
-						<ul>
-							<li>
-								Prodavač
-								<h2>
-									<Link to={`/seller/${product.seller._id}`}>
-										{product.seller.seller.name}
-									</Link>
-								</h2>
-								<Rating
-									rating={product.seller.seller.rating}
-									numReviews={product.seller.seller.numReviews}
-								></Rating>
-							</li>
-							<li>
-								<h1>{product.name}</h1>
-							</li>
-							<li>Cijena: {product.price}kn</li>
-							<li className="product-rating">
-								<Rating
-									rating={product.rating}
-									numReviews={product.numReviews}
-								></Rating>
-							</li>
-							<li>
-								Opis:
-								<span className="product-description">
-									{product.description}
-								</span>
-							</li>
-						</ul>
-						<div className="col-1">
-							<div className="card card-body">
+
+							<div className="card card-body pricebox">
 								<ul>
 									<li>
 										<div className="price-2">
@@ -150,22 +118,46 @@ export default function ProductScreen(props) {
 									)}
 								</ul>
 							</div>
-						</div>
+						</span>
+
+						<div className="col-1"></div>
+						<ul>
+							{
+								<li>
+									Prodavač
+									<h2>
+										<Link to={`/seller/${product.seller._id}`}>
+											{product.seller.seller.name}
+										</Link>
+									</h2>
+									<Rating
+										rating={product.seller.seller.rating}
+										numReviews={product.seller.seller.numReviews}
+									></Rating>
+								</li>
+							}
+							<li>
+								<h1>{product.name}</h1>
+							</li>
+							<li>Cijena: {product.price}kn</li>
+							{
+								<li className="product-rating">
+									<Rating
+										rating={product.rating}
+										numReviews={product.numReviews}
+									></Rating>
+								</li>
+							}
+							<li>
+								Opis:
+								<span className="product-description">
+									{product.description}
+								</span>
+							</li>
+						</ul>
 					</div>
 					<div>
-						<h2 id="reviews">Recenzija</h2>
-						{product.reviews.length === 0 && (
-							<MessageBox>Nema recenzija</MessageBox>
-						)}
 						<ul>
-							{product.reviews.map((review) => (
-								<li key={review._id}>
-									<strong>{review.name}</strong>
-									<Rating rating={review.rating} caption=" "></Rating>
-									<p>{review.createdAt.substring(0, 10)}</p>
-									<p>{review.comment}</p>
-								</li>
-							))}
 							<li>
 								{userInfo ? (
 									<form className="form" onSubmit={submitHandler}>
@@ -217,7 +209,23 @@ export default function ProductScreen(props) {
 									</MessageBox>
 								)}
 							</li>
-						</ul>
+						</ul>{" "}
+						<h2 id="reviews" className="row center">
+							Recenzija
+						</h2>
+						<div className="review">
+							{product.reviews.length === 0 && (
+								<MessageBox>Nema recenzija</MessageBox>
+							)}
+							{product.reviews.map((review) => (
+								<li key={review._id}>
+									<strong>{review.name}</strong>
+									<Rating rating={review.rating} caption=" "></Rating>
+									<p>{review.createdAt.substring(0, 10)}</p>
+									<p>{review.comment}</p>
+								</li>
+							))}
+						</div>
 					</div>
 				</div>
 			)}

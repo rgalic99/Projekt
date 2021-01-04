@@ -176,7 +176,8 @@ img.medium:hover {
 }
 
 img.large {
-	width: 100%;
+	width: 75rem;
+	height: 55rem;
 }
 
 /* Card */
@@ -256,6 +257,14 @@ img.large {
 	text-align: auto;
 }
 .rating span:last-child {
+	color: gray;
+}
+
+.rating-else span {
+	color: #f0c040;
+	margin: 0.1rem 0 0 0;
+}
+.rating-else span:last-child {
 	color: gray;
 }
 
@@ -423,8 +432,16 @@ label::before {
 }
 
 /* Carousel */
+.carousel .slide {
+	background-color: aliceblue;
+}
 .carousel .slide img {
-	max-width: 30rem;
+	max-width: 90rem;
+	height: 50rem;
+}
+.carousel .slide :hover {
+	transition: transform 0.1s;
+	transform: scale(1.05);
 }
 
 /* Search */
@@ -525,4 +542,20 @@ button.close-sidebar {
 }
 .pagination a.active {
 	font-weight: bold;
+}
+
+li {
+	list-style-type: none;
+}
+
+.review {
+	display: flex;
+	justify-content: center;
+}
+
+.pricebox {
+	position: absolute;
+	top: 8.3rem;
+	right: 2rem;
+	margin: 0;
 }

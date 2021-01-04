@@ -52,10 +52,12 @@ export default function SellerScreen(props) {
 							</div>
 						</li>
 						<li>
-							<Rating
-								rating={user.seller.rating}
-								numReviews={user.seller.numReviews}
-							></Rating>
+							{
+								<Rating
+									rating={user.seller.rating}
+									numReviews={user.seller.numReviews}
+								></Rating>
+							}
 						</li>
 						<li>
 							<a href={`mailto:${user.email}`}>Kontakt prodavača</a>

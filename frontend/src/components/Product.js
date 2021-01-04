@@ -16,13 +16,9 @@ export default function Product(props) {
 				<Rating
 					rating={product.rating}
 					numReviews={product.numReviews}
+					flag={true}
 				></Rating>
 				<span className="price">{product.price.toFixed(0)}kn</span>
-				<div>
-					<Link to={`/seller/${product.seller._id}`}>
-						{product.seller.seller.name}
-					</Link>
-				</div>
 			</div>
 		</div>
 	);
