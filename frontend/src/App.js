@@ -29,6 +29,7 @@ import { listProductCategories } from "./actions/productActions";
 import LoadingBox from "./components/LoadingBox";
 import MessageBox from "./components/MessageBox";
 import MapScreen from "./screens/MapScreen";
+import PageInfoScreen from "./screens/PageInfoScreen";
 
 function App() {
 	const cart = useSelector((state) => state.cart);
@@ -40,7 +41,9 @@ function App() {
 	const signoutHandler = () => {
 		dispatch(signOut());
 	};
-	const productCategoryList = useSelector((state) => state.productCategoryList);
+	const productCategoryList = useSelector(
+		(state) => state.productCategoryList
+	);
 	const {
 		loading: loadingCategories,
 		error: errorCategories,
@@ -74,7 +77,9 @@ function App() {
 						<Link to="/cart" className="cart">
 							Košarica👜
 							{cartItems.length > 0 && (
-								<span className="badge">{cartItems.length}</span>
+								<span className="badge">
+									{cartItems.length}
+								</span>
 							)}
 						</Link>
 						{userInfo ? (
@@ -91,7 +96,10 @@ function App() {
 										<Link to="/orderhistory">Narudžbe</Link>
 									</li>
 									<li>
-										<Link to="#signout" onClick={signoutHandler}>
+										<Link
+											to="#signout"
+											onClick={signoutHandler}
+										>
 											Odjava
 										</Link>
 									</li>
@@ -105,14 +113,19 @@ function App() {
 						{userInfo && userInfo.isSeller && (
 							<div className="dropdown">
 								<Link to="#admin">
-									Prodavač <i className="fa fa-caret-down"></i>
+									Prodavač{" "}
+									<i className="fa fa-caret-down"></i>
 								</Link>
 								<ul className="dropdown-content">
 									<li>
-										<Link to="/productlist/seller">Proizvodi</Link>
+										<Link to="/productlist/seller">
+											Proizvodi
+										</Link>
 									</li>
 									<li>
-										<Link to="/orderlist/seller">Narudžbe</Link>
+										<Link to="/orderlist/seller">
+											Narudžbe
+										</Link>
 									</li>
 								</ul>
 							</div>
@@ -155,7 +168,9 @@ function App() {
 						{loadingCategories ? (
 							<LoadingBox></LoadingBox>
 						) : errorCategories ? (
-							<MessageBox variant="failed-action">{errorCategories}</MessageBox>
+							<MessageBox variant="failed-action">
+								{errorCategories}
+							</MessageBox>
 						) : (
 							categories.map((c) => (
 								<li key={c}>
@@ -172,17 +187,34 @@ function App() {
 				</aside>
 				<main className="main">
 					<Route path="/" component={HomeScreen} exact></Route>
-					<Route path="/product/:id" component={ProductScreen} exact></Route>
+					<Route
+						path="/product/:id"
+						component={ProductScreen}
+						exact
+					></Route>
 					<Route
 						path="/product/:id/edit"
 						component={ProductEditScreen}
 						exact
 					></Route>
-					<Route path="/seller/:id" component={SellerScreen} exact></Route>
+					<Route
+						path="/seller/:id"
+						component={SellerScreen}
+						exact
+					></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
-					<Route path="/shipping" component={ShippingAddressScreen}></Route>
-					<Route path="/payment" component={PaymentMethodScreen}></Route>
-					<Route path="/placeorder" component={PlaceOrderScreen}></Route>
+					<Route
+						path="/shipping"
+						component={ShippingAddressScreen}
+					></Route>
+					<Route
+						path="/payment"
+						component={PaymentMethodScreen}
+					></Route>
+					<Route
+						path="/placeorder"
+						component={PlaceOrderScreen}
+					></Route>
 					<Route path="/order/:id" component={OrderScreen}></Route>
 					<Route path="/signin" component={SigninScreen}></Route>
 					<Route path="/register" component={RegisterScreen}></Route>
@@ -206,11 +238,15 @@ function App() {
 						component={SearchScreen}
 						exact
 					></Route>
-					<PrivateRoute path="/map" component={MapScreen}></PrivateRoute>
+					<PrivateRoute
+						path="/map"
+						component={MapScreen}
+					></PrivateRoute>
 					<PrivateRoute
 						path="/orderhistory"
 						component={OrderHistoryScreen}
 					></PrivateRoute>
+					<Route path="/o_nama" component={PageInfoScreen}></Route>
 					<Route path="/kontakt" component={KontaktScreen}></Route>
 					<PrivateRoute
 						path="/profile"
@@ -226,7 +262,10 @@ function App() {
 						component={OrderListScreen}
 						exact
 					></AdminRoute>
-					<AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
+					<AdminRoute
+						path="/userlist"
+						component={UserListScreen}
+					></AdminRoute>
 					<AdminRoute
 						path="/user/:id/edit"
 						component={UserEditScreen}
@@ -258,7 +297,9 @@ function App() {
 					></AdminRoute>
 				</main>
 				<footer className="row center">
-					<a href="/kontakt">Sva prava pridržana© Tech - @ - Tack 2020</a>
+					<a href="/o_nama">
+						Sva prava pridržana© Tech - @ - Tack 2020
+					</a>
 				</footer>
 			</div>
 		</BrowserRouter>

@@ -47,19 +47,31 @@ export default function CartScreen(props) {
 										></img>
 									</div>
 									<div className="min-30">
-										<Link to={`/product/${item.product}`}>{item.name}</Link>
+										<Link to={`/product/${item.product}`}>
+											{item.name}
+										</Link>
 									</div>
 									<div>
 										<select
 											value={item.qty}
 											onChange={(e) =>
 												dispatch(
-													addToCart(item.product, Number(e.target.value))
+													addToCart(
+														item.product,
+														Number(e.target.value)
+													)
 												)
 											}
 										>
-											{[...Array(item.countInStock).keys()].map((x) => (
-												<option key={x + 1} value={x + 1}>
+											{[
+												...Array(
+													item.countInStock
+												).keys(),
+											].map((x) => (
+												<option
+													key={x + 1}
+													value={x + 1}
+												>
 													{x + 1}
 												</option>
 											))}
@@ -72,7 +84,11 @@ export default function CartScreen(props) {
 									<div>
 										<button
 											type="button"
-											onClick={() => removeFromCartHandler(item.product)}
+											onClick={() =>
+												removeFromCartHandler(
+													item.product
+												)
+											}
 										>
 											Obriši
 										</button>
@@ -87,10 +103,12 @@ export default function CartScreen(props) {
 				<div className="card card-body">
 					<ul>
 						<li>
-							<h2>
-								Ukupno ({cartItems.reduce((a, c) => a + c.qty, 0)}
+							<h2 className="price-2">
+								Ukupno (
+								{cartItems.reduce((a, c) => a + c.qty, 0)}
 								{cartItems.length ? (
-									cartItems[0].qty === 1 && cartItems.length === 1 ? (
+									cartItems[0].qty === 1 &&
+									cartItems.length === 1 ? (
 										<span> proizvod</span>
 									) : (
 										<span> proizvoda</span>
@@ -99,8 +117,15 @@ export default function CartScreen(props) {
 									<span> proizvoda</span>
 								)}
 								){" "}
-								{cartItems.reduce((a, c) => a + c.price * c.qty, 0).toFixed(0)}
-								kn
+								<h2>
+									{cartItems
+										.reduce(
+											(a, c) => a + c.price * c.qty,
+											0
+										)
+										.toFixed(0)}
+									kn
+								</h2>
 							</h2>
 						</li>
 						<li>

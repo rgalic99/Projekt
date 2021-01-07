@@ -41,7 +41,7 @@ export default function SellerScreen(props) {
 							<div className="row start">
 								<div className="p-1">
 									<img
-										className="small"
+										className="seller"
 										src={user.seller.logo}
 										alt={user.seller.name}
 									></img>
@@ -60,7 +60,9 @@ export default function SellerScreen(props) {
 							}
 						</li>
 						<li>
-							<a href={`mailto:${user.email}`}>Kontakt prodavača</a>
+							<a href={`mailto:${user.email}`}>
+								Kontakt prodavača
+							</a>
 						</li>
 						<li>{user.seller.description}</li>
 					</ul>
@@ -70,13 +72,20 @@ export default function SellerScreen(props) {
 				{loadingProducts ? (
 					<LoadingBox></LoadingBox>
 				) : errorProducts ? (
-					<MessageBox variant="failed-action">{errorProducts}</MessageBox>
+					<MessageBox variant="failed-action">
+						{errorProducts}
+					</MessageBox>
 				) : (
 					<>
-						{products.length === 0 && <MessageBox>Nema proizvoda</MessageBox>}
+						{products.length === 0 && (
+							<MessageBox>Nema proizvoda</MessageBox>
+						)}
 						<div className="row center">
 							{products.map((product) => (
-								<Product key={product._id} product={product}></Product>
+								<Product
+									key={product._id}
+									product={product}
+								></Product>
 							))}
 						</div>
 
@@ -85,7 +94,9 @@ export default function SellerScreen(props) {
 								<Link
 									className={x + 1 === page ? "active" : ""}
 									key={x + 1}
-									to={`/seller/${sellerId}/pageNumber/${x + 1}`}
+									to={`/seller/${sellerId}/pageNumber/${
+										x + 1
+									}`}
 								>
 									{x + 1}
 								</Link>

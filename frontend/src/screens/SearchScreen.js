@@ -22,7 +22,9 @@ export default function SearchScreen(props) {
 	const productList = useSelector((state) => state.productList);
 	const { loading, error, products, page, pages } = productList;
 
-	const productCategoryList = useSelector((state) => state.productCategoryList);
+	const productCategoryList = useSelector(
+		(state) => state.productCategoryList
+	);
 	const {
 		loading: loadingCategories,
 		error: errorCategories,
@@ -63,7 +65,8 @@ export default function SearchScreen(props) {
 					<MessageBox variant="failed-action">{error}</MessageBox>
 				) : (
 					<div>
-						{products.length} rezultat{products.length !== 1 && <span>a</span>}
+						{products.length} rezultat
+						{products.length !== 1 && <span>a</span>}
 					</div>
 				)}
 				<div>
@@ -71,7 +74,9 @@ export default function SearchScreen(props) {
 					<select
 						value={order}
 						onChange={(e) => {
-							props.history.push(getFilterUrl({ order: e.target.value }));
+							props.history.push(
+								getFilterUrl({ order: e.target.value })
+							);
 						}}
 					>
 						<option value="newest">Najnovije</option>
@@ -83,17 +88,22 @@ export default function SearchScreen(props) {
 			</div>
 			<div className="row top">
 				<div className="col-1">
+					<h3>Filteri</h3>
 					<h3>Kategorije</h3>
 					<div>
 						{loadingCategories ? (
 							<LoadingBox></LoadingBox>
 						) : errorCategories ? (
-							<MessageBox variant="failed-action">{errorCategories}</MessageBox>
+							<MessageBox variant="failed-action">
+								{errorCategories}
+							</MessageBox>
 						) : (
 							<ul>
 								<li>
 									<Link
-										className={"all" === category ? "active" : ""}
+										className={
+											"all" === category ? "active" : ""
+										}
 										to={getFilterUrl({ category: "all" })}
 									>
 										Sve
@@ -102,7 +112,9 @@ export default function SearchScreen(props) {
 								{categories.map((c) => (
 									<li key={c}>
 										<Link
-											className={c === category ? "active" : ""}
+											className={
+												c === category ? "active" : ""
+											}
 											to={getFilterUrl({ category: c })}
 										>
 											{c}
@@ -118,9 +130,15 @@ export default function SearchScreen(props) {
 							{prices.map((p) => (
 								<li key={p.name}>
 									<Link
-										to={getFilterUrl({ min: p.min, max: p.max })}
+										to={getFilterUrl({
+											min: p.min,
+											max: p.max,
+										})}
 										className={
-											`${p.min}-${p.max}` === `${min}-${max}` ? "active" : ""
+											`${p.min}-${p.max}` ===
+											`${min}-${max}`
+												? "active"
+												: ""
 										}
 									>
 										{p.name}
@@ -136,9 +154,16 @@ export default function SearchScreen(props) {
 								<li key={r.name}>
 									<Link
 										to={getFilterUrl({ rating: r.rating })}
-										className={`${r.rating}` === `${rating}` ? "active" : ""}
+										className={
+											`${r.rating}` === `${rating}`
+												? "active"
+												: ""
+										}
 									>
-										<Rating caption={" & više"} rating={r.rating}></Rating>
+										<Rating
+											caption={" & više"}
+											rating={r.rating}
+										></Rating>
 									</Link>
 								</li>
 							))}
@@ -152,16 +177,23 @@ export default function SearchScreen(props) {
 						<MessageBox variant="failed-action">{error}</MessageBox>
 					) : (
 						<>
-							{products.length === 0 && <MessageBox>Nema proizvoda</MessageBox>}
+							{products.length === 0 && (
+								<MessageBox>Nema proizvoda</MessageBox>
+							)}
 							<div className="row center">
 								{products.map((product) => (
-									<Product key={product._id} product={product}></Product>
+									<Product
+										key={product._id}
+										product={product}
+									></Product>
 								))}
 							</div>
 							<div className="row center pagination">
 								{[...Array(pages).keys()].map((x) => (
 									<Link
-										className={x + 1 === page ? "active" : ""}
+										className={
+											x + 1 === page ? "active" : ""
+										}
 										key={x + 1}
 										to={getFilterUrl({ page: x + 1 })}
 									>

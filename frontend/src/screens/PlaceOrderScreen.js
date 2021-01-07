@@ -50,10 +50,13 @@ export default function PlaceOrderScreen(props) {
 							<div className="placeOrder placeOrder-body">
 								<h2>Adresa dostave</h2>
 								<p>
-									<strong>Ime:</strong> {cart.shippingAddress.fullName} <br />
-									<strong>Adresa: </strong> {cart.shippingAddress.address},
-									{cart.shippingAddress.city}, {cart.shippingAddress.postalCode}
-									,{cart.shippingAddress.country}
+									<strong>Ime:</strong>{" "}
+									{cart.shippingAddress.fullName} <br />
+									<strong>Adresa: </strong>{" "}
+									{cart.shippingAddress.address},
+									{cart.shippingAddress.city},{" "}
+									{cart.shippingAddress.postalCode},
+									{cart.shippingAddress.country}
 								</p>
 							</div>
 						</li>
@@ -61,7 +64,8 @@ export default function PlaceOrderScreen(props) {
 							<div className="placeOrder placeOrder-body">
 								<h2>Plaćanje</h2>
 								<p>
-									<strong>Način plaćanja:</strong> {cart.paymentMethod}
+									<strong>Način plaćanja:</strong>{" "}
+									{cart.paymentMethod}
 								</p>
 							</div>
 						</li>
@@ -80,14 +84,18 @@ export default function PlaceOrderScreen(props) {
 													></img>
 												</div>
 												<div className="min-30">
-													<Link to={`/product/${item.product}`}>
+													<Link
+														to={`/product/${item.product}`}
+													>
 														{item.name}
 													</Link>
 												</div>
 
 												<div>
-													{item.qty} x {item.price.toFixed(0)}kn =
-													{item.qty * item.price.toFixed(0)}
+													{item.qty} x{" "}
+													{item.price.toFixed(0)}kn =
+													{item.qty *
+														item.price.toFixed(0)}
 													kn
 												</div>
 											</div>
@@ -124,11 +132,11 @@ export default function PlaceOrderScreen(props) {
 							</li>
 							<li>
 								<div className="row">
-									<div>
-										<strong> Ukupno: </strong>
+									<div className="price-2">
+										<h2> Ukupno: </h2>
 									</div>
-									<div>
-										<strong>{cart.totalPrice.toFixed(0)}kn</strong>
+									<div className="price-2">
+										<h2>{cart.totalPrice.toFixed(0)}kn</h2>
 									</div>
 								</div>
 							</li>
@@ -144,7 +152,9 @@ export default function PlaceOrderScreen(props) {
 							</li>
 							{loading && <LoadingBox></LoadingBox>}
 							{error && (
-								<MessageBox variant="failed-action">{error}</MessageBox>
+								<MessageBox variant="failed-action">
+									{error}
+								</MessageBox>
 							)}
 						</ul>
 					</div>

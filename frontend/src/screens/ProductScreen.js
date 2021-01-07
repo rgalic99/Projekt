@@ -17,7 +17,9 @@ export default function ProductScreen(props) {
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
 
-	const productReviewCreate = useSelector((state) => state.productReviewCreate);
+	const productReviewCreate = useSelector(
+		(state) => state.productReviewCreate
+	);
 	const {
 		loading: loadingReviewCreate,
 		error: errorReviewCreate,
@@ -43,7 +45,11 @@ export default function ProductScreen(props) {
 		e.preventDefault();
 		if (comment && rating) {
 			dispatch(
-				createReview(productId, { rating, comment, name: userInfo.name })
+				createReview(productId, {
+					rating,
+					comment,
+					name: userInfo.name,
+				})
 			);
 		} else {
 			alert("Molimo unesite ocjenu i komentar");
@@ -78,9 +84,15 @@ export default function ProductScreen(props) {
 											<div>Status: </div>
 											<div>
 												{product.countInStock > 0 ? (
-													<span className="success"> Dostupno</span>
+													<span className="success">
+														{" "}
+														Dostupno
+													</span>
 												) : (
-													<span className="error"> Nedostupno</span>
+													<span className="error">
+														{" "}
+														Nedostupno
+													</span>
 												)}
 											</div>
 										</div>
@@ -93,15 +105,27 @@ export default function ProductScreen(props) {
 													<div>
 														<select
 															value={qty}
-															onChange={(e) => setQty(e.target.value)}
-														>
-															{[...Array(product.countInStock).keys()].map(
-																(x) => (
-																	<option key={x + 1} value={x + 1}>
-																		{x + 1}
-																	</option>
+															onChange={(e) =>
+																setQty(
+																	e.target
+																		.value
 																)
-															)}
+															}
+														>
+															{[
+																...Array(
+																	product.countInStock
+																).keys(),
+															].map((x) => (
+																<option
+																	key={x + 1}
+																	value={
+																		x + 1
+																	}
+																>
+																	{x + 1}
+																</option>
+															))}
 														</select>
 													</div>
 												</div>
@@ -119,23 +143,29 @@ export default function ProductScreen(props) {
 								</ul>
 							</div>
 						</span>
-
-						<div className="col-1"></div>
-						<ul>
+						<ul className="productInfo">
 							{
 								<li>
 									Prodavač
 									<h2>
-										<Link to={`/seller/${product.seller._id}`}>
+										<Link
+											to={`/seller/${product.seller._id}`}
+										>
 											{product.seller.seller.name}
 										</Link>
 									</h2>
 									<Rating
 										rating={product.seller.seller.rating}
-										numReviews={product.seller.seller.numReviews}
+										numReviews={
+											product.seller.seller.numReviews
+										}
 									></Rating>
 								</li>
 							}
+							<br />
+							<br />
+							<br />
+							<br />
 							<li>
 								<h1>{product.name}</h1>
 							</li>
@@ -160,41 +190,69 @@ export default function ProductScreen(props) {
 						<ul>
 							<li>
 								{userInfo ? (
-									<form className="form" onSubmit={submitHandler}>
+									<form
+										className="form"
+										onSubmit={submitHandler}
+									>
 										<div>
 											<h2>Napišite recenziju</h2>
 										</div>
 										<div>
-											<label htmlFor="rating">Recenzija</label>
+											<label htmlFor="rating">
+												Recenzija
+											</label>
 											<select
 												id="rating"
 												value={rating}
-												onChange={(e) => setRating(e.target.value)}
+												onChange={(e) =>
+													setRating(e.target.value)
+												}
 											>
-												<option value="">Odaberi..</option>
-												<option value="1">1- Loše</option>
-												<option value="2">2- Aj aj</option>
-												<option value="3">3- Dobro</option>
-												<option value="4">4- Ma super</option>
-												<option value="5">5- Parekselans</option>
+												<option value="">
+													Odaberi..
+												</option>
+												<option value="1">
+													1- Loše
+												</option>
+												<option value="2">
+													2- Aj aj
+												</option>
+												<option value="3">
+													3- Dobro
+												</option>
+												<option value="4">
+													4- Ma super
+												</option>
+												<option value="5">
+													5- Parekselans
+												</option>
 											</select>
 										</div>
 										<div>
-											<label htmlFor="comment">Komentar</label>
+											<label htmlFor="comment">
+												Komentar
+											</label>
 											<textarea
 												id="comment"
 												value={comment}
-												onChange={(e) => setComment(e.target.value)}
+												onChange={(e) =>
+													setComment(e.target.value)
+												}
 											></textarea>
 										</div>
 										<div>
 											<label />
-											<button className="primary" type="submit">
+											<button
+												className="primary"
+												type="submit"
+											>
 												Pošalji
 											</button>
 										</div>
 										<div>
-											{loadingReviewCreate && <LoadingBox></LoadingBox>}
+											{loadingReviewCreate && (
+												<LoadingBox></LoadingBox>
+											)}
 											{errorReviewCreate && (
 												<MessageBox variant="failed-action">
 													{errorReviewCreate}
@@ -204,8 +262,9 @@ export default function ProductScreen(props) {
 									</form>
 								) : (
 									<MessageBox>
-										Molimo <Link to="/signin">Prijavite se</Link> da bi ostavili
-										recenziju
+										Molimo{" "}
+										<Link to="/signin">Prijavite se</Link>{" "}
+										da bi ostavili recenziju
 									</MessageBox>
 								)}
 							</li>
@@ -220,7 +279,10 @@ export default function ProductScreen(props) {
 							{product.reviews.map((review) => (
 								<li key={review._id}>
 									<strong>{review.name}</strong>
-									<Rating rating={review.rating} caption=" "></Rating>
+									<Rating
+										rating={review.rating}
+										caption=" "
+									></Rating>
 									<p>{review.createdAt.substring(0, 10)}</p>
 									<p>{review.comment}</p>
 								</li>

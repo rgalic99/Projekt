@@ -91,8 +91,10 @@ export default function OrderScreen(props) {
 							<div className="placeOrder placeOrder-body">
 								<h2>Dostava</h2>
 								<p>
-									<strong>Ime:</strong> {order.shippingAddress.fullName} <br />
-									<strong>Adresa: </strong> {order.shippingAddress.address},
+									<strong>Ime:</strong>{" "}
+									{order.shippingAddress.fullName} <br />
+									<strong>Adresa: </strong>{" "}
+									{order.shippingAddress.address},
 									{order.shippingAddress.city},
 									{order.shippingAddress.postalCode},
 									{order.shippingAddress.country}
@@ -100,7 +102,8 @@ export default function OrderScreen(props) {
 								<>
 									{order.isDelivered ? (
 										<MessageBox variant="success-action">
-											Dostavljeno: {order.deliveredAt.substring(0, 10)}
+											Dostavljeno:{" "}
+											{order.deliveredAt.substring(0, 10)}
 										</MessageBox>
 									) : (
 										<MessageBox variant="failed-action">
@@ -114,14 +117,17 @@ export default function OrderScreen(props) {
 							<div className="placeOrder placeOrder-body">
 								<h2>Plaćanje</h2>
 								<p>
-									<strong>Način plaćanja:</strong> {order.paymentMethod}
+									<strong>Način plaćanja:</strong>{" "}
+									{order.paymentMethod}
 								</p>
 								{order.isPaid ? (
 									<MessageBox variant="success-action">
 										Plaćeno: {order.paidAt.substring(0, 10)}
 									</MessageBox>
 								) : (
-									<MessageBox variant="failed-action">Nije plaćeno</MessageBox>
+									<MessageBox variant="failed-action">
+										Nije plaćeno
+									</MessageBox>
 								)}
 							</div>
 						</li>
@@ -140,14 +146,19 @@ export default function OrderScreen(props) {
 													></img>
 												</div>
 												<div className="min-30">
-													<Link to={`/product/${item.product}`}>
+													<Link
+														to={`/product/${item.product}`}
+													>
 														{item.name}
 													</Link>
 												</div>
 
 												<div>
-													{item.qty} x {item.price.toFixed(0)}kn =
-													{item.qty * item.price.toFixed(0)}kn
+													{item.qty} x{" "}
+													{item.price.toFixed(0)}kn =
+													{item.qty *
+														item.price.toFixed(0)}
+													kn
 												</div>
 											</div>
 										</li>
@@ -172,7 +183,9 @@ export default function OrderScreen(props) {
 							<li>
 								<div className="row">
 									<div>Dostava</div>
-									<div>{order.shippingPrice.toFixed(0)}kn</div>
+									<div>
+										{order.shippingPrice.toFixed(0)}kn
+									</div>
 								</div>
 							</li>
 							<li>
@@ -183,11 +196,11 @@ export default function OrderScreen(props) {
 							</li>
 							<li>
 								<div className="row">
-									<div>
-										<strong>Ukupno</strong>
+									<div className="price-2">
+										<h2> Ukupno: </h2>
 									</div>
-									<div>
-										<strong>{order.totalPrice.toFixed(0)}kn</strong>
+									<div className="price-2">
+										<h2>{order.totalPrice.toFixed(0)}kn</h2>
 									</div>
 								</div>
 							</li>
@@ -199,7 +212,9 @@ export default function OrderScreen(props) {
 												{errorPay}
 											</MessageBox>
 										)}
-										{loadingPay && <LoadingBox></LoadingBox>}
+										{loadingPay && (
+											<LoadingBox></LoadingBox>
+										)}
 										<PayPalButton
 											amount={order.totalPrice.toFixed(0)}
 											onSuccess={successPaymentHandler}
@@ -207,23 +222,27 @@ export default function OrderScreen(props) {
 									</>
 								</li>
 							)}
-							{userInfo.isAdmin && order.isPaid && !order.isDelivered && (
-								<li>
-									{loadingDeliver && <LoadingBox></LoadingBox>}
-									{errorDeliver && (
-										<MessageBox variant="failed-action">
-											{errorDeliver}
-										</MessageBox>
-									)}
-									<button
-										type="button"
-										className="primary block"
-										onClick={deliverHandler}
-									>
-										Dostavi Narudžbu
-									</button>
-								</li>
-							)}
+							{userInfo.isAdmin &&
+								order.isPaid &&
+								!order.isDelivered && (
+									<li>
+										{loadingDeliver && (
+											<LoadingBox></LoadingBox>
+										)}
+										{errorDeliver && (
+											<MessageBox variant="failed-action">
+												{errorDeliver}
+											</MessageBox>
+										)}
+										<button
+											type="button"
+											className="primary block"
+											onClick={deliverHandler}
+										>
+											Dostavi Narudžbu
+										</button>
+									</li>
+								)}
 						</ul>
 					</div>
 				</div>
