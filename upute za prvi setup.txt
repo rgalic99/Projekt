@@ -27,9 +27,6 @@ za pokretanje trebaju dva terminala,
 	u prvom napisete npm start dok ste u Projekt folderu 
 	u drugom npm start dok ste u frontend folderu
 
-ako piše error 500 prvo morate otici na linkove (tj ako ne vidite nijedan proizvod)
-	-http://localhost:5000/api/products/seed
-	-http://localhost:5000/api/users/seed
 
 obratite se Roku za admin account,paypal sandbox account,env file
 
