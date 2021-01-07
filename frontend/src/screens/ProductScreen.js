@@ -63,7 +63,9 @@ export default function ProductScreen(props) {
 				<MessageBox variant="failed-action">{Error}</MessageBox>
 			) : (
 				<div>
-					<Link to="/">⬅ Povratak na rezultate</Link>
+					<Link onClick={() => props.history.goBack()}>
+						⬅ Povratak na rezultate
+					</Link>
 					<div className="row top">
 						<span className="col-2">
 							<img

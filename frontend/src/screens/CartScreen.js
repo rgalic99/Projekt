@@ -20,6 +20,7 @@ export default function CartScreen(props) {
 
 	const removeFromCartHandler = (id) => {
 		dispatch(removeFromCart(id));
+		props.history.push("/cart");
 	};
 
 	const checkoutHandler = () => {
@@ -30,10 +31,12 @@ export default function CartScreen(props) {
 			<div className="col-2">
 				<h1>Košarica</h1>
 				{cartItems.length === 0 ? (
-					<MessageBox>
-						Košarica je prazna
-						<Link to="/">....⬅ Natrag na kupovinu</Link>
-					</MessageBox>
+					<div className="emptyCart">
+						<MessageBox>
+							Košarica je prazna
+							<Link to="/">....⬅ Natrag na kupovinu</Link>
+						</MessageBox>
+					</div>
 				) : (
 					<ul>
 						{cartItems.map((item) => (

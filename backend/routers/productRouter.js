@@ -16,17 +16,24 @@ productRouter.get(
 		const seller = req.query.seller || "";
 		const order = req.query.order || "";
 		const min =
-			req.query.min && Number(req.query.min) !== 0 ? Number(req.query.min) : 0;
+			req.query.min && Number(req.query.min) !== 0
+				? Number(req.query.min)
+				: 0;
 		const max =
-			req.query.max && Number(req.query.max) !== 0 ? Number(req.query.max) : 0;
+			req.query.max && Number(req.query.max) !== 0
+				? Number(req.query.max)
+				: 0;
 		const rating =
 			req.query.rating && Number(req.query.rating) !== 0
 				? Number(req.query.rating)
 				: 0;
-		const nameFilter = name ? { name: { $regex: name, $options: "i" } } : {};
+		const nameFilter = name
+			? { name: { $regex: name, $options: "i" } }
+			: {};
 		const sellerFilter = seller ? { seller } : {};
 		const categoryFilter = category ? { category } : {};
-		const priceFilter = min && max ? { price: { $gte: min, $lte: max } } : {};
+		const priceFilter =
+			min && max ? { price: { $gte: min, $lte: max } } : {};
 		const ratingFilter = rating ? { rating: { $gte: rating } } : {};
 		const sortOrder =
 			order === "lowest"
@@ -160,7 +167,9 @@ productRouter.post(
 		const product = await Product.findById(productId);
 		if (product) {
 			if (product.reviews.find((x) => x.name === req.user.name)) {
-				return res.status(400).send({ message: "Već ste ostavili recenziju" });
+				return res
+					.status(400)
+					.send({ message: "Već ste ostavili recenziju" });
 			}
 			const review = {
 				name: req.user.name,
@@ -175,7 +184,8 @@ productRouter.post(
 			const updatedProduct = await product.save();
 			res.status(201).send({
 				message: "Recenzija objavljena",
-				review: updatedProduct.reviews[updatedProduct.reviews.length - 1],
+				review:
+					updatedProduct.reviews[updatedProduct.reviews.length - 1],
 			});
 		} else {
 			res.status(404).send({ message: "Proizvod nije pronađen" });
