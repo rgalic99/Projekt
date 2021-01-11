@@ -1,6 +1,7 @@
 import { createStore, compose, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
+import { wishlistReducer } from "./reducers/wishlistReducers";
 import {
 	orderCreateReducer,
 	orderDeleteReducer,
@@ -41,16 +42,26 @@ const initialState = {
 		cartItems: localStorage.getItem("cartItems")
 			? JSON.parse(localStorage.getItem("cartItems"))
 			: [],
+
 		shippingAddress: localStorage.getItem("shippingAddress")
 			? JSON.parse(localStorage.getItem("shippingAddress"))
 			: {},
 		paymentMethod: "Gotovinom pri preuzimanju",
 	},
+	
+	wishlist: {
+		wishlistItems: localStorage.getItem("wishlistItems")
+			? JSON.parse(localStorage.getItem("wishlistItems"))
+			: [],
+
+	},
+
 };
 const reducer = combineReducers({
 	productList: productListReducer,
 	productDetails: productDetailsReducer,
 	cart: cartReducer,
+	wishlist: wishlistReducer,
 	userSignin: userSigninReducer,
 	userRegister: userRegisterReducer,
 	orderCreate: orderCreateReducer,

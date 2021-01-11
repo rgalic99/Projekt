@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signOut } from "./actions/userActions";
 import CartScreen from "./screens/CartScreen";
+import WishlistScreen from "./screens/WishlistScreen";
 import HomeScreen from "./screens/HomeScreen";
 import KontaktScreen from "./screens/KontaktScreen";
 import ProductScreen from "./screens/ProductScreen";
@@ -34,6 +35,8 @@ import PageInfoScreen from "./screens/PageInfoScreen";
 function App() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
+	const wishlist = useSelector((state) => state.wishlist);
+	const { wishlistItems } = wishlist;
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
 	const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -79,6 +82,14 @@ function App() {
 							{cartItems.length > 0 && (
 								<span className="badge">
 									{cartItems.length}
+								</span>
+							)}
+						</Link>
+						<Link to="/wishlist" className="cart">
+							Wishlist🎁
+							{wishlistItems.length > 0 && (
+								<span className="badge">
+									{wishlistItems.length}
 								</span>
 							)}
 						</Link>
@@ -203,6 +214,7 @@ function App() {
 						exact
 					></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
+					<Route path="/wishlist/:id?" component={WishlistScreen}></Route>
 					<Route
 						path="/shipping"
 						component={ShippingAddressScreen}

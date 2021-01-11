@@ -69,6 +69,7 @@ export const signOut = () => (dispatch) => {
 	localStorage.removeItem("userInfo");
 	localStorage.removeItem("cartItems");
 	localStorage.removeItem("shippingAddress");
+	localStorage.removeItem("wishlistItems");
 
 	dispatch({ type: USER_SIGNOUT });
 	document.location.href = "/signin";

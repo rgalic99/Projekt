@@ -38,9 +38,15 @@ export default function ProductScreen(props) {
 		}
 		dispatch(detailsProduct(productId));
 	}, [dispatch, productId, successReviewCreate]);
+	
 	const addToCartHandler = () => {
 		props.history.push(`/cart/${productId}?qty=${qty}`);
 	};
+
+	const addToWishlistHandler = () => {
+		props.history.push(`/wishlist/${productId}?qty=1`);
+	};
+
 	const submitHandler = (e) => {
 		e.preventDefault();
 		if (comment && rating) {
@@ -138,6 +144,12 @@ export default function ProductScreen(props) {
 													className="primary block"
 												>
 													Dodaj u košaricu
+												</button>
+												<button
+													onClick={addToWishlistHandler}
+													className="primary block"
+												>
+													Dodaj u wishlist
 												</button>
 											</li>
 										</>
