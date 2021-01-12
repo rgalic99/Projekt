@@ -72,7 +72,9 @@ export default function ProfileScreen() {
 					<>
 						{loadingUpdate && <LoadingBox></LoadingBox>}
 						{errorUpdate && (
-							<MessageBox variant="failed-action">{errorUpdate}</MessageBox>
+							<MessageBox variant="failed-action">
+								{errorUpdate}
+							</MessageBox>
 						)}
 						{successUpdate && (
 							<MessageBox variant="success-action">
@@ -109,45 +111,61 @@ export default function ProfileScreen() {
 							></input>
 						</div>
 						<div>
-							<label htmlFor="confirmPassword">Ponovite lozinku</label>
+							<label htmlFor="confirmPassword">
+								Ponovite lozinku
+							</label>
 							<input
 								id="pconfirmPassword"
 								type="text"
 								placeholder="Ponovno unesite lozinku"
-								onChange={(e) => setConfirmPassword(e.target.value)}
+								onChange={(e) =>
+									setConfirmPassword(e.target.value)
+								}
 							></input>
 						</div>
 						{user.isSeller && (
 							<>
 								<h2>Prodavač</h2>
 								<div>
-									<label htmlFor="sellerName">Ime prodavača</label>
+									<label htmlFor="sellerName">
+										Ime prodavača
+									</label>
 									<input
 										id="sellerName"
 										type="text"
 										placeholder="Unesite ime prodavača"
 										value={sellerName}
-										onChange={(e) => setSellerName(e.target.value)}
+										onChange={(e) =>
+											setSellerName(e.target.value)
+										}
 									></input>
 								</div>
 								<div>
-									<label htmlFor="sellerLogo">Logo prodavača</label>
+									<label htmlFor="sellerLogo">
+										Logo prodavača
+									</label>
 									<input
 										id="sellerLogo"
 										type="text"
 										placeholder="Unesite logo prodavača"
 										value={sellerLogo}
-										onChange={(e) => setSellerLogo(e.target.value)}
+										onChange={(e) =>
+											setSellerLogo(e.target.value)
+										}
 									></input>
 								</div>
 								<div>
-									<label htmlFor="sellerDescription">Opis prodavača</label>
+									<label htmlFor="sellerDescription">
+										Opis prodavača
+									</label>
 									<input
 										id="sellerDescription"
 										type="text"
 										placeholder="Unesite opis prodavača"
 										value={sellerDescription}
-										onChange={(e) => setSellerDescription(e.target.value)}
+										onChange={(e) =>
+											setSellerDescription(e.target.value)
+										}
 									></input>
 								</div>
 							</>
@@ -155,7 +173,7 @@ export default function ProfileScreen() {
 						<div>
 							<label />
 							<button className="primary" type="submit">
-								Ažuriraj
+								Ažuriraj <i class="far fa-edit"></i>
 							</button>
 						</div>
 					</>

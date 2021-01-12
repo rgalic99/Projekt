@@ -48,7 +48,9 @@ export default function UserEditScreen(props) {
 					<h1>Uredi Korisnika{name}</h1>
 					{loadingUpdate && <LoadingBox></LoadingBox>}
 					{errorUpdate && (
-						<MessageBox variant="failed-action">{errorUpdate}</MessageBox>
+						<MessageBox variant="failed-action">
+							{errorUpdate}
+						</MessageBox>
 					)}
 				</div>
 				{loading ? (
@@ -84,7 +86,9 @@ export default function UserEditScreen(props) {
 									id="isSeller"
 									type="checkbox"
 									checked={isSeller}
-									onChange={(e) => setIsSeller(e.target.checked)}
+									onChange={(e) =>
+										setIsSeller(e.target.checked)
+									}
 								></input>
 							</span>
 						</div>
@@ -95,13 +99,15 @@ export default function UserEditScreen(props) {
 									id="isAdmin"
 									type="checkbox"
 									checked={isAdmin}
-									onChange={(e) => setIsAdmin(e.target.checked)}
+									onChange={(e) =>
+										setIsAdmin(e.target.checked)
+									}
 								></input>
 							</span>
 						</div>
 						<div>
 							<button type="submit" className="primary">
-								Ažuriraj
+								Ažuriraj <i class="far fa-edit"></i>
 							</button>
 						</div>
 					</>

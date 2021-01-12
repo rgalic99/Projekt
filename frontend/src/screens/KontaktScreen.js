@@ -35,7 +35,7 @@ export default function KontaktScreen() {
 						></textarea>
 					</div>
 					<button className="btn" type="submit">
-						Pošalji
+						Pošalji <i class="fas fa-paper-plane"></i>
 					</button>
 				</form>
 			</section>

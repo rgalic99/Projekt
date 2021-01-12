@@ -47,8 +47,12 @@ export default function OrderListScreen(props) {
 							<th>KORISNIK</th>
 							<th>DATUM</th>
 							<th>UKUPNO</th>
-							<th>PLAĆENO</th>
-							<th>DOSTAVLJENO</th>
+							<th>
+								PLAĆENO <i class="fas fa-money-bill-wave"></i>
+							</th>
+							<th>
+								DOSTAVLJENO <i class="fas fa-truck"></i>
+							</th>
 							<th>AKCIJE</th>
 						</tr>
 					</thead>
@@ -66,16 +70,23 @@ export default function OrderListScreen(props) {
 												{order.paidAt.substring(0, 10)}
 											</MessageBox>
 										) : (
-											<MessageBox variant="failed-action">Ne</MessageBox>
+											<MessageBox variant="failed-action">
+												Ne
+											</MessageBox>
 										)}
 									</td>
 									<td>
 										{order.isDelivered ? (
 											<MessageBox variant="success-action">
-												{order.deliveredAt.substring(0, 10)}
+												{order.deliveredAt.substring(
+													0,
+													10
+												)}
 											</MessageBox>
 										) : (
-											<MessageBox variant="failed-action">Ne</MessageBox>
+											<MessageBox variant="failed-action">
+												Ne
+											</MessageBox>
 										)}
 									</td>
 									<td>
@@ -83,17 +94,21 @@ export default function OrderListScreen(props) {
 											type="button"
 											className="small"
 											onClick={() => {
-												props.history.push(`/order/${order._id}`);
+												props.history.push(
+													`/order/${order._id}`
+												);
 											}}
 										>
-											Detalji
+											Detalji{" "}
+											<i class="fas fa-info-circle"></i>
 										</button>
 										<button
 											type="button"
-											className="small"
+											className="small remove-button-2"
 											onClick={() => deleteHandler(order)}
 										>
-											Obriši
+											Obriši{" "}
+											<i class="far fa-trash-alt"></i>
 										</button>
 									</td>
 								</tr>

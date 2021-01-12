@@ -92,7 +92,9 @@ export default function ProductEditScreen(props) {
 				</div>
 				{loadingUpdate && <LoadingBox></LoadingBox>}
 				{errorUpdate && (
-					<MessageBox variant="failed-action">{errorUpdate}</MessageBox>
+					<MessageBox variant="failed-action">
+						{errorUpdate}
+					</MessageBox>
 				)}
 				{loading ? (
 					<LoadingBox></LoadingBox>
@@ -140,7 +142,9 @@ export default function ProductEditScreen(props) {
 							></input>
 							{loadingUpload && <LoadingBox></LoadingBox>}
 							{errorUpload && (
-								<MessageBox variant="failed-action">{errorUpload}</MessageBox>
+								<MessageBox variant="failed-action">
+									{errorUpload}
+								</MessageBox>
 							)}
 						</div>
 						<div>
@@ -170,7 +174,9 @@ export default function ProductEditScreen(props) {
 								type="text"
 								placeholder="Unesite količinu"
 								value={countInStock}
-								onChange={(e) => setCountInStock(e.target.value)}
+								onChange={(e) =>
+									setCountInStock(e.target.value)
+								}
 							></input>
 						</div>
 						<div>
@@ -187,7 +193,7 @@ export default function ProductEditScreen(props) {
 						<div>
 							<label></label>
 							<button className="primary" type="submit">
-								Ažuriraj
+								Ažuriraj <i class="far fa-edit"></i>
 							</button>
 						</div>
 					</>

@@ -389,6 +389,19 @@ label::before {
 	visibility: hidden;
 }
 
+.form-2 {
+	max-width: 35rem;
+	margin: 0 auto;
+}
+.form-2 > div {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+.form-2 label {
+	margin: 1rem 0;
+}
+
 /* Dropdown */
 .dropdown {
 	display: inline-block;
@@ -398,13 +411,14 @@ label::before {
 	position: absolute;
 	display: none;
 	right: 0;
-	min-width: 12rem;
+	min-width: 13rem;
 	padding: 0.6rem;
 	z-index: 1;
 	background-color: #203040;
 	margin: 0;
 	margin-top: 0.1rem;
 	border-radius: 0.2rem;
+	color: #ffffff;
 }
 .dropdown:hover .dropdown-content {
 	display: block;
@@ -482,7 +496,7 @@ label::before {
 }
 
 .search input {
-	width: 87.2%;
+	width: 86.4%;
 	border-radius: 0.5rem 0 0 0.5rem;
 	border-right: none;
 	margin-left: 0.5rem;
@@ -494,7 +508,7 @@ label::before {
 }
 form.search {
 	justify-content: center;
-	width: 130%;
+	width: 125%;
 }
 /* Aside */
 aside {
@@ -595,7 +609,7 @@ li {
 .pricebox {
 	position: absolute;
 	padding-top: 0;
-	top: 8.3rem;
+	top: 6.5rem;
 	right: 2rem;
 	margin: 0;
 }
@@ -613,4 +627,22 @@ li {
 }
 .emptyCart {
 	width: 680px;
+}
+
+button.wish {
+	margin-top: 1rem;
+	background-color: lightgray;
+}
+
+.float-left {
+	float: right;
+}
+.remove-button {
+	margin-left: 2rem;
+	background-color: rgb(255, 100, 100);
+}
+
+.remove-button-2 {
+	margin-left: 2rem;
+	background-color: rgb(255, 155, 155);
 }

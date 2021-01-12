@@ -78,7 +78,7 @@ function App() {
 					</span>
 					<div className="header-links">
 						<Link to="/cart" className="cart">
-							Košarica👜
+							Košarica<i class="fa fa-shopping-cart"></i>
 							{cartItems.length > 0 && (
 								<span className="badge">
 									{cartItems.length}
@@ -86,7 +86,7 @@ function App() {
 							)}
 						</Link>
 						<Link to="/wishlist" className="cart">
-							Wishlist🎁
+							Lista želja <i class="far fa-heart"></i>
 							{wishlistItems.length > 0 && (
 								<span className="badge">
 									{wishlistItems.length}
@@ -101,16 +101,22 @@ function App() {
 								</Link>
 								<ul className="dropdown-content">
 									<li>
-										<Link to="/profile">Profil</Link>
+										<Link to="/profile">
+											<i class="fa fa-user"></i> Profil
+										</Link>
 									</li>
 									<li>
-										<Link to="/orderhistory">Narudžbe</Link>
+										<Link to="/orderhistory">
+											<i class="fas fa-receipt"></i>{" "}
+											Narudžbe
+										</Link>
 									</li>
 									<li>
 										<Link
 											to="#signout"
 											onClick={signoutHandler}
 										>
+											<i class="fas fa-user-slash"></i>{" "}
 											Odjava
 										</Link>
 									</li>
@@ -129,11 +135,13 @@ function App() {
 								</Link>
 								<ul className="dropdown-content">
 									<li>
+										<i class="fa fa-dolly"></i>
 										<Link to="/productlist/seller">
 											Proizvodi
 										</Link>
 									</li>
 									<li>
+										<i class="fas fa-receipt"></i>
 										<Link to="/orderlist/seller">
 											Narudžbe
 										</Link>
@@ -151,12 +159,15 @@ function App() {
 										<Link to="/dashboard">Pregled</Link>
 									</li> */}
 									<li>
+										<i class="fa fa-dolly"></i>
 										<Link to="/productlist">Proizvodi</Link>
 									</li>
 									<li>
+										<i class="fas fa-receipt"></i>
 										<Link to="/orderlist">Narudžbe</Link>
 									</li>
 									<li>
+										<i class="fa fa-users"></i>
 										<Link to="/userlist">Korisnici</Link>
 									</li>
 								</ul>
@@ -173,7 +184,7 @@ function App() {
 								className="close-sidebar"
 								type="button"
 							>
-								<i className="fa fa-close"></i>
+								<i class="fas fa-times"></i>
 							</button>
 						</li>
 						{loadingCategories ? (
@@ -214,7 +225,10 @@ function App() {
 						exact
 					></Route>
 					<Route path="/cart/:id?" component={CartScreen}></Route>
-					<Route path="/wishlist/:id?" component={WishlistScreen}></Route>
+					<Route
+						path="/wishlist/:id?"
+						component={WishlistScreen}
+					></Route>
 					<Route
 						path="/shipping"
 						component={ShippingAddressScreen}

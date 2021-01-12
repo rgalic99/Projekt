@@ -87,13 +87,15 @@ export default function CartScreen(props) {
 									<div>
 										<button
 											type="button"
+											className="remove-button"
 											onClick={() =>
 												removeFromCartHandler(
 													item.product
 												)
 											}
 										>
-											Obriši
+											Obriši{" "}
+											<i class="far fa-trash-alt"></i>
 										</button>
 									</div>
 								</div>

@@ -71,7 +71,11 @@ export default function ProductListScreen(props) {
 		<div>
 			<div className="row">
 				<h1>Proizvodi</h1>
-				<button type="button" className="primary" onClick={createHandler}>
+				<button
+					type="button"
+					className="primary"
+					onClick={createHandler}
+				>
 					Kreiraj Proizvod
 				</button>
 			</div>
@@ -114,17 +118,22 @@ export default function ProductListScreen(props) {
 											type="button"
 											className="small"
 											onClick={() =>
-												props.history.push(`/product/${product._id}/edit`)
+												props.history.push(
+													`/product/${product._id}/edit`
+												)
 											}
 										>
-											Uredi
+											Uredi <i class="far fa-edit"></i>
 										</button>
 										<button
 											type="button"
-											className="small"
-											onClick={() => deleteHandler(product)}
+											className="small remove-button-2"
+											onClick={() =>
+												deleteHandler(product)
+											}
 										>
-											Izbriši
+											Obriši{" "}
+											<i class="far fa-trash-alt"></i>
 										</button>
 									</td>
 								</tr>
@@ -135,16 +144,22 @@ export default function ProductListScreen(props) {
 						{sellerMode
 							? [...Array(pages).keys()].map((x) => (
 									<Link
-										className={x + 1 === page ? "active" : ""}
+										className={
+											x + 1 === page ? "active" : ""
+										}
 										key={x + 1}
-										to={`/productlist/seller/pageNumber/${x + 1}`}
+										to={`/productlist/seller/pageNumber/${
+											x + 1
+										}`}
 									>
 										{x + 1}
 									</Link>
 							  ))
 							: [...Array(pages).keys()].map((x) => (
 									<Link
-										className={x + 1 === page ? "active" : ""}
+										className={
+											x + 1 === page ? "active" : ""
+										}
 										key={x + 1}
 										to={`/productlist/pageNumber/${x + 1}`}
 									>

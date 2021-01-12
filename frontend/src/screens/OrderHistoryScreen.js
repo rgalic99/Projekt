@@ -25,8 +25,12 @@ export default function OrderHistoryScreen(props) {
 							<th>ID</th>
 							<th>DATUM</th>
 							<th>UKUPNO</th>
-							<th>PLAĆENO</th>
-							<th>DOSTAVLJENO</th>
+							<th>
+								PLAĆENO <i class="fas fa-money-bill-wave"></i>
+							</th>
+							<th>
+								DOSTAVLJENO <i class="fas fa-truck"></i>
+							</th>
 							<th>AKCIJE</th>
 						</tr>
 					</thead>
@@ -42,7 +46,9 @@ export default function OrderHistoryScreen(props) {
 											{order.paidAt.substring(0, 10)}
 										</MessageBox>
 									) : (
-										<MessageBox variant="failed-action">Ne</MessageBox>
+										<MessageBox variant="failed-action">
+											Ne
+										</MessageBox>
 									)}
 								</td>
 								<td>
@@ -51,7 +57,9 @@ export default function OrderHistoryScreen(props) {
 											{order.deliveredAt.substring(0, 10)}
 										</MessageBox>
 									) : (
-										<MessageBox variant="failed-action">Ne</MessageBox>
+										<MessageBox variant="failed-action">
+											Ne
+										</MessageBox>
 									)}
 								</td>
 								<td>
@@ -59,10 +67,13 @@ export default function OrderHistoryScreen(props) {
 										type="button"
 										className="small"
 										onClick={() => {
-											props.history.push(`/order/${order._id}`);
+											props.history.push(
+												`/order/${order._id}`
+											);
 										}}
 									>
-										Detalji
+										Detalji{" "}
+										<i class="fas fa-info-circle"></i>
 									</button>
 								</td>
 							</tr>

@@ -34,7 +34,9 @@ export default function UserListScreen(props) {
 				<MessageBox variant="failed-action">{errorDelete}</MessageBox>
 			)}
 			{successDelete && (
-				<MessageBox variant="success">Korisnik uspješno obrisan</MessageBox>
+				<MessageBox variant="success">
+					Korisnik uspješno obrisan
+				</MessageBox>
 			)}
 			{loading ? (
 				<LoadingBox></LoadingBox>
@@ -60,32 +62,44 @@ export default function UserListScreen(props) {
 								<td>{user.email}</td>
 								<td>
 									{user.isSeller ? (
-										<MessageBox variant="success-action">Da</MessageBox>
+										<MessageBox variant="success-action">
+											Da
+										</MessageBox>
 									) : (
-										<MessageBox variant="failed-action">Ne</MessageBox>
+										<MessageBox variant="failed-action">
+											Ne
+										</MessageBox>
 									)}
 								</td>
 								<td>
 									{user.isAdmin ? (
-										<MessageBox variant="success-action">Da</MessageBox>
+										<MessageBox variant="success-action">
+											Da
+										</MessageBox>
 									) : (
-										<MessageBox variant="failed-action">Ne</MessageBox>
+										<MessageBox variant="failed-action">
+											Ne
+										</MessageBox>
 									)}
 								</td>
 								<td>
 									<button
 										type="button"
 										className="small"
-										onClick={() => props.history.push(`/user/${user._id}/edit`)}
+										onClick={() =>
+											props.history.push(
+												`/user/${user._id}/edit`
+											)
+										}
 									>
-										Uredi
+										Uredi <i class="far fa-edit"></i>
 									</button>
 									<button
 										type="button"
-										className="small"
+										className="small remove-button-2"
 										onClick={() => deleteHandler(user)}
 									>
-										Obriši
+										Obriši <i class="far fa-trash-alt"></i>
 									</button>
 								</td>
 							</tr>

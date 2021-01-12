@@ -27,11 +27,11 @@ export default function WishlistScreen(props) {
 	return (
 		<div className="row top">
 			<div className="col-2">
-				<h1>Wishlist</h1>
+				<h1>Lista želja</h1>
 				{wishlistItems.length === 0 ? (
 					<div className="emptyCart">
 						<MessageBox>
-						Wishlist je prazan
+							Lista želja je prazna
 							<Link to="/">....⬅ Natrag na kupovinu</Link>
 						</MessageBox>
 					</div>
@@ -53,8 +53,6 @@ export default function WishlistScreen(props) {
 										</Link>
 									</div>
 
-									
-
 									<div className="pricetag">
 										{item.price.toFixed(0)}
 										kn
@@ -63,26 +61,28 @@ export default function WishlistScreen(props) {
 									<div>
 										<button
 											type="button"
+											className="primary"
 											onClick={() =>
-												addToCartHandler(
-													item.product
-												)
+												addToCartHandler(item.product)
 											}
 										>
-											Dodaj u Košaricu
+											Dodaj u Košaricu{" "}
+											<i class="fas fa-cart-plus"></i>
 										</button>
 									</div>
 
 									<div>
 										<button
 											type="button"
+											className="remove-button"
 											onClick={() =>
 												removeFromWishlistHandler(
 													item.product
 												)
 											}
 										>
-											Obriši
+											Obriši{" "}
+											<i class="far fa-trash-alt"></i>
 										</button>
 									</div>
 								</div>
@@ -91,7 +91,6 @@ export default function WishlistScreen(props) {
 					</ul>
 				)}
 			</div>
-			
 		</div>
 	);
 }

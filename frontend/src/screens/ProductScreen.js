@@ -38,7 +38,7 @@ export default function ProductScreen(props) {
 		}
 		dispatch(detailsProduct(productId));
 	}, [dispatch, productId, successReviewCreate]);
-	
+
 	const addToCartHandler = () => {
 		props.history.push(`/cart/${productId}?qty=${qty}`);
 	};
@@ -143,13 +143,17 @@ export default function ProductScreen(props) {
 													onClick={addToCartHandler}
 													className="primary block"
 												>
-													Dodaj u košaricu
+													Dodaj u košaricu{" "}
+													<i class="fas fa-cart-plus"></i>
 												</button>
 												<button
-													onClick={addToWishlistHandler}
-													className="primary block"
+													onClick={
+														addToWishlistHandler
+													}
+													className="wish primary block"
 												>
-													Dodaj u wishlist
+													Dodaj u listu želja{" "}
+													<i class="far fa-heart"></i>
 												</button>
 											</li>
 										</>
@@ -260,7 +264,8 @@ export default function ProductScreen(props) {
 												className="primary"
 												type="submit"
 											>
-												Pošalji
+												Pošalji{" "}
+												<i class="fas fa-paper-plane"></i>
 											</button>
 										</div>
 										<div>

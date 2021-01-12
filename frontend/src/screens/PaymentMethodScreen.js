@@ -25,7 +25,7 @@ export default function PaymentMethodScreen(props) {
 	return (
 		<div>
 			<CheckoutSteps step1 step2 step3></CheckoutSteps>
-			<form className="form" onSubmit={submitHandler}>
+			<form className="form-2" onSubmit={submitHandler}>
 				<div>
 					<h1>Način plaćanja</h1>
 				</div>
@@ -40,6 +40,7 @@ export default function PaymentMethodScreen(props) {
 							onChange={(e) => setPaymentMethod(e.target.value)}
 						></input>
 						<label htmlFor="paypal">PayPal</label>
+						<i class="fab fa-cc-paypal fa-2x float-left"></i>
 					</div>
 				</span>
 				<span>
@@ -52,7 +53,10 @@ export default function PaymentMethodScreen(props) {
 							required
 							onChange={(e) => setPaymentMethod(e.target.value)}
 						></input>
-						<label htmlFor="card">Kartica</label>
+						<label htmlFor="card">
+							Kartica{" "}
+							<i class="fas fa-credit-card float-left fa-2x"></i>
+						</label>
 					</div>
 				</span>
 				<span>
@@ -64,7 +68,10 @@ export default function PaymentMethodScreen(props) {
 						required
 						onChange={(e) => setPaymentMethod(e.target.value)}
 					></input>
-					<label htmlFor="cash">Gotovinom pri preuzimanju</label>
+					<label htmlFor="cash">
+						Gotovinom pri preuzimanju{" "}
+						<i class="fas fa-money-bill-wave float-left fa-2x"></i>
+					</label>
 				</span>
 				<div>
 					<label />
