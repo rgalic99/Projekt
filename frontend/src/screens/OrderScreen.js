@@ -239,7 +239,8 @@ export default function OrderScreen(props) {
 											className="primary block"
 											onClick={deliverHandler}
 										>
-											Dostavi Narudžbu
+											Dostavi Narudžbu{" "}
+											<i class="fas fa-truck"></i>
 										</button>
 									</li>
 								)}

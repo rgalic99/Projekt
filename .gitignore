@@ -19,3 +19,7 @@ yarn-error.log*
 package-lock.json
 
 .env
+
+frontend/jsconfig.json
+.vscode
+.eslintrc.js

@@ -124,7 +124,7 @@ function App() {
 							</div>
 						) : (
 							<Link to="/signin" className="signUpIn">
-								Prijava 🖊
+								Prijava <i class="fas fa-sign-in-alt"></i>
 							</Link>
 						)}
 						{userInfo && userInfo.isSeller && (

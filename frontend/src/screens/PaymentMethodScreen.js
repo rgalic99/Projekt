@@ -76,7 +76,7 @@ export default function PaymentMethodScreen(props) {
 				<div>
 					<label />
 					<button className="primary" type="submit">
-						Nastavak➡
+						Nastavak <i class="fas fa-arrow-right"></i>
 					</button>
 				</div>
 			</form>

@@ -64,10 +64,12 @@ export default function SearchScreen(props) {
 				) : error ? (
 					<MessageBox variant="failed-action">{error}</MessageBox>
 				) : (
-					<div>
-						{products.length} rezultat
-						{products.length !== 1 && <span>a</span>}
-					</div>
+					<>
+						{/* 			<div>
+							{products.length} rezultat
+							{products.length !== 1 && <span>a</span>}
+						</div> */}
+					</>
 				)}
 				<div>
 					Sortiraj po

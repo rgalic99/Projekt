@@ -29,7 +29,9 @@ export default function SigninScreen(props) {
 					<h1>Prijava</h1>
 				</div>
 				{loading && <LoadingBox></LoadingBox>}
-				{error && <MessageBox variant="failed-login">{error}</MessageBox>}
+				{error && (
+					<MessageBox variant="failed-login">{error}</MessageBox>
+				)}
 				<div>
 					<label htmlFor="email">Email adresa</label>
 					<input
@@ -53,15 +55,17 @@ export default function SigninScreen(props) {
 				<div>
 					<label />
 					<button className="primary" type="submit">
-						Prijava
+						Prijava <i class="fas fa-sign-in-alt"></i>
 					</button>
 				</div>
 				<div>
 					<label />
 					<div>
 						Novi korisnik?
+						<br />
+						<i class="fas fa-user-plus"></i>
 						<Link to={`/register?redirect=${redirect}`}>
-							Napravite svoj račun
+							{"  "}Napravite svoj račun
 						</Link>
 					</div>
 				</div>

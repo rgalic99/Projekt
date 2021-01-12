@@ -32,7 +32,9 @@ export default function ShippingAddressScreen(props) {
 		}
 		let moveOn = true;
 		if (!newLat || !newLng) {
-			moveOn = window.confirm("Niste postavili adresu na karti. Nastaviti?");
+			moveOn = window.confirm(
+				"Niste postavili adresu na karti. Nastaviti?"
+			);
 		}
 		if (moveOn) {
 			dispatch(
@@ -129,13 +131,13 @@ export default function ShippingAddressScreen(props) {
 				<div>
 					<label htmlFor="chooseOnMap">Lokacija</label>
 					<button type="button" onClick={chooseOnMap}>
-						Odaberi na mapi
+						Odaberi na mapi <i class="fas fa-map-marked-alt"></i>
 					</button>
 				</div>
 				<div>
 					<label />
 					<button className="primary" type="submit">
-						Nastavak ➡
+						Nastavak <i class="fas fa-arrow-right"></i>
 					</button>
 				</div>
 			</form>

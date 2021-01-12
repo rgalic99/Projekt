@@ -84,7 +84,10 @@ export default function ProductScreen(props) {
 								<ul>
 									<li>
 										<div className="price-2">
-											Cijena: <h2>{product.price} kn</h2>
+											Cijena:{" "}
+											<h2>
+												{product.price.toFixed(0)} kn
+											</h2>
 										</div>
 									</li>
 									<li>
@@ -187,7 +190,7 @@ export default function ProductScreen(props) {
 							<li>
 								<h1>{product.name}</h1>
 							</li>
-							<li>Cijena: {product.price}kn</li>
+							<li>Cijena: {product.price.toFixed(0)}kn</li>
 							{
 								<li className="product-rating">
 									<Rating
