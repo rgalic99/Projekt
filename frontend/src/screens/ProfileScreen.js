@@ -4,6 +4,7 @@ import { detailsUser, updateUserProfile } from "../actions/userActions";
 import MessageBox from "../components/MessageBox";
 import LoadingBox from "../components/LoadingBox";
 import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
+import Axios from "../../node_modules/axios/index";
 
 export default function ProfileScreen() {
 	const [name, setName] = useState("");
@@ -11,7 +12,7 @@ export default function ProfileScreen() {
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [sellerName, setSellerName] = useState("");
-	const [sellerLogo, setSellerLogo] = useState("");
+	const [image, setImage] = useState(""); //sellerLogo
 	const [sellerDescription, setSellerDescription] = useState("");
 
 	const dispatch = useDispatch();
@@ -35,7 +36,7 @@ export default function ProfileScreen() {
 			setEmail(user.email);
 			if (user.seller) {
 				setSellerName(user.seller.name);
-				setSellerLogo(user.seller.logo);
+				setImage(user.seller.logo); //setSellerLogo
 				setSellerDescription(user.seller.description);
 			}
 		}
@@ -52,12 +53,34 @@ export default function ProfileScreen() {
 					email,
 					password,
 					sellerName,
-					sellerLogo,
+					image, //sellerLogo
 					sellerDescription,
 				})
 			);
 		}
 	};
+	const [loadingUpload, setLoadingUpload] = useState(false);
+	const [errorUpload, setErrorUpload] = useState("");
+	const uploadFileHandler = async (e) => {
+		const file = e.target.files[0];
+		const bodyFormData = new FormData();
+		bodyFormData.append("image", file);
+		setLoadingUpload(true);
+		try {
+			const { data } = await Axios.post("/api/uploads", bodyFormData, {
+				headers: {
+					"Content-Type": "multipart/form-data",
+					Authorization: `Bearer ${userInfo.token}`,
+				},
+			});
+			setImage(data);
+			setLoadingUpload(false);
+		} catch (error) {
+			setErrorUpload(error.message);
+			setLoadingUpload(false);
+		}
+	};
+
 	return (
 		<div>
 			<form className="form" onSubmit={submitHandler}>
@@ -141,6 +164,39 @@ export default function ProfileScreen() {
 									></input>
 								</div>
 								<div>
+									<label htmlFor="image">Put slike</label>
+									<input
+										id="image"
+										type="text"
+										placeholder="Unesite sliku"
+										value={image}
+										onChange={(e) =>
+											setImage(e.target.value)
+										}
+									></input>
+									{loadingUpload && <LoadingBox></LoadingBox>}
+									{errorUpload && (
+										<MessageBox variant="failed-action">
+											{errorUpload}
+										</MessageBox>
+									)}
+								</div>
+								<div>
+									<label htmlFor="imageFile">Slika</label>
+									<input
+										type="file"
+										id="imageFile"
+										label="Odaberite sliku"
+										onChange={uploadFileHandler}
+									></input>
+									{loadingUpload && <LoadingBox></LoadingBox>}
+									{errorUpload && (
+										<MessageBox variant="failed-action">
+											{errorUpload}
+										</MessageBox>
+									)}
+								</div>
+								{/* 					<div>
 									<label htmlFor="sellerLogo">
 										Logo prodavača
 									</label>
@@ -153,7 +209,7 @@ export default function ProfileScreen() {
 											setSellerLogo(e.target.value)
 										}
 									></input>
-								</div>
+								</div> */}
 								<div>
 									<label htmlFor="sellerDescription">
 										Opis prodavača
