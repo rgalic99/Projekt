@@ -192,6 +192,91 @@ img.icon {
 	width: inherit;
 	margin: auto;
 }
+img.Goga {
+	max-width: 30rem;
+	display: block;
+	margin: auto;
+	height: 30rem;
+}
+img.Ante {
+	max-width: 30rem;
+	display: block;
+	margin: auto;
+	height: 30rem;
+}
+img.Ivan {
+	max-width: 30rem;
+	display: block;
+	margin: auto;
+	height: 30rem;
+}
+img.Marin {
+	max-width: 30rem;
+	display: block;
+	margin: auto;
+	height: 30rem;
+}
+img.Karla {
+	max-width: 30rem;
+	display: block;
+	margin: auto;
+	height: 30rem;
+}
+img.Roko {
+	max-width: 30rem;
+	display: block;
+	margin: auto;
+	height: 30rem;
+}
+img.Roko:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
+img.Roko:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
+img.Ante:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
+img.Marin:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
+img.Ivan:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
+img.Karla:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
+img.Goga:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
 img.icon:hover {
 	transition: transform 0.1s;
 	transform: scale(1.02);
@@ -656,7 +741,7 @@ li {
 .o_nama {
 	padding: 60px;
 	text-align: center;
-	background: #1abc9c;
+	background: #047a63;
 	color: white;
 	font-size: 30px;
 }
@@ -684,4 +769,36 @@ button.wish {
 .remove-button-2 {
 	margin-left: 2rem;
 	background-color: rgb(255, 155, 155);
+}
+
+.founderCard {
+	flex-grow: 2;
+	flex-basis: 20%;
+	border: 0.1rem #c0c0c0 solid;
+	background-color: #f8f8f8;
+	border-radius: 0.5rem;
+	justify-content: space-between;
+	margin: 1rem;
+	max-width: 35rem;
+	height: 55rem;
+	display: table;
+	align-content: center;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	align-items: baseline;
+}
+.founderCard:hover {
+	box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+	margin: 2rem;
+}
+
+.o_nama > b {
+	color: white;
+}
+.o_nama > b:hover {
+	color: white;
+	cursor: grab;
 }

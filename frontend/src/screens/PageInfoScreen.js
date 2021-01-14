@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Space from "../components/Space.js";
+import { array } from "../constants/founders.js";
 export default function PageInfoScreen() {
+	const [duck, setDuck] = useState(false);
 	return (
-		<body>
-			<h1 className="o_nama">O nama</h1>
+		<>
+			<h1 className="o_nama">
+				{duck ? (
+					<b onClick={() => setDuck(false)}>🦆</b>
+				) : (
+					<b onClick={() => setDuck(true)}>O</b>
+				)}{" "}
+				nama
+			</h1>
 			<p>
 				Tech-@-tack je najbolja stranica koja nije na tržištu. <br />
 				Njen inovativan dizajn je nešto što je tema brojnih diskusija
@@ -15,6 +24,39 @@ export default function PageInfoScreen() {
 				Imate neki problem ili upit?{" "}
 				<Link to="/kontakt">Kontaktirajte nas</Link>
 			</div>
-		</body>
+			<h2>Naš tim</h2>
+			<body>
+				<div className="row">
+					{array.map((item) => (
+						<div class="column">
+							<div class="founderCard" key={item.id}>
+								<img
+									src={item.url}
+									alt={item.name}
+									className={item.tag}
+								/>
+								<div class="container">
+									<h2>
+										{item.name} {item.lastName}
+									</h2>
+									<p class="title">{item.title}</p>
+									<p>
+										<span class="mail">
+											<a href={`mailto:${item.mail}`}>
+												{" "}
+												Kontakt
+											</a>{" "}
+											<i class="far fa-envelope"></i>
+										</span>
+									</p>
+									<p>{item.description}</p>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</body>
+			<Space num="22"></Space>
+		</>
 	);
 }

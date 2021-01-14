@@ -9,7 +9,7 @@ import { listProducts } from "../actions/productActions";
 import { listTopSellers } from "../actions/userActions";
 import { Link } from "react-router-dom";
 
-export default function HomeScreen(props) {
+export default function HomeScreen() {
 	const dispatch = useDispatch();
 	const productList = useSelector((state) => state.productList);
 	const { loading, error, products } = productList;
