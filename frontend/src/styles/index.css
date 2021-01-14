@@ -552,6 +552,7 @@ label::before {
 .placeOrder-body {
 	padding: 1rem;
 	word-wrap: break-word;
+	width: 67rem;
 	text-align: auto;
 }
 .placeOrder-body > * {
@@ -620,7 +621,6 @@ label::before {
 }
 
 .search input {
-	width: 86.4%;
 	border-radius: 0.5rem 0 0 0.5rem;
 	border-right: none;
 	margin-left: 0.5rem;
@@ -631,8 +631,8 @@ label::before {
 	margin-top: 0rem;
 }
 form.search {
-	justify-content: center;
-	width: 125%;
+	display: flex;
+	justify-content: flex-end;
 }
 /* Aside */
 aside {
