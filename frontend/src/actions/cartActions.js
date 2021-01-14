@@ -20,12 +20,18 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
 			qty,
 		},
 	});
-	localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+	localStorage.setItem(
+		"cartItems",
+		JSON.stringify(getState().cart.cartItems)
+	);
 };
 
 export const removeFromCart = (productId) => (dispatch, getState) => {
 	dispatch({ type: CART_REMOVE_ITEM, payload: productId });
-	localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+	localStorage.setItem(
+		"cartItems",
+		JSON.stringify(getState().cart.cartItems)
+	);
 };
 
 export const saveShippingAddress = (data) => (dispatch) => {

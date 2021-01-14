@@ -37,12 +37,22 @@ export default function HomeScreen(props) {
 					{sellers.length === 0 && (
 						<MessageBox>Nije pronađen prodavač</MessageBox>
 					)}
-					<Carousel showArrows responsiveHeight autoPlay showThumbs={false}>
+					<Carousel
+						showArrows
+						responsiveHeight
+						autoPlay
+						showThumbs={false}
+					>
 						{sellers.map((seller) => (
 							<div key={seller._id}>
 								<Link to={`/seller/${seller._id}`}>
-									<img src={seller.seller.logo} alt={seller.seller.name} />
-									<p className="legend">{seller.seller.name}</p>
+									<img
+										src={seller.seller.logo}
+										alt={seller.seller.name}
+									/>
+									<p className="legend">
+										{seller.seller.name}
+									</p>
 								</Link>
 							</div>
 						))}
@@ -56,10 +66,15 @@ export default function HomeScreen(props) {
 				<MessageBox variant="failed-action">{error}</MessageBox>
 			) : (
 				<>
-					{products.length === 0 && <MessageBox>Nema Proizvoda</MessageBox>}
+					{products.length === 0 && (
+						<MessageBox>Nema Proizvoda</MessageBox>
+					)}
 					<div className="row center">
 						{products.map((product) => (
-							<Product key={product._id} product={product}></Product>
+							<Product
+								key={product._id}
+								product={product}
+							></Product>
 						))}
 					</div>
 				</>

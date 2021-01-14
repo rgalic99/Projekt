@@ -48,14 +48,12 @@ const initialState = {
 			: {},
 		paymentMethod: "Gotovinom pri preuzimanju",
 	},
-	
+
 	wishlist: {
 		wishlistItems: localStorage.getItem("wishlistItems")
 			? JSON.parse(localStorage.getItem("wishlistItems"))
 			: [],
-
 	},
-
 };
 const reducer = combineReducers({
 	productList: productListReducer,

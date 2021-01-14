@@ -107,8 +107,15 @@ export default function MapScreen(props) {
 						onPlacesChanged={onPlacesChanged}
 					>
 						<div className="map-input-box">
-							<input type="text" placeholder="Unesi adresu"></input>
-							<button type="button" className="primary" onClick={onConfirm}>
+							<input
+								type="text"
+								placeholder="Unesi adresu"
+							></input>
+							<button
+								type="button"
+								className="primary"
+								onClick={onConfirm}
+							>
 								Potvrdi
 							</button>
 						</div>

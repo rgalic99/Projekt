@@ -53,7 +53,10 @@ export const listProductCategories = () => async (dispatch) => {
 		const { data } = await Axios.get(`/api/products/categories`);
 		dispatch({ type: PRODUCT_CATEGORY_LIST_SUCCESS, payload: data });
 	} catch (error) {
-		dispatch({ type: PRODUCT_CATEGORY_LIST_FAILURE, payload: error.message });
+		dispatch({
+			type: PRODUCT_CATEGORY_LIST_FAILURE,
+			payload: error.message,
+		});
 	}
 };
 
@@ -105,9 +108,13 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 		userSignin: { userInfo },
 	} = getState();
 	try {
-		const { data } = await Axios.put(`/api/products/${product._id}`, product, {
-			headers: { Authorization: `Bearer ${userInfo.token}` },
-		});
+		const { data } = await Axios.put(
+			`/api/products/${product._id}`,
+			product,
+			{
+				headers: { Authorization: `Bearer ${userInfo.token}` },
+			}
+		);
 		dispatch({ type: PRODUCT_UPDATE_SUCCESS, payload: data });
 	} catch (error) {
 		const message =

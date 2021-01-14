@@ -12,7 +12,9 @@ export default function Rating(props) {
 					<div>
 						{caption ? (
 							<span>{caption}</span>
-						) : numReviews === 2 || numReviews === 3 || numReviews === 4 ? (
+						) : numReviews === 2 ||
+						  numReviews === 3 ||
+						  numReviews === 4 ? (
 							numReviews + " recenzije"
 						) : (
 							numReviews + " recenzija"
@@ -25,7 +27,9 @@ export default function Rating(props) {
 					<div>
 						{caption ? (
 							<span>{caption}</span>
-						) : numReviews === 2 || numReviews === 3 || numReviews === 4 ? (
+						) : numReviews === 2 ||
+						  numReviews === 3 ||
+						  numReviews === 4 ? (
 							numReviews + " recenzije"
 						) : (
 							numReviews + " recenzija"

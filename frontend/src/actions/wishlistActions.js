@@ -17,10 +17,16 @@ export const addToWishlist = (productId) => async (dispatch, getState) => {
 			seller: data.seller,
 		},
 	});
-	localStorage.setItem("wishlistItems", JSON.stringify(getState().wishlist.wishlistItems));
+	localStorage.setItem(
+		"wishlistItems",
+		JSON.stringify(getState().wishlist.wishlistItems)
+	);
 };
 
 export const removeFromWishlist = (productId) => (dispatch, getState) => {
 	dispatch({ type: WISHLIST_REMOVE_ITEM, payload: productId });
-	localStorage.setItem("wishlistItems", JSON.stringify(getState().wishlist.wishlistItems));
+	localStorage.setItem(
+		"wishlistItems",
+		JSON.stringify(getState().wishlist.wishlistItems)
+	);
 };
