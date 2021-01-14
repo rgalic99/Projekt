@@ -32,60 +32,68 @@ export default function WishlistScreen(props) {
 					<div className="emptyCart">
 						<MessageBox>
 							Lista želja je prazna
-							<Link to="/">....⬅ Natrag na kupovinu</Link>
+							<Link to="/">
+								....<i class="fas fa-arrow-left"></i> Natrag na
+								kupovinu
+							</Link>
 						</MessageBox>
 					</div>
 				) : (
-					<ul>
+					<ul className="wish-alt">
 						{wishlistItems.map((item) => (
 							<li key={item.product}>
-								<div className="placeOrder placeOrder-body row min-30-parent">
-									<div>
-										<img
-											src={item.image}
-											alt={item.name}
-											className="small"
-										></img>
-									</div>
-									<div className="min-30">
-										<Link to={`/product/${item.product}`}>
-											{item.name}
-										</Link>
-									</div>
+								<>
+									<div className="wishlist wishlist-body row">
+										<div>
+											<img
+												src={item.image}
+												alt={item.name}
+												className="icon"
+											></img>
+										</div>
+										<div className="min-30 textLarge">
+											<Link
+												to={`/product/${item.product}`}
+											>
+												{item.name}
+											</Link>
+										</div>
 
-									<div className="pricetag">
-										{item.price.toFixed(0)}
-										kn
-									</div>
+										<div className="price-2 pricetag">
+											<h2>{item.price.toFixed(0)} kn</h2>
+										</div>
 
-									<div>
-										<button
-											type="button"
-											className="primary"
-											onClick={() =>
-												addToCartHandler(item.product)
-											}
-										>
-											Dodaj u Košaricu{" "}
-											<i class="fas fa-cart-plus"></i>
-										</button>
-									</div>
+										<div>
+											<button
+												type="button"
+												className="primary"
+												onClick={() =>
+													addToCartHandler(
+														item.product
+													)
+												}
+											>
+												Dodaj u Košaricu{" "}
+												<i class="fas fa-cart-plus"></i>
+											</button>
+										</div>
 
-									<div>
-										<button
-											type="button"
-											className="remove-button"
-											onClick={() =>
-												removeFromWishlistHandler(
-													item.product
-												)
-											}
-										>
-											Obriši{" "}
-											<i class="far fa-trash-alt"></i>
-										</button>
+										<div>
+											<button
+												type="button"
+												className="remove-button"
+												onClick={() =>
+													removeFromWishlistHandler(
+														item.product
+													)
+												}
+											>
+												Obriši{" "}
+												<i class="far fa-trash-alt"></i>
+											</button>
+										</div>
 									</div>
-								</div>
+								</>
 							</li>
 						))}
 					</ul>

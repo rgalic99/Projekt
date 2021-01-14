@@ -156,12 +156,15 @@ a.logo {
 }
 
 .min-30 {
-	width: 40rem;
+	width: 30rem;
+}
+.textLarge {
+	font-size: 4rem;
 }
 .pricetag {
 	padding-top: 10px;
 	padding-left: 2px;
-	width: 8rem;
+	width: 17rem;
 }
 
 /* Image */
@@ -183,6 +186,20 @@ img.seller {
 	max-width: 10rem;
 	width: 100%;
 }
+img.icon {
+	max-width: 22rem;
+	display: block;
+	width: inherit;
+	margin: auto;
+}
+img.icon:hover {
+	transition: transform 0.1s;
+	transform: scale(1.02);
+	border-radius: 5px;
+	box-shadow: 0 16px 32px 0;
+	color: lightgray;
+}
+
 img.medium {
 	max-width: 29rem;
 	display: block;
@@ -455,6 +472,28 @@ label::before {
 .placeOrder-body > * {
 	margin-bottom: 0.5rem;
 }
+/* Wishlist */
+.wishlist {
+	border: 0.1rem #c0c0c0 solid;
+	background-color: #f8f8f8;
+	border-radius: 0.5rem;
+	margin: 1rem;
+}
+.wishlist-body {
+	min-width: 136rem;
+	padding: 1rem;
+	word-wrap: break-word;
+	text-align: auto;
+	align-items: center;
+}
+.wish-alt > li:nth-of-type(odd) {
+	background-color: darkgray;
+	border-radius: 1rem 0 1rem 0;
+}
+.wishlist-body > * {
+	margin-bottom: 0.5rem;
+}
+
 /* Table */
 .table {
 	width: 100%;

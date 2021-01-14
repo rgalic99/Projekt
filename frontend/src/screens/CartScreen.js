@@ -34,7 +34,10 @@ export default function CartScreen(props) {
 					<div className="emptyCart">
 						<MessageBox>
 							Košarica je prazna
-							<Link to="/">....⬅ Natrag na kupovinu</Link>
+							<Link to="/">
+								....<i class="fas fa-arrow-left"></i> Natrag na
+								kupovinu
+							</Link>
 						</MessageBox>
 					</div>
 				) : (

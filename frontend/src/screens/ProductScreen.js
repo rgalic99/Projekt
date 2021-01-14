@@ -70,7 +70,7 @@ export default function ProductScreen(props) {
 			) : (
 				<div>
 					<Link onClick={() => props.history.goBack()}>
-						⬅ Povratak na rezultate
+						<i class="fas fa-arrow-left"></i> Povratak na rezultate
 					</Link>
 					<div className="row top">
 						<span className="col-2">
