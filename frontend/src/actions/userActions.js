@@ -73,6 +73,7 @@ export const signOut = () => (dispatch) => {
 	localStorage.removeItem("cartItems");
 	localStorage.removeItem("shippingAddress");
 	localStorage.removeItem("wishlistItems");
+	localStorage.removeItem("discountPercent");
 
 	dispatch({ type: USER_SIGNOUT });
 	document.location.href = "/signin";

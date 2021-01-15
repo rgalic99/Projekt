@@ -10,8 +10,11 @@ import {
 	ORDER_DELIVER_RESET,
 	ORDER_PAY_RESET,
 } from "../constants/orderConstants";
+import { resetDiscount } from "../actions/discountActions";
 
 export default function OrderScreen(props) {
+	const dispatch = useDispatch();
+	dispatch(resetDiscount());
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
 	if (!userInfo) {
@@ -36,7 +39,6 @@ export default function OrderScreen(props) {
 		success: successPay,
 	} = orderPay;
 
-	const dispatch = useDispatch();
 	useEffect(() => {
 		const addPayPalScript = async () => {
 			const { data } = await Axios.get("/api/config/paypal");
@@ -194,7 +196,15 @@ export default function OrderScreen(props) {
 									<div>{order.taxPrice.toFixed(0)}kn</div>
 								</div>
 							</li>
-							<li>
+							{order.discountAmount && (
+								<li>
+									<div className="row">
+										<div>Popust</div>
+										<div>{order.discountAmount}%</div>
+									</div>
+								</li>
+							)}
+							<div>
 								<div className="row">
 									<div className="price-2">
 										<h2> Ukupno: </h2>
@@ -203,7 +213,7 @@ export default function OrderScreen(props) {
 										<h2>{order.totalPrice.toFixed(0)}kn</h2>
 									</div>
 								</div>
-							</li>
+							</div>
 							{!order.isPaid && (
 								<li>
 									<>

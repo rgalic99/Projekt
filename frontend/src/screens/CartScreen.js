@@ -3,16 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import MessageBox from "../components/MessageBox";
-import { setDiscount } from "../actions/discountActions";
+import { resetDiscount, setDiscount } from "../actions/discountActions";
 
 export default function CartScreen(props) {
 	const productId = props.match.params.id;
 	const cart = useSelector((state) => state.cart);
-	const rate = "10";
 	const { cartItems } = cart;
-	const [discountp, setDiscountp] = useState("");
-	const [discountError, setDiscountError] = useState(false);
-	const [discountSuccess, setDiscountSuccess] = useState(false);
+
 	const qty = props.location.search
 		? Number(props.location.search.split("=")[1])
 		: 1;
@@ -28,17 +25,26 @@ export default function CartScreen(props) {
 		props.history.push("/cart");
 	};
 
+	const discount = useSelector((state) => state.discountRate);
+	const { discountPercent } = discount;
 	const checkoutHandler = () => {
 		props.history.push("/signin?redirect=shipping");
 	};
+
+	const rate = "90";
+	const [discountText, setDiscountText] = useState("");
+	const [discountError, setDiscountError] = useState(false);
+	const [discountSuccess, setDiscountSuccess] = useState(false);
+
 	const discountHandler = () => {
-		if (discountp === "POPUST10") {
+		if (discountText === "POPUST10") {
 			setDiscountError(false);
 			setDiscountSuccess(true);
 			dispatch(setDiscount(rate));
 		} else {
 			setDiscountSuccess(false);
 			setDiscountError(true);
+			dispatch(resetDiscount());
 		}
 	};
 	return (
@@ -143,16 +149,34 @@ export default function CartScreen(props) {
 								)}
 								){" "}
 								<div className="price-3">
-									{cartItems
-										.reduce(
-											(a, c) => a + c.price * c.qty,
-											0
-										)
-										.toFixed(0)}
+									{discountPercent
+										? cartItems
+												.reduce(
+													(a, c) =>
+														a +
+														(c.price *
+															c.qty *
+															discountPercent) /
+															100,
+													0
+												)
+												.toFixed(0)
+										: cartItems
+												.reduce(
+													(a, c) =>
+														a + c.price * c.qty,
+													0
+												)
+												.toFixed(0)}
 									kn
 								</div>
 							</h2>
 						</li>
+						{discountPercent && (
+							<li>
+								Popust od {100 - discountPercent}% primjenjen
+							</li>
+						)}
 						<li>
 							<button
 								type="button"
@@ -184,8 +208,8 @@ export default function CartScreen(props) {
 						id="popust"
 						type="text"
 						placeholder="Unesite kod..."
-						value={discountp}
-						onChange={(e) => setDiscountp(e.target.value)}
+						value={discountText}
+						onChange={(e) => setDiscountText(e.target.value)}
 					></input>
 					<button
 						type="discount-button"

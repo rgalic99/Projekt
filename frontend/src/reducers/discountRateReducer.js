@@ -1,7 +1,7 @@
-import { SET_DISCOUNT } from "../constants/wishlistConstants";
+import { RESET_DISCOUNT, SET_DISCOUNT } from "../constants/wishlistConstants";
 
 export const discountRateReducer = (
-	state = { discountPercent: "0" },
+	state = { discountPercent: "" },
 	action
 ) => {
 	switch (action.type) {
@@ -10,6 +10,8 @@ export const discountRateReducer = (
 				...state,
 				discountPercent: action.payload,
 			};
+		case RESET_DISCOUNT:
+			return { ...state, discountPercent: "" };
 		default:
 			return state;
 	}

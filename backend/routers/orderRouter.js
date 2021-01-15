@@ -46,12 +46,14 @@ orderRouter.post(
 				shippingPrice: req.body.shippingPrice,
 				taxPrice: req.body.taxPrice,
 				totalPrice: req.body.totalPrice,
+				discountAmount: req.body.discountAmount,
 				user: req.user._id,
 			});
 			const createdOrder = await order.save();
-			res
-				.status(201)
-				.send({ message: "Nova narudžba kreirana", order: createdOrder });
+			res.status(201).send({
+				message: "Nova narudžba kreirana",
+				order: createdOrder,
+			});
 		}
 	})
 );

@@ -7,6 +7,7 @@ import { createOrder } from "../actions/orderActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
+import { resetDiscount } from "../actions/discountActions";
 dotenv.config();
 
 export default function PlaceOrderScreen(props) {
@@ -19,6 +20,8 @@ export default function PlaceOrderScreen(props) {
 	if (!cart.paymentMethod) {
 		props.history.push("/payment");
 	}
+	const discount = useSelector((state) => state.discountRate);
+	const { discountPercent } = discount;
 	const toPrice = (num) => Number(num.toFixed(2)); //5.123 => "5.12" => 5.12
 	cart.itemsPrice = toPrice(
 		cart.cartItems.reduce((a, c) => a + c.qty * c.price.toFixed(0), 0)
@@ -26,13 +29,21 @@ export default function PlaceOrderScreen(props) {
 	const PDV = Number(process.env.PDV) || 0.25;
 	cart.shippingPrice = cart.itemsPrice >= 500 ? toPrice(0) : toPrice(10);
 	cart.taxPrice = toPrice(PDV * cart.itemsPrice);
-	cart.totalPrice = cart.itemsPrice + cart.shippingPrice;
+	cart.discountAmount = 100 - discountPercent || 0;
+	if (cart.discountAmount !== 100)
+		cart.totalPrice = (cart.itemsPrice * (100 - cart.discountAmount)) / 100;
+	else {
+		cart.totalPrice = cart.itemsPrice;
+	}
+	cart.totalPrice += cart.shippingPrice;
 	cart.itemsPrice *= 1 - PDV;
+
 	const dispatch = useDispatch();
 	const orderCreate = useSelector((state) => state.orderCreate);
 	const { loading, success, error, order } = orderCreate;
 	const placeOrderHandler = () => {
 		dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
+		dispatch(resetDiscount());
 	};
 	useEffect(() => {
 		if (success) {
@@ -130,7 +141,15 @@ export default function PlaceOrderScreen(props) {
 									<div>{cart.taxPrice.toFixed(0)}kn</div>
 								</div>
 							</li>
-							<li>
+							{discountPercent && (
+								<li>
+									<div className="row">
+										<div>Popust</div>
+										<div>{cart.discountAmount}%</div>
+									</div>
+								</li>
+							)}
+							<div>
 								<div className="row">
 									<div className="price-2">
 										<h2> Ukupno: </h2>
@@ -139,7 +158,7 @@ export default function PlaceOrderScreen(props) {
 										<h2>{cart.totalPrice.toFixed(0)}kn</h2>
 									</div>
 								</div>
-							</li>
+							</div>
 							<li>
 								<button
 									type="button"
