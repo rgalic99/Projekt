@@ -10,6 +10,7 @@ import {
 	ORDER_DELIVER_RESET,
 	ORDER_PAY_RESET,
 } from "../constants/orderConstants";
+import Space from "../components/Space";
 
 export default function OrderScreen(props) {
 	const dispatch = useDispatch();
@@ -93,7 +94,8 @@ export default function OrderScreen(props) {
 								<h2>Dostava</h2>
 								<p>
 									<strong>Ime:</strong>{" "}
-									{order.shippingAddress.fullName} <br />
+									{order.shippingAddress.fullName}{" "}
+									<Space num="1"></Space>
 									<strong>Adresa: </strong>{" "}
 									{order.shippingAddress.address},
 									{order.shippingAddress.city},

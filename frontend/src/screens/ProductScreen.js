@@ -69,7 +69,7 @@ export default function ProductScreen(props) {
 				<MessageBox variant="failed-action">{Error}</MessageBox>
 			) : (
 				<div>
-					<Link onClick={() => props.history.goBack()}>
+					<Link to="/" onClick={() => props.history.goBack()}>
 						<i className="fas fa-arrow-left"></i> Povratak na
 						rezultate
 					</Link>

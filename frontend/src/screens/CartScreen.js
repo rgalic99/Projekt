@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import MessageBox from "../components/MessageBox";
 import { resetDiscount, setDiscount } from "../actions/discountActions";
+import Space from "../components/Space";
 
 export default function CartScreen(props) {
 	const productId = props.match.params.id;
@@ -194,13 +195,13 @@ export default function CartScreen(props) {
 					{discountError && (
 						<MessageBox variant="failed-action">
 							Pogrešan kod
-							<br />
+							<Space num="1"></Space>
 						</MessageBox>
 					)}
 					{discountSuccess && (
 						<MessageBox variant="success-action">
 							Kod uspiješno primjenjen
-							<br />
+							<Space num="1"></Space>
 						</MessageBox>
 					)}
 					{!(discountSuccess || discountError) && <></>}

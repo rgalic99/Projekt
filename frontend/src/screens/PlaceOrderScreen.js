@@ -8,6 +8,7 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 import { resetDiscount } from "../actions/discountActions";
+import Space from "../components/Space";
 dotenv.config();
 
 export default function PlaceOrderScreen(props) {
@@ -62,7 +63,8 @@ export default function PlaceOrderScreen(props) {
 								<h2>Adresa dostave</h2>
 								<p>
 									<strong>Ime:</strong>{" "}
-									{cart.shippingAddress.fullName} <br />
+									{cart.shippingAddress.fullName}
+									<Space num="1"></Space>
 									<strong>Adresa: </strong>{" "}
 									{cart.shippingAddress.address},
 									{cart.shippingAddress.city},{" "}

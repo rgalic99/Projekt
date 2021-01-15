@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { signIn } from "../actions/userActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import Space from "../components/Space";
 
 export default function SigninScreen(props) {
 	const [email, setEmail] = useState("");
@@ -62,7 +63,7 @@ export default function SigninScreen(props) {
 					<label />
 					<div>
 						Novi korisnik?
-						<br />
+						<Space num="1"></Space>
 						<i className="fas fa-user-plus"></i>
 						<Link to={`/register?redirect=${redirect}`}>
 							{"  "}Napravite svoj račun
