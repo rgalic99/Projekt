@@ -516,7 +516,6 @@ label::before {
 /* Dropdown */
 .dropdown {
 	display: inline-block;
-	position: relative;
 }
 .dropdown-content {
 	position: absolute;
@@ -740,11 +739,9 @@ li {
 }
 
 .pricebox {
-	position: absolute;
 	padding-top: 0;
-	top: 6.5rem;
-	right: 2rem;
 	margin: 0;
+	float: right;
 }
 
 .o_nama {
@@ -817,7 +814,7 @@ button.wish {
 	width: 29rem;
 	height: 18rem;
 	margin: auto;
-	position: relative;
+	margin-top: 2rem;
 }
 
 .card-body-discount > * {

@@ -80,7 +80,8 @@ export default function ProductScreen(props) {
 								src={product.image}
 								alt={product.name}
 							></img>
-
+						</span>
+						<ul className="productInfo">
 							<div className="card card-body pricebox">
 								<ul>
 									<li>
@@ -164,8 +165,6 @@ export default function ProductScreen(props) {
 									)}
 								</ul>
 							</div>
-						</span>
-						<ul className="productInfo">
 							{
 								<li>
 									Prodavač
@@ -184,10 +183,7 @@ export default function ProductScreen(props) {
 									></Rating>
 								</li>
 							}
-							<br />
-							<br />
-							<br />
-							<br />
+
 							<li>
 								<h1>{product.name}</h1>
 							</li>
