@@ -777,7 +777,7 @@ button.wish {
 
 .remove-button-2 {
 	margin-left: 2rem;
-	background-color: rgb(255, 155, 155);
+	background-color: rgb(255, 100, 100);
 }
 
 .founderCard {
@@ -815,7 +815,7 @@ button.wish {
 .card-body-discount {
 	padding: 2rem 2rem 0rem 2rem;
 	width: 29rem;
-	height: 16rem;
+	height: 18rem;
 	margin: auto;
 	position: relative;
 }

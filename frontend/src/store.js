@@ -31,6 +31,7 @@ import {
 	userUpdateProfileReducer,
 	userUpdateReducer,
 } from "./reducers/userReducers";
+import { discountRateReducer } from "./reducers/discountRateReducer";
 
 const initialState = {
 	userSignin: {
@@ -54,12 +55,18 @@ const initialState = {
 			? JSON.parse(localStorage.getItem("wishlistItems"))
 			: [],
 	},
+	discountRate: {
+		discountPercent: localStorage.getItem("discountPercent")
+			? JSON.parse(localStorage.getItem("discountPercent"))
+			: "",
+	},
 };
 const reducer = combineReducers({
 	productList: productListReducer,
 	productDetails: productDetailsReducer,
 	cart: cartReducer,
 	wishlist: wishlistReducer,
+	discountRate: discountRateReducer,
 	userSignin: userSigninReducer,
 	userRegister: userRegisterReducer,
 	orderCreate: orderCreateReducer,
