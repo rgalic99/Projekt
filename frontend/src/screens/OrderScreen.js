@@ -10,11 +10,10 @@ import {
 	ORDER_DELIVER_RESET,
 	ORDER_PAY_RESET,
 } from "../constants/orderConstants";
-import { resetDiscount } from "../actions/discountActions";
 
 export default function OrderScreen(props) {
 	const dispatch = useDispatch();
-	dispatch(resetDiscount());
+
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
 	if (!userInfo) {
@@ -196,7 +195,7 @@ export default function OrderScreen(props) {
 									<div>{order.taxPrice.toFixed(0)}kn</div>
 								</div>
 							</li>
-							{order.discountAmount && (
+							{order.discountAmount < 100 && (
 								<li>
 									<div className="row">
 										<div>Popust</div>

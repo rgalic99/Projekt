@@ -35,7 +35,7 @@ const orderSchena = new mongoose.Schema(
 		shippingPrice: { type: Number, required: true },
 		taxPrice: { type: Number, required: true },
 		totalPrice: { type: Number, required: true },
-		discountAmount: { type: Number, default: 0 },
+		discountAmount: { type: Number, default: 0, required: true },
 		user: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "User",

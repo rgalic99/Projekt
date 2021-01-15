@@ -43,12 +43,12 @@ export default function PlaceOrderScreen(props) {
 	const { loading, success, error, order } = orderCreate;
 	const placeOrderHandler = () => {
 		dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
-		dispatch(resetDiscount());
 	};
 	useEffect(() => {
 		if (success) {
 			props.history.push(`/order/${order._id}`);
 			dispatch({ type: ORDER_CREATE_RESET });
+			dispatch(resetDiscount());
 		}
 	}, [success, dispatch, order, props.history]);
 	return (
@@ -141,7 +141,7 @@ export default function PlaceOrderScreen(props) {
 									<div>{cart.taxPrice.toFixed(0)}kn</div>
 								</div>
 							</li>
-							{discountPercent && (
+							{cart.discountAmount < 100 && (
 								<li>
 									<div className="row">
 										<div>Popust</div>
