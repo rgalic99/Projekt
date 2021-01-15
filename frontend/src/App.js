@@ -80,7 +80,7 @@ function App() {
 						</span>
 						<div className="header-links">
 							<Link to="/cart" className="cart">
-								Košarica<i class="fa fa-shopping-cart"></i>
+								Košarica<i className="fa fa-shopping-cart"></i>
 								{cartItems.length > 0 && (
 									<span className="badge">
 										{cartItems.length}
@@ -88,7 +88,7 @@ function App() {
 								)}
 							</Link>
 							<Link to="/wishlist" className="cart">
-								Lista želja <i class="far fa-heart"></i>
+								Lista želja <i className="far fa-heart"></i>
 								{wishlistItems.length > 0 && (
 									<span className="badge">
 										{wishlistItems.length}
@@ -104,13 +104,13 @@ function App() {
 									<ul className="dropdown-content">
 										<li>
 											<Link to="/profile">
-												<i class="fa fa-user"></i>{" "}
+												<i className="fa fa-user"></i>{" "}
 												Profil
 											</Link>
 										</li>
 										<li>
 											<Link to="/orderhistory">
-												<i class="fas fa-receipt"></i>{" "}
+												<i className="fas fa-receipt"></i>{" "}
 												Narudžbe
 											</Link>
 										</li>
@@ -119,7 +119,7 @@ function App() {
 												to="#signout"
 												onClick={signoutHandler}
 											>
-												<i class="fas fa-user-slash"></i>{" "}
+												<i className="fas fa-user-slash"></i>{" "}
 												Odjava
 											</Link>
 										</li>
@@ -127,7 +127,8 @@ function App() {
 								</div>
 							) : (
 								<Link to="/signin" className="signUpIn">
-									Prijava <i class="fas fa-sign-in-alt"></i>
+									Prijava{" "}
+									<i className="fas fa-sign-in-alt"></i>
 								</Link>
 							)}
 							{userInfo && userInfo.isSeller && (
@@ -138,13 +139,13 @@ function App() {
 									</Link>
 									<ul className="dropdown-content">
 										<li>
-											<i class="fa fa-dolly"></i>
+											<i className="fa fa-dolly"></i>
 											<Link to="/productlist/seller">
 												Proizvodi
 											</Link>
 										</li>
 										<li>
-											<i class="fas fa-receipt"></i>
+											<i className="fas fa-receipt"></i>
 											<Link to="/orderlist/seller">
 												Narudžbe
 											</Link>
@@ -163,19 +164,19 @@ function App() {
 										<Link to="/dashboard">Pregled</Link>
 									</li> */}
 										<li>
-											<i class="fa fa-dolly"></i>
+											<i className="fa fa-dolly"></i>
 											<Link to="/productlist">
 												Proizvodi
 											</Link>
 										</li>
 										<li>
-											<i class="fas fa-receipt"></i>
+											<i className="fas fa-receipt"></i>
 											<Link to="/orderlist">
 												Narudžbe
 											</Link>
 										</li>
 										<li>
-											<i class="fa fa-users"></i>
+											<i className="fa fa-users"></i>
 											<Link to="/userlist">
 												Korisnici
 											</Link>
@@ -194,7 +195,7 @@ function App() {
 									className="close-sidebar"
 									type="button"
 								>
-									<i class="fas fa-times"></i>
+									<i className="fas fa-times"></i>
 								</button>
 							</li>
 							{loadingCategories ? (

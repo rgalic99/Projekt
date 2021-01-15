@@ -107,7 +107,7 @@ export default function UserEditScreen(props) {
 						</div>
 						<div>
 							<button type="submit" className="primary">
-								Ažuriraj <i class="far fa-edit"></i>
+								Ažuriraj <i className="far fa-edit"></i>
 							</button>
 						</div>
 					</>

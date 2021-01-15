@@ -28,25 +28,25 @@ export default function PageInfoScreen() {
 			<body>
 				<div className="row">
 					{array.map((item) => (
-						<div class="column">
-							<div class="founderCard" key={item.id}>
+						<div className="column">
+							<div className="founderCard" key={item.id}>
 								<img
 									src={item.url}
 									alt={item.name}
 									className={item.tag}
 								/>
-								<div class="container">
+								<div className="container">
 									<h2>
 										{item.name} {item.lastName}
 									</h2>
-									<p class="title">{item.title}</p>
+									<p className="title">{item.title}</p>
 									<p>
-										<span class="mail">
+										<span className="mail">
 											<a href={`mailto:${item.mail}`}>
 												{" "}
 												Kontakt
 											</a>{" "}
-											<i class="far fa-envelope"></i>
+											<i className="far fa-envelope"></i>
 										</span>
 									</p>
 									<p>{item.description}</p>

@@ -70,7 +70,8 @@ export default function ProductScreen(props) {
 			) : (
 				<div>
 					<Link onClick={() => props.history.goBack()}>
-						<i class="fas fa-arrow-left"></i> Povratak na rezultate
+						<i className="fas fa-arrow-left"></i> Povratak na
+						rezultate
 					</Link>
 					<div className="row top">
 						<span className="col-2">
@@ -147,7 +148,7 @@ export default function ProductScreen(props) {
 													className="primary block"
 												>
 													Dodaj u košaricu{" "}
-													<i class="fas fa-cart-plus"></i>
+													<i className="fas fa-cart-plus"></i>
 												</button>
 												<button
 													onClick={
@@ -156,7 +157,7 @@ export default function ProductScreen(props) {
 													className="wish primary block"
 												>
 													Dodaj u listu želja{" "}
-													<i class="far fa-heart"></i>
+													<i className="far fa-heart"></i>
 												</button>
 											</li>
 										</>
@@ -268,7 +269,7 @@ export default function ProductScreen(props) {
 												type="submit"
 											>
 												Pošalji{" "}
-												<i class="fas fa-paper-plane"></i>
+												<i className="fas fa-paper-plane"></i>
 											</button>
 										</div>
 										<div>

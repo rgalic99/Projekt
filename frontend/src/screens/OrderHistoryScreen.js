@@ -26,10 +26,11 @@ export default function OrderHistoryScreen(props) {
 							<th>DATUM</th>
 							<th>UKUPNO</th>
 							<th>
-								PLAĆENO <i class="fas fa-money-bill-wave"></i>
+								PLAĆENO{" "}
+								<i className="fas fa-money-bill-wave"></i>
 							</th>
 							<th>
-								DOSTAVLJENO <i class="fas fa-truck"></i>
+								DOSTAVLJENO <i className="fas fa-truck"></i>
 							</th>
 							<th>AKCIJE</th>
 						</tr>
@@ -73,7 +74,7 @@ export default function OrderHistoryScreen(props) {
 										}}
 									>
 										Detalji{" "}
-										<i class="fas fa-info-circle"></i>
+										<i className="fas fa-info-circle"></i>
 									</button>
 								</td>
 							</tr>

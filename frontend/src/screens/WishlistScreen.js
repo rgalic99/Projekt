@@ -27,14 +27,16 @@ export default function WishlistScreen(props) {
 	return (
 		<div className="row top">
 			<div className="col-2">
-				<h1>Lista želja</h1>
+				<h1>
+					Lista želja <i className="far fa-heart"></i>
+				</h1>
 				{wishlistItems.length === 0 ? (
 					<div className="emptyCart">
 						<MessageBox>
 							Lista želja je prazna
 							<Link to="/">
-								....<i class="fas fa-arrow-left"></i> Natrag na
-								kupovinu
+								....<i className="fas fa-arrow-left"></i> Natrag
+								na kupovinu
 							</Link>
 						</MessageBox>
 					</div>
@@ -74,7 +76,7 @@ export default function WishlistScreen(props) {
 												}
 											>
 												Dodaj u Košaricu{" "}
-												<i class="fas fa-cart-plus"></i>
+												<i className="fas fa-cart-plus"></i>
 											</button>
 										</div>
 
@@ -89,7 +91,7 @@ export default function WishlistScreen(props) {
 												}
 											>
 												Obriši{" "}
-												<i class="far fa-trash-alt"></i>
+												<i className="far fa-trash-alt"></i>
 											</button>
 										</div>
 									</div>

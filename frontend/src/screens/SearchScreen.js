@@ -91,7 +91,7 @@ export default function SearchScreen(props) {
 			<div className="row top">
 				<div className="col-1">
 					<h3>
-						Filteri <i class="fas fa-filter"></i>
+						Filteri <i className="fas fa-filter"></i>
 					</h3>
 					<h3>Kategorije</h3>
 					<div>

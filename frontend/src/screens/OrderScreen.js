@@ -240,7 +240,7 @@ export default function OrderScreen(props) {
 											onClick={deliverHandler}
 										>
 											Dostavi Narudžbu{" "}
-											<i class="fas fa-truck"></i>
+											<i className="fas fa-truck"></i>
 										</button>
 									</li>
 								)}

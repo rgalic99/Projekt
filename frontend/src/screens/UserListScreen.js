@@ -92,14 +92,15 @@ export default function UserListScreen(props) {
 											)
 										}
 									>
-										Uredi <i class="far fa-edit"></i>
+										Uredi <i className="far fa-edit"></i>
 									</button>
 									<button
 										type="button"
 										className="small remove-button-2"
 										onClick={() => deleteHandler(user)}
 									>
-										Obriši <i class="far fa-trash-alt"></i>
+										Obriši{" "}
+										<i className="far fa-trash-alt"></i>
 									</button>
 								</td>
 							</tr>

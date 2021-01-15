@@ -123,7 +123,8 @@ export default function ProductListScreen(props) {
 												)
 											}
 										>
-											Uredi <i class="far fa-edit"></i>
+											Uredi{" "}
+											<i className="far fa-edit"></i>
 										</button>
 										<button
 											type="button"
@@ -133,7 +134,7 @@ export default function ProductListScreen(props) {
 											}
 										>
 											Obriši{" "}
-											<i class="far fa-trash-alt"></i>
+											<i className="far fa-trash-alt"></i>
 										</button>
 									</td>
 								</tr>

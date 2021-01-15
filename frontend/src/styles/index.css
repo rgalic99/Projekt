@@ -94,6 +94,10 @@ button.primary {
 	margin: auto;
 	background-color: #f0c040;
 }
+button.secondary {
+	margin: auto;
+	background-color: lightgray;
+}
 button.block {
 	width: 100%;
 }
@@ -156,7 +160,7 @@ a.logo {
 }
 
 .min-30 {
-	width: 30rem;
+	width: 40rem;
 }
 .textLarge {
 	font-size: 4rem;
@@ -362,6 +366,11 @@ img.large:hover {
 }
 
 .price-2 > h2 {
+	font-size: 4rem;
+	padding: 0;
+	margin: 0 0;
+}
+.price-3 {
 	font-size: 4rem;
 	padding: 0;
 	margin: 0 0;
@@ -801,4 +810,22 @@ button.wish {
 .o_nama > b:hover {
 	color: white;
 	cursor: grab;
+}
+
+.card-body-discount {
+	padding: 2rem 2rem 0rem 2rem;
+	width: 29rem;
+	height: 16rem;
+	margin: auto;
+	position: relative;
+}
+
+.card-body-discount > * {
+	margin-bottom: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.card-body-discount > h2 {
+	margin-top: 0;
+	padding-top: 0;
 }

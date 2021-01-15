@@ -131,13 +131,14 @@ export default function ShippingAddressScreen(props) {
 				<div>
 					<label htmlFor="chooseOnMap">Lokacija</label>
 					<button type="button" onClick={chooseOnMap}>
-						Odaberi na mapi <i class="fas fa-map-marked-alt"></i>
+						Odaberi na mapi{" "}
+						<i className="fas fa-map-marked-alt"></i>
 					</button>
 				</div>
 				<div>
 					<label />
 					<button className="primary" type="submit">
-						Nastavak <i class="fas fa-arrow-right"></i>
+						Nastavak <i className="fas fa-arrow-right"></i>
 					</button>
 				</div>
 			</form>

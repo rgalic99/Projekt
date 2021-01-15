@@ -79,7 +79,7 @@ export default function SigninScreen(props) {
 				<div>
 					<label />
 					<button className="primary" type="submit">
-						Registracija <i class="fas fa-user-plus"></i>
+						Registracija <i className="fas fa-user-plus"></i>
 					</button>
 				</div>
 				<div>
@@ -87,7 +87,7 @@ export default function SigninScreen(props) {
 					<div>
 						Već imate račun?
 						<Link to={`/signin?redirect=${redirect}`}>
-							Prijavite se <i class="fas fa-sign-in-alt"></i>
+							Prijavite se <i className="fas fa-sign-in-alt"></i>
 						</Link>
 					</div>
 				</div>

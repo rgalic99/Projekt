@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartActions";
@@ -8,6 +8,7 @@ export default function CartScreen(props) {
 	const productId = props.match.params.id;
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
+	const [discount, setDiscount] = useState("");
 	const qty = props.location.search
 		? Number(props.location.search.split("=")[1])
 		: 1;
@@ -26,17 +27,22 @@ export default function CartScreen(props) {
 	const checkoutHandler = () => {
 		props.history.push("/signin?redirect=shipping");
 	};
+	const discountHandler = () => {
+		console.log(discount);
+	};
 	return (
 		<div className="row top">
 			<div className="col-2">
-				<h1>Košarica</h1>
+				<h1>
+					Košarica <i className="fa fa-shopping-cart"></i>
+				</h1>
 				{cartItems.length === 0 ? (
 					<div className="emptyCart">
 						<MessageBox>
 							Košarica je prazna
 							<Link to="/">
-								....<i class="fas fa-arrow-left"></i> Natrag na
-								kupovinu
+								....<i className="fas fa-arrow-left"></i> Natrag
+								na kupovinu
 							</Link>
 						</MessageBox>
 					</div>
@@ -98,7 +104,7 @@ export default function CartScreen(props) {
 											}
 										>
 											Obriši{" "}
-											<i class="far fa-trash-alt"></i>
+											<i className="far fa-trash-alt"></i>
 										</button>
 									</div>
 								</div>
@@ -125,7 +131,7 @@ export default function CartScreen(props) {
 									<span> proizvoda</span>
 								)}
 								){" "}
-								<h2>
+								<h3 className="price-3">
 									{cartItems
 										.reduce(
 											(a, c) => a + c.price * c.qty,
@@ -133,7 +139,7 @@ export default function CartScreen(props) {
 										)
 										.toFixed(0)}
 									kn
-								</h2>
+								</h3>
 							</h2>
 						</li>
 						<li>
@@ -147,6 +153,24 @@ export default function CartScreen(props) {
 							</button>
 						</li>
 					</ul>
+				</div>
+				<div className="card card-body-discount">
+					<h2>Kod za popust</h2>
+					<input
+						id="popust"
+						type="text"
+						placeholder="Unesite kod..."
+						value={discount}
+						onChange={(e) => setDiscount(e.target.value)}
+					></input>
+					<button
+						type="discount-button"
+						className="secondary block"
+						disabled={cartItems.length === 0}
+						onClick={discountHandler}
+					>
+						Unesi kod
+					</button>
 				</div>
 			</div>
 		</div>

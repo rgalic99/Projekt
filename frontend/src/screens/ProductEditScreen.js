@@ -193,7 +193,7 @@ export default function ProductEditScreen(props) {
 						<div>
 							<label></label>
 							<button className="primary" type="submit">
-								Ažuriraj <i class="far fa-edit"></i>
+								Ažuriraj <i className="far fa-edit"></i>
 							</button>
 						</div>
 					</>
