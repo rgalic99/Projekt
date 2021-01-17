@@ -852,3 +852,7 @@ button.wish {
 .filter > li:first-child {
 	padding-top: 0.6rem;
 }
+
+.button-end {
+	background-color: inherit !important;
+}

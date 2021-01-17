@@ -237,7 +237,7 @@ export default function OrderScreen(props) {
 							{userInfo.isAdmin &&
 								order.isPaid &&
 								!order.isDelivered && (
-									<li>
+									<li className="button-end">
 										{loadingDeliver && (
 											<LoadingBox></LoadingBox>
 										)}

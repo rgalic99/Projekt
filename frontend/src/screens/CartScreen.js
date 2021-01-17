@@ -178,7 +178,7 @@ export default function CartScreen(props) {
 								Popust od {100 - discountPercent}% primjenjen
 							</li>
 						)}
-						<li>
+						<li className="button-end">
 							<button
 								type="button"
 								onClick={checkoutHandler}

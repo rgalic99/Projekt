@@ -7,6 +7,7 @@ import MessageBox from "../components/MessageBox";
 import { detailsProduct, createReview } from "../actions/productActions";
 import Rating from "../components/Rating";
 import { PRODUCT_REVIEW_CREATE_RESET } from "../constants/productConstants";
+import Space from "../components/Space";
 
 export default function ProductScreen(props) {
 	const dispatch = useDispatch();
@@ -197,7 +198,7 @@ export default function ProductScreen(props) {
 								</li>
 							}
 							<li>
-								Opis:
+								Opis:<Space num="1"></Space>
 								<span className="product-description">
 									{product.description}
 								</span>
