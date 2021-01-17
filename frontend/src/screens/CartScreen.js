@@ -200,7 +200,7 @@ export default function CartScreen(props) {
 					)}
 					{discountSuccess && (
 						<MessageBox variant="success-action">
-							Kod uspiješno primjenjen
+							Kod uspješno primjenjen
 							<Space num="1"></Space>
 						</MessageBox>
 					)}

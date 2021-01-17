@@ -197,14 +197,15 @@ export default function OrderScreen(props) {
 									<div>{order.taxPrice.toFixed(0)}kn</div>
 								</div>
 							</li>
-							{order.discountAmount < 100 && (
-								<li>
-									<div className="row">
-										<div>Popust</div>
-										<div>{order.discountAmount}%</div>
-									</div>
-								</li>
-							)}
+							{order.discountAmount < 100 &&
+								order.discountAmount !== 0 && (
+									<li>
+										<div className="row">
+											<div>Popust</div>
+											<div>{order.discountAmount}%</div>
+										</div>
+									</li>
+								)}
 							<div>
 								<div className="row">
 									<div className="price-2">
