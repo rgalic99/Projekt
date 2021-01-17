@@ -69,7 +69,10 @@ function App() {
 							>
 								<i className="fa fa-bars"></i>
 							</button>
-							<Link to="/"> Tech - @ - Tack </Link>
+							<Link to="/" className="logo">
+								{" "}
+								Tech - @ - Tack{" "}
+							</Link>
 						</div>
 						<span>
 							<Route
@@ -103,23 +106,21 @@ function App() {
 									</Link>
 									<ul className="dropdown-content">
 										<li>
-											<Link to="/profile">
-												<i className="fa fa-user"></i>{" "}
-												Profil
-											</Link>
+											<i className="fa fa-user"></i>
+											<Link to="/profile">Profil</Link>
 										</li>
 										<li>
+											<i className="fas fa-receipt"></i>
 											<Link to="/orderhistory">
-												<i className="fas fa-receipt"></i>{" "}
 												Narudžbe
 											</Link>
 										</li>
 										<li>
+											<i className="fas fa-user-slash"></i>
 											<Link
 												to="#signout"
 												onClick={signoutHandler}
 											>
-												<i className="fas fa-user-slash"></i>{" "}
 												Odjava
 											</Link>
 										</li>
@@ -127,14 +128,14 @@ function App() {
 								</div>
 							) : (
 								<Link to="/signin" className="signUpIn">
-									Prijava{" "}
+									Prijava
 									<i className="fas fa-sign-in-alt"></i>
 								</Link>
 							)}
 							{userInfo && userInfo.isSeller && (
 								<div className="dropdown">
 									<Link to="#admin">
-										Prodavač{" "}
+										Prodavač
 										<i className="fa fa-caret-down"></i>
 									</Link>
 									<ul className="dropdown-content">
@@ -156,7 +157,7 @@ function App() {
 							{userInfo && userInfo.isAdmin && (
 								<div className="dropdown">
 									<Link to="#admin">
-										Admin{" "}
+										Admin
 										<i className="fa fa-caret-down"></i>
 									</Link>
 									<ul className="dropdown-content">
@@ -348,9 +349,15 @@ function App() {
 						></AdminRoute>
 					</main>
 					<footer className="row center">
-						<a href="/o_nama">
-							Sva prava pridržana© Tech - @ - Tack 2020
-						</a>
+						<span>
+							Sva prava pridržana© Tech - @ - Tack 2020 <t />
+							{"          "}
+							<t />
+							<t />
+							<t />
+							<t />
+							<a href="/o_nama">O nama</a>
+						</span>
 					</footer>
 				</div>
 			</ScrollToTop>

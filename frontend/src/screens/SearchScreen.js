@@ -102,11 +102,13 @@ export default function SearchScreen(props) {
 								{errorCategories}
 							</MessageBox>
 						) : (
-							<ul>
+							<ul className="filter">
 								<li>
 									<Link
 										className={
-											"all" === category ? "active" : ""
+											"all" === category
+												? "active-filter"
+												: ""
 										}
 										to={getFilterUrl({ category: "all" })}
 									>
@@ -117,7 +119,9 @@ export default function SearchScreen(props) {
 									<li key={c}>
 										<Link
 											className={
-												c === category ? "active" : ""
+												c === category
+													? "active-filter"
+													: ""
 											}
 											to={getFilterUrl({ category: c })}
 										>
@@ -130,7 +134,7 @@ export default function SearchScreen(props) {
 					</div>
 					<div>
 						<h3>Cijena</h3>
-						<ul>
+						<ul className="filter">
 							{prices.map((p) => (
 								<li key={p.name}>
 									<Link
@@ -141,7 +145,7 @@ export default function SearchScreen(props) {
 										className={
 											`${p.min}-${p.max}` ===
 											`${min}-${max}`
-												? "active"
+												? "active-filter"
 												: ""
 										}
 									>
@@ -153,14 +157,14 @@ export default function SearchScreen(props) {
 					</div>
 					<div>
 						<h3>Ocjene</h3>
-						<ul>
+						<ul className="filter">
 							{ratings.map((r) => (
 								<li key={r.name}>
 									<Link
 										to={getFilterUrl({ rating: r.rating })}
 										className={
 											`${r.rating}` === `${rating}`
-												? "active"
+												? "active-filter"
 												: ""
 										}
 									>
@@ -196,7 +200,9 @@ export default function SearchScreen(props) {
 								{[...Array(pages).keys()].map((x) => (
 									<Link
 										className={
-											x + 1 === page ? "active" : ""
+											x + 1 === page
+												? "active-filter"
+												: ""
 										}
 										key={x + 1}
 										to={getFilterUrl({ page: x + 1 })}
