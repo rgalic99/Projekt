@@ -43,8 +43,9 @@ main {
 }
 footer {
 	grid-area: footer;
-	background-color: darkslategray;
-	color: white;
+	display: flex;
+	justify-content: space-around !important;
+	flex-flow: column !important;
 }
 
 /* Common */
@@ -153,9 +154,6 @@ a.logo {
 .col-1 > div > ul > li:last-child {
 	border-radius: 0 0 2rem 2rem;
 }
-.col-1 > div > ul > li :nth-child(.active) {
-	background-color: #f51212de;
-}
 .col-1 > div > ul > li:first-child {
 	font-weight: bold;
 }
@@ -176,14 +174,14 @@ a.logo {
 	font-size: 4rem;
 }
 .pricetag {
-	padding-top: 10px;
-	padding-left: 2px;
+	padding-top: 1rem;
+	padding-left: 0.2rem;
 	width: 17rem;
 }
 
 /* Image */
 img {
-	border-radius: 5px 5px 0 0;
+	border-radius: 0.5rem;
 }
 img.small {
 	max-width: 5rem;
@@ -192,7 +190,7 @@ img.small {
 img.small:hover {
 	transition: transform 0.1s;
 	transform: scale(1.02);
-	border-radius: 5px;
+	border-radius: 0.5rem;
 	box-shadow: 0 16px 32px 0;
 	color: lightgray;
 }
@@ -231,7 +229,7 @@ img.Marin {
 	height: 30rem;
 }
 img.Karla {
-	max-width: 30rem;
+	max-width: 34rem;
 	display: block;
 	margin: auto;
 	height: 30rem;
@@ -314,7 +312,8 @@ img.medium:hover {
 }
 
 img.large {
-	width: 75rem;
+	margin-top: 1rem;
+	width: 65rem;
 	height: 55rem;
 }
 
@@ -421,7 +420,7 @@ img.large:hover {
 
 footer a {
 	color: white;
-	padding-left: 6rem;
+	padding-bottom: 1rem;
 }
 
 /*Alert*/
@@ -660,7 +659,7 @@ aside {
 	overflow: scroll;
 	width: 30rem;
 	height: 100%;
-	background-color: #a3a5a5;
+	background-color: #dbd9d9;
 	z-index: 1000;
 	transform: translateX(-30rem);
 	transition: all 0.5s;
@@ -691,7 +690,7 @@ aside li {
 	width: 100%;
 }
 aside > ul :nth-of-type(even) {
-	background-color: #dbd9d9de;
+	background-color: #edecee;
 }
 button.close-sidebar {
 	padding: 0.3rem 0.8rem;
@@ -755,8 +754,8 @@ li {
 }
 
 .pricebox {
-	padding-top: 0;
-	margin: 0;
+	margin-top: 1rem;
+	margin-left: 2rem;
 	float: right;
 }
 
@@ -769,10 +768,11 @@ li {
 }
 
 .productInfo {
-	width: 600px;
+	width: 60rem;
+	margin-right: 3rem;
 }
 .emptyCart {
-	width: 680px;
+	width: 68rem;
 }
 
 button.wish {
@@ -855,4 +855,16 @@ button.wish {
 
 .button-end {
 	background-color: inherit !important;
+}
+
+.review > ul > li {
+	padding: 2rem;
+	min-width: 26rem;
+	text-align: center;
+	border-radius: 2rem;
+	border: 1px #dbd9d9de;
+}
+
+.review > ul > li:nth-of-type(even) {
+	background-color: #eeececde;
 }

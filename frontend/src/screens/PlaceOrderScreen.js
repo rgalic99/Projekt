@@ -161,7 +161,7 @@ export default function PlaceOrderScreen(props) {
 									</div>
 								</div>
 							</div>
-							<li>
+							<li className="button-end">
 								<button
 									type="button"
 									onClick={placeOrderHandler}

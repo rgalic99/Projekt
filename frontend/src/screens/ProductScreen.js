@@ -296,17 +296,21 @@ export default function ProductScreen(props) {
 							{product.reviews.length === 0 && (
 								<MessageBox>Nema recenzija</MessageBox>
 							)}
-							{product.reviews.map((review) => (
-								<li key={review._id}>
-									<strong>{review.name}</strong>
-									<Rating
-										rating={review.rating}
-										caption=" "
-									></Rating>
-									<p>{review.createdAt.substring(0, 10)}</p>
-									<p>{review.comment}</p>
-								</li>
-							))}
+							<ul>
+								{product.reviews.map((review) => (
+									<li key={review._id}>
+										<strong>{review.name}</strong>
+										<Rating
+											rating={review.rating}
+											caption=" "
+										></Rating>
+										<p>
+											{review.createdAt.substring(0, 10)}
+										</p>
+										<p>{review.comment}</p>
+									</li>
+								))}
+							</ul>
 						</div>
 					</div>
 				</div>

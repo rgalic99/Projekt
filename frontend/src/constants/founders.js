@@ -25,7 +25,7 @@ export const array = [
 		name: "Ivan",
 		lastName: "Budiša",
 		title: "Tester / Korisnička podrška",
-		url: "/images/f1.jpg",
+		url: "/images/f3.jpeg",
 		description:
 			"Kada meni netko dođe sa problemom kažem mu da je lakše da se pravi da ga nema",
 		mail: "",
@@ -36,10 +36,10 @@ export const array = [
 		name: "Karla",
 		lastName: "Brkan",
 		title: "Analitičarka / Dizajner",
-		url: "/images/f1.jpg",
+		url: "/images/f4.jpeg",
 		description:
-			"Moje volju za radom u poslovnom okruženju jedino može nadmašiti dobar popust na paleti",
-		mail: "",
+			"Moju volju za radom u poslovnom okruženju jedino može nadmašiti dobar popust na paleti",
+		mail: "kbrkan00@gmail.com",
 		tag: "Karla",
 	},
 	{

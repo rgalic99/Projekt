@@ -349,15 +349,10 @@ function App() {
 						></AdminRoute>
 					</main>
 					<footer className="row center">
-						<span>
-							Sva prava pridržana© Tech - @ - Tack 2020 <t />
-							{"          "}
-							<t />
-							<t />
-							<t />
-							<t />
+						<div>
 							<a href="/o_nama">O nama</a>
-						</span>
+						</div>
+						<div>Sva prava pridržana© Tech - @ - Tack 2020</div>
 					</footer>
 				</div>
 			</ScrollToTop>
